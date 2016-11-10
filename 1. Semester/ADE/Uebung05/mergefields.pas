@@ -36,7 +36,7 @@ BEGIN
 
     IF found = False THEN
       FOR i3 := 0 TO length(a3)-1 DO
-        IF (a2[i] >= a3[i3]) AND ((a2[i] <= a3[i3+1]) OR (a3[i3+1] = 0)) THEN 
+        IF ((a2[i] >= a3[i3]) OR (i = 0)) AND ((a2[i] <= a3[i3+1]) OR (a3[i3+1] = 0)) THEN 
         BEGIN
           FOR i4 := length(a3)-1 DOWNTO i3+1 DO
             a3[i4] := a3[i4-1];
@@ -54,16 +54,35 @@ var a3 : ARRAY [1 .. (length(a1) + length(a2))] OF INTEGER;
 var n3 : INTEGER;
 
 BEGIN
-a1[1] := 1;
-a1[2] := 2;
-a1[3] := 3;
-a1[4] := 4;
-a1[5] := 5;
-a1[6] := 6;
+// a1[1] := 1;
+// a1[2] := 2;
+// a1[3] := 3;
+// a1[4] := 4;
+// a1[5] := 5;
+// a1[6] := 6;
 
-a2[1] := 4;
-a2[2] := 6;
-a2[3] := 8;
+// a2[1] := 7;
+// a2[2] := 8;
+// a2[3] := 9;
+// a2[4] := 10;
+
+// Merge(a1,a2,a3,n3);
+
+// printArray(a1);
+// printArray(a2);
+// printArray(a3);
+
+
+a1[1] := 2;
+a1[2] := 4;
+a1[3] := 4;
+a1[4] := 10;
+a1[5] := 15;
+a1[6] := 15;
+
+a2[1] := 2;
+a2[2] := 4;
+a2[3] := 5;
 a2[4] := 10;
 
 Merge(a1,a2,a3,n3);
@@ -71,5 +90,4 @@ Merge(a1,a2,a3,n3);
 printArray(a1);
 printArray(a2);
 printArray(a3);
-
 END.
