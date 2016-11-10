@@ -27,8 +27,7 @@ BEGIN
     end;
   
   IF NOT addpossible THEN
-    WriteLn('AddEntry not possible');
-    
+    WriteLn('AddEntry not possible'); 
 END;
 
 (*deletes entry and moves later entries down (no gaps)*)

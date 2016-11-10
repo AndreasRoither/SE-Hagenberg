@@ -1,5 +1,6 @@
 program mergefields;
 
+(*gibt ein array auf der konsole aus*)
 procedure printArray(a : ARRAY OF INTEGER);
 var i : INTEGER;
 begin
@@ -8,6 +9,7 @@ begin
   WriteLn();
 end;
 
+(*setzt alle elemente in einem array auf 0*)
 procedure clearArray(var a : ARRAY OF INTEGER);
 var i : INTEGER;
 begin
@@ -21,7 +23,9 @@ var found : Boolean;
 BEGIN
   count := 0;
   found := False;
+  n3 := 0;
 
+  (*schreibt alle unterschiedlichen elemente von a1 und a2 aus a1 in a3*)
   FOR i := 0 TO length(a1)-1 DO BEGIN
     FOR i2 := 0 TO length(a2)-1 DO BEGIN
       IF a2[i2] = a1[i] THEN 
@@ -31,10 +35,12 @@ BEGIN
     BEGIN
       a3[count] := a1[i];
       count := count + 1;
+      n3 := n3 + 1;
     END;
     found := False;
   END;
 
+  (*schreibt alle unterschiedlichen elemente aus a1 und a2 aus a2 geordnet in a3*)
   FOR i := 0 TO length(a2)-1 DO BEGIN
     FOR i2 := 0 TO length(a1)-1 DO BEGIN
       IF a1[i2] = a2[i] THEN
@@ -49,6 +55,7 @@ BEGIN
             a3[i4] := a3[i4-1];
 
           a3[i3] := a2[i];  
+          n3 := n3 + 1;
           break;        
         END;
     found := false;
@@ -78,7 +85,7 @@ Merge(a1,a2,a3,n3);
 printArray(a1);
 printArray(a2);
 printArray(a3);
-WriteLn();
+WriteLn('n3: ',n3,#13#10);
 
 clearArray(a3);
 
@@ -99,4 +106,5 @@ Merge(a1,a2,a3,n3);
 printArray(a1);
 printArray(a2);
 printArray(a3);
+WriteLn('n3: ',n3,#13#10);
 END.
