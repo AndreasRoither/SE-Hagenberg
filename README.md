@@ -20,13 +20,13 @@ Nothing
 
 A step by step series of examples that tell you have to get a development env running
 
-Schritt 1:
+Step 1:
 
 ```
 Install FPC Compiler
 ```
 
-Schritt 2:
+Step 2:
 
 ```
 Install Texteditor
