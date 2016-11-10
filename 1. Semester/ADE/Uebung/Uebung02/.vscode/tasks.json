@@ -1,0 +1,19 @@
+{
+        "version": "0.1.0",
+        "windows": {
+            "command": "C:\\FPC2\\3.0.0\\bin\\i386-win32\\fpc.exe"
+        },
+        "isShellCommand": true,
+        "showOutput": "always",
+        "args": ["C:\\pascal\\quadratwurzel.pas"],
+        "problemMatcher": {
+            "owner": "external",
+            "pattern": {
+                "regexp": "^([\\w]+\\.p)\\((\\d+)\\,(\\d+)\\)\\s(Fatal|Error|Warning|Note):(.*)",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "message": 5
+            }
+        }
+    }

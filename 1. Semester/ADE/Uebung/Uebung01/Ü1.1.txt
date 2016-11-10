@@ -1,0 +1,27 @@
+Spannweite()
+begin  
+    Read(↑value)
+
+    if value > 0 then
+        min := value
+        max := value
+        repeat
+            Read(↑value)
+            if value > 0 then
+                if value > max then
+                    max := value
+                else value < min then
+                    min := value
+                end
+            end
+        until value = 0
+        
+        if max = min then
+            Write(↓'Spannweite: 0')
+        else
+            spanwidth := max - min
+            Write(↓'Spannweite: ', ↓spanwidth)
+    else
+        Write(↓'Spannweite: 0')
+    end
+end

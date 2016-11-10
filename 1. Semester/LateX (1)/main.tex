@@ -1,0 +1,104 @@
+%für Sprache, A4 Blatt, float, Grafiken, UTF Codierung, PDF, Color, Seitenabstand, Listings
+\documentclass[a4papr,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{booktabs}
+
+%Mathematics
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+%include this before fancy or page style gets messed up bc of geometry
+\include{settings}
+
+%Für Kopfzeile den Style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{1. Semester - Software Engineering}
+\rhead{Andreas Roither, \today{}}
+
+\begin{document}
+
+%ANGABE 
+%\thispagestyle{plain}
+%\includepdf[pages={1},pagecommand={     
+%\begin{tikzpicture}[remember picture, overlay]\node at (15.8, -1.35) {4 h};\end{tikzpicture}
+%\begin{tikzpicture}[remember picture, overlay]\node at (7.6, -1.35) {Andreas Roither};\end{tikzpicture}
+%\begin{Huge}
+%\begin{tikzpicture}[remember picture, overlay]\node at (-1, -1.9) {X};\end{tikzpicture}
+%\end{Huge}
+%}]{Angabe/Uebung03.pdf}
+%\includepdf[pages=2-,pagecommand={}]{testpdf}
+
+% Makros fuer wahr/falsch in der Wahrheitstabelle:
+\newcommand{\wahr}{\text{w}}
+\newcommand{\falsch}{\text{f}}
+% kann leicht geändert werden auf andere Darstellung, etwa mit 0 und 1:
+%\newcommand{\wahr}{1}
+%\newcommand{\falsch}{0}
+
+\title{1. Semester - Software Engineering}
+\author{Andreas Roither}
+\date{bla{}, Hagenberg}
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+
+%LGI Übung%
+
+\includepdf[offset=-10 -45,pages=1,pagecommand={\section{LGI Übung} \subsection{Übung 1}}]{Angabe/LGI_Uebung01.pdf}
+\includepdf[pages=2-,offset=-10 -45,pagecommand={}]{Angabe/LGI_Uebung01.pdf}
+\input{./LGI/LGI_Uebung01}
+
+
+\includepdf[offset=-10 -25,pages=1,pagecommand={\subsection{Übung 2}}]{Angabe/LGI_Uebung02.pdf}
+\includepdf[pages=2-,offset=-10 -25,pagecommand={}]{Angabe/LGI_Uebung02.pdf}
+\input{./LGI/LGI_Uebung02}
+
+
+
+\includepdf[offset=-10 -25,pages=1,pagecommand={\subsection{Übung 3}}]{Angabe/LGI_Uebung03.pdf}
+\includepdf[pages=2-,offset=-10 -25,pagecommand={}]{Angabe/LGI_Uebung03.pdf}
+\input{./LGI/LGI_Uebung03}
+
+\includepdf[offset=-10 -25,pages=1,pagecommand={\subsection{Übung 4}}]{Angabe/LGI_Uebung04.pdf}
+\input{./LGI/LGI_Uebung04}
+
+%EIR Übung%
+
+\includepdf[offset=-10 -45,pages=1,pagecommand={\section{EIR Übung} \subsection{Übung 1}}]{Angabe/LGI_Uebung01.pdf}
+\includepdf[pages=2-,offset=-10 -45,pagecommand={}]{Angabe/LGI_Uebung01.pdf}
+\input{./LGI/LGI_Uebung01}
+
+\includepdf[offset=-10 -25,pages=1,pagecommand={\subsection{Übung 2}}]{Angabe/LGI_Uebung02.pdf}
+\includepdf[pages=2-,offset=-10 -25,pagecommand={}]{Angabe/LGI_Uebung02.pdf}
+\input{./LGI/LGI_Uebung02}
+
+\includepdf[offset=-10 -25,pages=1,pagecommand={\subsection{Übung 3}}]{Angabe/LGI_Uebung03.pdf}
+\includepdf[pages=2-,offset=-10 -25,pagecommand={}]{Angabe/LGI_Uebung03.pdf}
+\input{./LGI/LGI_Uebung03}
+
+
+
+\end{document}
+
+
+
+
+

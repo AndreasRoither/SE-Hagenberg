@@ -1,0 +1,94 @@
+%für Sprache, A4 Blatt, float, Grafiken, UTF Codierung, PDF, Color, Seitenabstand, Listings
+\documentclass[a4papr,15pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+
+%Mathematics
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+%Für Kopfzeile den Style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{ADE - Übung 2}
+\rhead{Andreas Roither, \today{}}
+
+\include{settings}
+
+\begin{document}
+
+%ANGABE 
+\thispagestyle{plain}
+\includepdf[pagecommand={     
+\begin{tikzpicture}[remember picture, overlay]\node at (15.8, -1.35) {3 h};\end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]\node at (7.6, -1.35) {Andreas Roither};\end{tikzpicture}
+}]{Angabe/Uebung02.pdf}
+%\includepdf[pages=2-]{Angabe/Uebung 2.pdf}
+
+\section*{Übung 2}
+\subsection*{Aufgabe 1}
+
+\lstinputlisting[language=Pascal] {../spannweite.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.653]{./pictures/spannweite.png}
+	\caption{Testfälle Spannweitenberechnung}
+	\label{fig: Spannweiten Berechnung}
+\end{figure}
+
+\section*{Testfälle}
+Bei der Spannweitenberechnung wurden 4 mögliche Testfälle ausprobiert.
+Die Reihenfolge der Zahlen, negative Zahlen und Nulleingaben wurden berücksichtigt und getestet.
+\newpage
+
+\subsection*{Aufgabe 2}
+
+\lstinputlisting[language=Pascal] {../sortieren.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.653]{./pictures/sortieren.png}
+	\caption{Testfälle Sortieralgorithmus}
+	\label{fig: Sortieralgorithmus}
+\end{figure}
+
+\section*{Testfälle}
+Für den Sortieralgorithmus wurde die Reihenfolge der Zahlen, negative Zahlen, und Nulleingabe getestet.
+
+\newpage
+
+\subsection*{Aufgabe 3}
+\subsubsection*{Lösungsidee}
+Bei der Quadratwurzelberechnung soll mithilfe einer Reellen Zahl und einer Fehlerschranke die Quadratische Wurzel der Reellen Zahl berechnet werden. Dazu muss die Richtigkeit der Eingabe überprüft werden und entsprechende Fehlermeldungen ausgegeben werden. Nach der Überprüfung der Eingabe soll mithilfe der Newtonsche Iterationsformel eine Näherung für $y \approx \sqrt{x}$ berechnet werden. Mithilfe der Formel $ y1 = \frac{1}{2}(y0 + \frac{x}{y_{0}})$ und einer Repeat Until Schleife die nach 50 Iterationen abbricht wird eine Näherung für die Eingabe berechnet.
+
+\lstinputlisting[language=Pascal] {../quadratwurzel.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{./pictures/quadratwurzel.png}
+	\caption{Testfälle Quadratwurzelberechnung}
+	\label{fig: label}
+\end{figure}
+
+\section*{Testfälle}
+Bei der Quadratwurzelberechnung wurde auf verschiedene Fehlerquellen getestet.
+Der erste Testfall dient zur generellen Überprüfung der Berechnung, der zweite Testfall dient zur Überprüfung der Eingabe. Der dritte Testfall soll zeigen das nach 50 Iterationen abgebrochen wird.
+
+\newpage
+\end{document}
+
+
+
+
+
