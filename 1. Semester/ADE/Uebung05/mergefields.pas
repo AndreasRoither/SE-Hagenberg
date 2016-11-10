@@ -68,6 +68,7 @@ var a3 : ARRAY [1 .. (length(a1) + length(a2))] OF INTEGER;
 var n3 : INTEGER;
 
 BEGIN
+WriteLn('-- mergefields --');
 a1[1] := 1;
 a1[2] := 2;
 a1[3] := 3;

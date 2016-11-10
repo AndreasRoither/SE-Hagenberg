@@ -93,14 +93,14 @@ END;
 
 VAR dictionary : Phonebook;
 BEGIN
+  WriteLn('-- mergefields --');
   AddEntry('Test1','Test01',1,dictionary);
   AddEntry('Test2','Test02',2,dictionary);
   AddEntry('Test3','Test03',3,dictionary);
   AddEntry('Test4','Test04',4,dictionary);
   AddEntry('Test5','Test05',5,dictionary);
   
-  PrintDictionary(dictionary);
-  WriteLn('Laenge: ',NrofEntries(dictionary),#13#10);
+  WriteLn('Laenge: ',NrofEntries(dictionary));
   
   DeleteEntry('Test6','Test06',dictionary);
   
@@ -113,5 +113,4 @@ BEGIN
   
   SearchNumber('Test7','Test7',dictionary);
   SearchNumber('Test7','Test07',dictionary);
-
 END.

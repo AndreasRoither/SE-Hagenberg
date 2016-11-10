@@ -1,0 +1,33 @@
+\section*{Übung 5}
+\subsection*{Aufgabe 1}
+\subsubsection*{Lösungsidee}
+
+\lstinputlisting[language=Pascal] {../phonedictionary.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{./pictures/phonedictionary.png}
+	\caption{Testfälle Basis 2 bis 36}
+	\label{fig: Spannweiten Berechnung}
+\end{figure}
+
+\section*{Testfälle}
+
+
+\newpage
+
+\subsection*{Aufgabe 2}
+\subsubsection*{Lösungsidee}
+
+
+\lstinputlisting[language=Pascal] {../mergefields.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{./pictures/mergefields.png}
+	\caption{Testfälle Balkendiagramm}
+	\label{fig: Sortieralgorithmus}
+\end{figure}
+
+\section*{Testfälle}
+
+
+\newpage
