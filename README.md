@@ -38,13 +38,13 @@ Install Texteditor
 Compile your code with the FPC compiler
 
 ```
-fpc.exe sort.pas
+fpc.exe yourfile.pas
 ```
 
 Run it in a console window
 
 ```
-sort.exe
+yourfile.exe
 ```
 
 ## Built With
