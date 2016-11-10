@@ -1,6 +1,5 @@
 program mergefields;
 
-(*Schreibt die Werte eines Array in di Konsole*)
 procedure printArray(a : ARRAY OF INTEGER);
 var i : INTEGER;
 begin
@@ -9,7 +8,6 @@ begin
   WriteLn();
 end;
 
-(*Setzt Werte eines Arrays auf 0*)
 procedure clearArray(var a : ARRAY OF INTEGER);
 var i : INTEGER;
 begin
@@ -17,16 +15,13 @@ begin
     a[i] := 0;
 end;
 
-(*schreibt aus zwei Arrays die unterschiedlichen Zahlen in ein drittes Array*)
 PROCEDURE Merge(a1, a2: ARRAY OF INTEGER; VAR a3: ARRAY OF INTEGER; VAR n3: INTEGER); 
 var i,i2,i3,i4,count : INTEGER;
 var found : Boolean;
 BEGIN
   count := 0;
   found := False;
-  n3 := 0;
 
-  (*dieser Block schreibt alle unterschiedlichen Zahlen von array 1 in das dritte Array*)
   FOR i := 0 TO length(a1)-1 DO BEGIN
     FOR i2 := 0 TO length(a2)-1 DO BEGIN
       IF a2[i2] = a1[i] THEN 
@@ -36,12 +31,10 @@ BEGIN
     BEGIN
       a3[count] := a1[i];
       count := count + 1;
-      n3 := n3 + 1;
     END;
     found := False;
   END;
 
-  (*dieser Block schreibt die unterschieldlichen Zahlen von array 2 nach größe sortiert in das dritte Array*)
   FOR i := 0 TO length(a2)-1 DO BEGIN
     FOR i2 := 0 TO length(a1)-1 DO BEGIN
       IF a1[i2] = a2[i] THEN
@@ -56,7 +49,6 @@ BEGIN
             a3[i4] := a3[i4-1];
 
           a3[i3] := a2[i];  
-          n3 := n3 + 1;
           break;        
         END;
     found := false;
@@ -69,7 +61,6 @@ var a3 : ARRAY [1 .. (length(a1) + length(a2))] OF INTEGER;
 var n3 : INTEGER;
 
 BEGIN
-WriteLn('-- mergefields --');
 a1[1] := 1;
 a1[2] := 2;
 a1[3] := 3;
@@ -87,7 +78,7 @@ Merge(a1,a2,a3,n3);
 printArray(a1);
 printArray(a2);
 printArray(a3);
-WriteLn('n3: ',n3,#13#10);
+WriteLn();
 
 clearArray(a3);
 
@@ -108,5 +99,4 @@ Merge(a1,a2,a3,n3);
 printArray(a1);
 printArray(a2);
 printArray(a3);
-WriteLn('n3: ',n3,#13#10);
 END.
