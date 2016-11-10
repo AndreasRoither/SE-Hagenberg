@@ -94,6 +94,7 @@ END;
 
 VAR dictionary : Phonebook;
 BEGIN
+  WriteLn('-- phonedictionary --');
   AddEntry('Test1','Test01',1,dictionary);
   AddEntry('Test2','Test02',2,dictionary);
   AddEntry('Test3','Test03',3,dictionary);
