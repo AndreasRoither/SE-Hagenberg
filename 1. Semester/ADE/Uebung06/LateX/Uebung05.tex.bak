@@ -1,0 +1,72 @@
+\section*{Übung 5}
+\subsection*{Aufgabe 1}
+\subsubsection*{Lösungsidee}
+Es werden alle Fälle in denen Valid False zurückgeben muss, beachtet.
+
+\lstinputlisting[language=Pascal] {../Ossi.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.85]{./pictures/Ossi.png}
+	\caption{Alle möglichen Kombinationen}
+	\label{fig: Ossi Combinations}
+\end{figure}
+
+\section*{Kombinationen}
+Zeigt alle möglichen Kombinationen.
+
+\newpage
+
+\subsection*{Aufgabe 2}
+\subsubsection*{Lösungsidee}
+Die Funktion wird so umgeschrieben das kein Boolean als Rückgabewert verwendet wird. Stattdessen wird -1 und 1 verwendet. 1 wird semantisch als True angesehen und -1 wird semantisch als False angesehen.
+
+\lstinputlisting[language=Pascal] {../search.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{./pictures/Original withoutdirective.png}
+	\caption{Testfälle Original ohne Directive}
+	\label{fig: Original withoutdirective}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{./pictures/Original withdirective.png}
+	\caption{Testfälle Original mit Directive}
+	\label{fig: Original withdirective}
+\end{figure}
+
+\lstinputlisting[language=Pascal] {../searchwithoutbool.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{./pictures/Altered with directive.png}
+	\caption{Testfälle Suchen mit Directive}
+	\label{fig: Search without Bool}
+\end{figure}
+
+\section*{Testfälle}
+
+
+\newpage
+
+\subsection*{Aufgabe 3}
+\subsubsection*{Lösungsidee}
+Es soll mit Rational Zahlen gerechnet werden. Dazu werden 
+
+\lstinputlisting[language=Pascal] {../rationalcalc.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.85]{./pictures/rationalcalc1.png}
+	\caption{Testfall rationalcalc}
+	\label{fig: rationalcalc1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.85]{./pictures/rationalcalc2.png}
+	\caption{Testfall rationalcalc}
+	\label{fig: rationalcalc2}
+\end{figure}
+
+\section*{Testfall}
+
+\newpage
