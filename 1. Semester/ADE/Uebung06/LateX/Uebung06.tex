@@ -1,4 +1,4 @@
-\section*{Übung 5}
+\section*{Übung 6}
 \subsection*{Aufgabe 1}
 \subsubsection*{Lösungsidee}
 Es werden alle Fälle in denen Valid False zurückgeben muss, beachtet.
@@ -7,12 +7,12 @@ Es werden alle Fälle in denen Valid False zurückgeben muss, beachtet.
 \lstinputlisting[language=Pascal] {../Ossi.pas}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.85]{./pictures/Ossi.png}
+	\includegraphics[scale=0.9]{./pictures/Ossi.png}
 	\caption{Alle möglichen Kombinationen}
 	\label{fig: Ossi Combinations}
 \end{figure}
 
-\section*{Kombinationen}
+\section*{Testfall}
 Zeigt alle möglichen Kombinationen.
 
 \newpage
@@ -25,28 +25,29 @@ Die Funktion wird so umgeschrieben das kein Boolean als Rückgabewert verwendet 
 \lstinputlisting[language=Pascal] {../search.pas}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{./pictures/Original withoutdirective.png}
+	\includegraphics[scale=0.55]{./pictures/Original withoutdirective.png}
 	\caption{Testfälle Original ohne Directive}
 	\label{fig: Original withoutdirective}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{./pictures/Original withdirective.png}
+	\includegraphics[scale=0.55]{./pictures/Original withdirective.png}
 	\caption{Testfälle Original mit Directive}
 	\label{fig: Original withdirective}
 \end{figure}
+\newpage
 
 \lstinputlisting[language=Pascal] {../searchwithoutbool.pas}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{./pictures/Altered with directive.png}
+	\includegraphics[scale=0.55]{./pictures/Altered with directive.png}
 	\caption{Testfälle Suchen mit Directive}
 	\label{fig: Search without Bool}
 \end{figure}
 
 \section*{Testfälle}
-
+Es werden zwei Zahlen gesucht, eine ist vorhanden die andere nicht (1 wenn gefunden, -1 wenn nicht).
 
 \newpage
 
@@ -58,25 +59,25 @@ Es soll mit Rational Zahlen gerechnet werden. Dazu werden 4 verschieden Procedur
 \lstinputlisting[language=Pascal] {../rationalcalc.pas}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.85]{./pictures/rationalcalc1.png}
+	\includegraphics[scale=0.9]{./pictures/rationalcalc1.png}
 	\caption{Testfall rationalcalc}
 	\label{fig: rationalcalc1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.85]{./pictures/rationalcalc3.png}
+	\includegraphics[scale=0.9]{./pictures/rationalcalc3.png}
 	\caption{Testfall rationalcalc}
 	\label{fig: rationalcalc3}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.85]{./pictures/rationalcalc2.png}
+	\includegraphics[scale=0.9]{./pictures/rationalcalc2.png}
 	\caption{Testfall rationalcalc}
 	\label{fig: rationalcalc2}
 \end{figure}
 
 \section*{Testfälle}
-Die Testfälle zeigen das Rechnen mit zwei verschiedenen Brüchen sowie einer Falsch Eingabe.
+Die Testfälle zeigen das Rechnen mit zwei verschiedenen Brüchen. Der letzte Testfall zeigt das solange eingelesen wird bis gültige Werte eingegeben wurden.
 \newpage
