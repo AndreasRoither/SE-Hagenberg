@@ -348,46 +348,7 @@ FUNCTION Product (a, b: BigIntPtr) : BigIntPtr; (*compute product = a * b*)
 var result : BigIntPtr;
 
 BEGIN
-  result := NIL;
 
-  IF (a^.val = 0) OR (b^.val = 0) THEN 
-  BEGIN
-    Append(result, 1);
-    Append(result, 0);
-  END
-  ELSE
-  BEGIN 
-
-    IF (sign_a = 1) AND (sign_b = 1) THEN Append(result,1)
-    ELSE IF (sign_a = -1) AND (sign_b = -1) THEN Append(result,1)
-    ELSE
-      Append(result,-1);
-    
-    REPEAT
-      IF a^.next <> NIL THEN a := a^.next ELSE a^.val := 0;
-      IF b^.next <> NIL THEN b := b^.next ELSE b^.val := 0;
-
-      IF ((sign_a = 1) AND (sign_b = 1)) OR ((sign_a = -1) AND (sign_b = -1)) THEN temp := a^.val + b^.val + overflow
-      ELSE
-        IF ishigher = 1 THEN temp := a^.val - b^.val + overflow ELSE temp := b^.val - a^.val + overflow;    
-
-      IF temp >= 1000 THEN
-      BEGIN
-        overflow := 1;
-        temp := temp - 1000;
-      END
-      ELSE IF temp < 0 THEN
-        overflow := -1
-      ELSE
-        overflow := 0;  
-
-      Append(result,temp);
-
-    UNTIL (a^.next = NIL) AND (b^.next = NIL);
-  END;
-  
-  Sum := result;
-END;
 END;
 
 (*=== main program, for test purposes ===*)
