@@ -252,7 +252,6 @@ FUNCTION ANZ_Nodes(a : BigIntPtr): INTEGER;
 VAR count : INTEGER;
 BEGIN
   count := 1;
-  a := a^.next;
   
   WHILE a^.next <> NIL DO
   BEGIN
@@ -263,8 +262,29 @@ BEGIN
   ANZ_Nodes := count;
 END;
 
+FUNCTION HigherBigInt (a, b: BigIntPtr) : INTEGER;
+VAR temp_a, temp_b : BigIntPtr;
+BEGIN
+  temp_a := CopyOfBigInt(a);
+  temp_b := CopyOfBigInt(b);
+  InvertBigInt(temp_a);
+  InvertBigInt(temp_b);
+
+  WHILE (temp_a^.val = temp_b^.val) AND (temp_a^.next <> NIL) AND (temp_b^.next <> NIL) DO
+  BEGIN
+    temp_a := temp_a^.next;
+    temp_b := temp_b^.next;
+  END;    
+
+  IF (temp_a^.next = NIL) AND (temp_b^.next = NIL) THEN HigherBigInt := 0
+  ELSE IF (temp_a^.next <> NIL) AND (temp_b^.next = NIL) THEN HigherBigInt := 1
+  ELSE IF (temp_a^.next  = NIL) AND (temp_b^.next <> NIL) THEN HigherBigInt := 2
+  ELSE IF temp_a^.val > temp_b^.val THEN HigherBigInt := 1 
+  ELSE HigherBigInt := 2;
+END;
+
 FUNCTION Sum (a, b: BigIntPtr) : BigIntPtr;  (*compute sum = a + b*)
-VAR result, temp_a, temp_b : BigIntPtr;
+VAR result : BigIntPtr;
 VAR sign_a, sign_b, overflow, temp, anz_a, anz_b, ishigher : Integer;
 
 BEGIN
@@ -275,32 +295,15 @@ BEGIN
   BEGIN 
     result := NIL;
     overflow := 0;
+    ishigher := 0;
     sign_a := Sign(a);
     sign_b := Sign(b);
     anz_a := ANZ_Nodes(a);
     anz_b := ANZ_Nodes(b);
 
-    IF anz_a = anz_b THEN
-    BEGIN
-      temp_a := CopyOfBigInt(a);
-      temp_b := CopyOfBigInt(b);
-      InvertBigInt(temp_a);
-      InvertBigInt(temp_b);
-
-      WHILE (temp_a^.val = temp_b^.val) AND (temp_a^.next <> NIL) AND (temp_b^.next <> NIL) DO
-      BEGIN
-        temp_a := temp_a^.next;
-        temp_b := temp_b^.next;
-      END;
-      
-      IF (temp_a^.next = NIL) AND (temp_b^.next = NIL) THEN
-        ishigher := 0
-      ELSE IF temp_a^.val > temp_b^.val THEN ishigher := 1 
-      ELSE IF temp_a^.val < temp_b^.val THEN ishigher := 2
-
-    END
-    ELSE IF anz_a > anz_b THEN ishigher := 1
-    ELSE ishigher := 2;
+    IF anz_a > anz_b THEN ishigher := 1
+    ELSE IF anz_b > anz_a THEN ishigher := 2
+    ELSE ishigher := HigherBigInt(a,b);   
     
     IF (sign_a = 1) AND (sign_b = 1) THEN Append(result,1)
     ELSE IF (sign_a = -1) AND (sign_b = -1) THEN Append(result,-1)
@@ -309,7 +312,10 @@ BEGIN
     ELSE
       IF ishigher = 1 THEN Append(result,1) ELSE Append(result,-1);
     
-    IF ishigher = 0 THEN
+    WriteLn('a b pos/neg and ishigher ',a^.val,' ',b^.val,' ',ishigher);
+    WriteLn('result pos/neg ',result^.val);
+
+    IF (ishigher = 0) AND (sign_a <> sign_b) THEN
     BEGIN
       result^.val := 1;
       Append(result,0);
@@ -317,27 +323,51 @@ BEGIN
     ELSE
     BEGIN
       REPEAT
-
         IF a^.next <> NIL THEN a := a^.next ELSE a^.val := 0;
         IF b^.next <> NIL THEN b := b^.next ELSE b^.val := 0;
 
-        IF ((sign_a = 1) AND (sign_b = 1)) OR ((sign_a = -1) AND (sign_b = -1)) THEN temp := a^.val + b^.val + overflow
+        IF ((sign_a = 1) AND (sign_b = 1)) OR ((sign_a = -1) AND (sign_b = -1)) THEN 
+        BEGIN
+          temp := a^.val + b^.val + overflow;
+          overflow := 0;
+        END
         ELSE
-          IF ishigher = 1 THEN temp := a^.val - b^.val + overflow ELSE temp := b^.val - a^.val + overflow;    
+        BEGIN
+          IF ishigher = 1 THEN
+          BEGIN
+            IF a^.val >= b^.val THEN 
+            BEGIN
+              temp := a^.val - b^.val + overflow;
+              overflow := 0;  
+            END
+            ELSE BEGIN
+              temp := (1000 + a^.val) - b^.val + overflow;
+              overflow := -1;
+            END;
+          END
+          ELSE
+          BEGIN
+            IF b^.val >= a^.val THEN 
+            BEGIN
+              temp := b^.val - a^.val + overflow;
+              overflow := 0;  
+            END
+            ELSE BEGIN
+              temp := (1000 + b^.val) - a^.val + overflow;
+              overflow := -1;
+            END;
+          END;
+        END;  
 
         IF temp >= 1000 THEN
         BEGIN
           overflow := 1;
           temp := temp - 1000;
-        END
-        ELSE IF temp < 0 THEN
-          overflow := -1
-        ELSE
-          overflow := 0;  
+        END;
 
-        Append(result,temp);
+        IF (temp = 0) AND ((a^.next = NIL) AND (b^.next = NIL)) THEN ELSE Append(result,temp);
 
-      UNTIL (a^.next = NIL) AND (b^.next = NIL);
+      UNTIL ((a^.val = 0) AND (b^.val = 0)) AND ((a^.next = NIL) AND (b^.next = NIL));
     END;
   END;
   
@@ -377,7 +407,7 @@ BEGIN (*BigInts*)
   WriteBigInt(bi2);
   WriteLn;
   
-  Write('Sum: ');
+  WriteLn('Sum: ');
   sumbi := Sum(bi,bi2);
   WriteBigInt(sumbi);
   WriteLN;
