@@ -351,10 +351,12 @@ BEGIN
             BEGIN
               temp := b^.val - a^.val + overflow;
               overflow := 0;  
+              WriteLn('First');
             END
             ELSE BEGIN
               temp := (1000 + b^.val) - a^.val + overflow;
               overflow := -1;
+              WriteLn('second ');
             END;
           END;
         END;  
@@ -363,8 +365,14 @@ BEGIN
         BEGIN
           overflow := 1;
           temp := temp - 1000;
+        END
+        ELSE IF temp < 0 then
+        BEGIN
+          temp := 1000 + temp;
+          overflow := - 1;
         END;
 
+        WriteLn('temp: ', temp);
         IF (temp = 0) AND ((a^.next = NIL) AND (b^.next = NIL)) THEN ELSE Append(result,temp);
 
       UNTIL ((a^.val = 0) AND (b^.val = 0)) AND ((a^.next = NIL) AND (b^.next = NIL));
