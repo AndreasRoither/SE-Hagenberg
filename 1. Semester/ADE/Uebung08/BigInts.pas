@@ -8,7 +8,8 @@ PROGRAM BigInts;
 
 (*$IFDEF WINDOWS, for Borland Pascal only*)
   USES
-    WinCrt;
+    WinCrt,
+    Math;
 (*$ENDIF*)
 
 (*$DEFINE SIGNED*)   (*when defined: first digit is sign +1 or -1*)
@@ -378,9 +379,51 @@ END;
 
 FUNCTION Product (a, b: BigIntPtr) : BigIntPtr; (*compute product = a * b*)
 var result : BigIntPtr;
+VAR i, sum_a, sum_b, sum_ab : Int64;
 
 BEGIN
+  result := NIL;
 
+  IF Sign(a) <> Sign(b) then
+    Append(result, -1)
+  ELSE
+    Append(result, 1);
+  
+  sum_a := 0;
+  sum_b := 0;
+  i := 0;
+
+  a := a^.next;
+  b := b^.next;
+
+  WHILE a <> NIL DO 
+  BEGIN
+    sum_a := sum_a + (a^.val * (base ** i));
+    a := a^.next;
+    i := i + 1;
+  END;
+
+  i := 0;
+
+  WHILE b <> NIL DO 
+  BEGIN 
+    sum_b := sum_b + (b^.val * (base ** i));
+    b := b^.next;
+    i := i + 1;
+  END;
+
+  sum_ab := sum_a * sum_b;
+  WriteLn(sum_ab);
+  
+  WHILE sum_ab <> 0 DO 
+  BEGIN 
+    Append(result, (sum_ab MOD base));
+    WriteBigInt(result);
+    sum_ab := sum_ab DIV base;
+  END;
+
+  Product := result;
+    
 END;
 
 (*=== main program, for test purposes ===*)
@@ -389,6 +432,7 @@ END;
     bi : BigIntPtr;
     bi2: BigIntPtr;
     sumbi : BigIntPtr;
+    probi : BigIntPtr;
 
 BEGIN (*BigInts*)
 
@@ -403,10 +447,14 @@ BEGIN (*BigInts*)
 
   WriteLN;
   
-  WriteLn('Sum: ');
+  Write('Sum : ');
   sumbi := Sum(bi,bi2);
   WriteBigInt(sumbi);
   WriteLN;
+
+  Write('Product : ');
+  probi := Product(bi, bi2);
+  WriteBigInt(probi);
 
 END. (*BigInts*)
 
