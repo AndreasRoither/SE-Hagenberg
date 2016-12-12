@@ -311,9 +311,6 @@ BEGIN
       IF ishigher = 1 THEN Append(result,-1) ELSE Append(result,1)
     ELSE
       IF ishigher = 1 THEN Append(result,1) ELSE Append(result,-1);
-    
-    WriteLn('a b pos/neg and ishigher ',a^.val,' ',b^.val,' ',ishigher);
-    WriteLn('result pos/neg ',result^.val);
 
     IF (ishigher = 0) AND (sign_a <> sign_b) THEN
     BEGIN
@@ -351,12 +348,10 @@ BEGIN
             BEGIN
               temp := b^.val - a^.val + overflow;
               overflow := 0;  
-              WriteLn('First');
             END
             ELSE BEGIN
               temp := (1000 + b^.val) - a^.val + overflow;
               overflow := -1;
-              WriteLn('second ');
             END;
           END;
         END;  
@@ -372,7 +367,6 @@ BEGIN
           overflow := - 1;
         END;
 
-        WriteLn('temp: ', temp);
         IF (temp = 0) AND ((a^.next = NIL) AND (b^.next = NIL)) THEN ELSE Append(result,temp);
 
       UNTIL ((a^.val = 0) AND (b^.val = 0)) AND ((a^.next = NIL) AND (b^.next = NIL));
