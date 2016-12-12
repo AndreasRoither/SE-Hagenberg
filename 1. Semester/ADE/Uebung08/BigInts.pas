@@ -377,60 +377,57 @@ BEGIN
   Sum := result;
 END;
 
-FUNCTION Product (a, b: BigIntPtr) : BigIntPtr; (*compute product = a * b*)
-var result : BigIntPtr;
-VAR i, sum_a, sum_b, sum_ab : Int64;
+(* Product of two Big Ints *)
+FUNCTION Product(a, b: BigIntPtr): BigIntPtr; (*compute product = a * b*)
+   VAR
+     result : BigIntPtr;
+     sum_a,sum_b,sum_ab : int64;
+     i : INTEGER;
+ BEGIN
 
-BEGIN
-  result := NIL;
-
-  IF Sign(a) <> Sign(b) then
-    Append(result, -1)
+   IF Sign(a) <> Sign(b) THEN
+    result := NewNode(-1)
   ELSE
-    Append(result, 1);
-  
-  sum_a := 0;
-  sum_b := 0;
-  i := 0;
+    result := NewNode(1);
 
-  a := a^.next;
-  b := b^.next;
+   i := 0;
+   sum_a := 0;
+   sum_b := 0;
 
-  WHILE a <> NIL DO 
-  BEGIN
-    sum_a := sum_a + (a^.val * (base ** i));
-    a := a^.next;
-    i := i + 1;
-  END;
+   a := a^.next;
+   b := b^.next;
 
-  i := 0;
+   WHILE a <> NIL DO BEGIN
+     sum_a := sum_a + (a^.val * (base ** i));
+     a := a^.next;
+     i := i + 1;
+   END;
 
-  WHILE b <> NIL DO 
-  BEGIN 
-    sum_b := sum_b + (b^.val * (base ** i));
-    b := b^.next;
-    i := i + 1;
-  END;
+   i:=0;
 
-  sum_ab := sum_a * sum_b;
-  WriteLn(sum_ab);
-  
+   WHILE b <> NIL DO BEGIN
+     sum_b := sum_b + (b^.val * (base ** i));
+     b := b^.next;
+     i := i + 1;
+   END;
+
+   sum_ab := sum_a * sum_b;
+
   WHILE sum_ab <> 0 DO 
   BEGIN 
     Append(result, (sum_ab MOD base));
-    WriteBigInt(result);
     sum_ab := sum_ab DIV base;
   END;
-
-  Product := result;
-    
-END;
+   Product := result;
+ END;
 
 (*=== main program, for test purposes ===*)
 
   VAR
     bi : BigIntPtr;
     bi2: BigIntPtr;
+    bi_temp : BigIntPtr;
+    bi2_temp : BigIntPtr;
     sumbi : BigIntPtr;
     probi : BigIntPtr;
 
@@ -445,6 +442,9 @@ BEGIN (*BigInts*)
   Write('big int > ');
   ReadBigInt(bi2);
 
+  bi_temp := CopyOfBigInt(bi);;
+  bi2_temp := CopyOfBigInt(bi2);;
+
   WriteLN;
   
   Write('Sum : ');
@@ -453,7 +453,7 @@ BEGIN (*BigInts*)
   WriteLN;
 
   Write('Product : ');
-  probi := Product(bi, bi2);
+  probi := Product(bi_temp, bi2_temp);
   WriteBigInt(probi);
 
 END. (*BigInts*)
