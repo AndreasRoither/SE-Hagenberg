@@ -1,3 +1,7 @@
+(* WLA:                                    HDO, 2016-12-06
+   ---
+   Wish list analyzer for the Christkind.
+==========================================================*)
 PROGRAM WLA;
 
 (*$IFDEF WINDOWS*)
@@ -37,46 +41,57 @@ PROGRAM WLA;
     END; (*RECORD*)
     DelivListPtr = DelivNodePtr;
 
-(* Function to get a new WishNode *)
-FUNCTION NewWishNode(line : STRING): WishListPtr;
-VAR n : WishNodePtr;
+
+(*#########*)
+(*  Wishes *)
+(*#########*)
+
+(* New WishNode Function *)
+FUNCTION newWishNode(line : STRING): WishListPtr;
+VAR node : WishNodePtr;
 BEGIN
-  New(n);
-  n^.next := NIL;
-  n^.name := Copy(line,1,pos(':',line)-1);
-  n^.item := Copy(line,pos(' ',line)+1,length(line));
-  NewWishNode := n;
+  New(node);
+  node^.name := Copy(line,1,pos(':',line)-1);
+  node^.item := Copy(line,pos(' ',line)+1,length(line));
+  node^.next := NIL;
+  newWishNode := node;
 END;
 
-(* Proc to append a WishNode *)
-PROCEDURE AppendWish(VAR list : WishNodePtr; element : WishNodePtr);
-VAR tmp : WishNodePtr;
+(* Append to a Wish List*)
+PROCEDURE appendToWishList(VAR list : WishNodePtr; element : WishNodePtr);
+VAR wishList : WishNodePtr;
 BEGIN
-  IF list = NIL THEN list := element ELSE BEGIN
-    tmp := list;
+  IF list = NIL THEN list := element ELSE 
+  BEGIN
+    wishList := list;
     
-    WHILE (tmp^.next <> NIL) DO
-      tmp := tmp^.next;
+    WHILE (wishList^.next <> NIL) DO
+      wishList := wishList^.next;
       
-    tmp^.next := element; 
+    wishList^.next := element; 
   END;
 END;
 
-(* Proc to print wish lists *)
-PROCEDURE PrintWishList(list : WishNodePtr);
+(* Write Wish List to Console *)
+PROCEDURE writeWishList(wishList : WishNodePtr);
 BEGIN
-    Writeln('##### Wish list: #####');
+    WriteLn(chr(205),chr(205),chr(185),' Wish list: ',chr(204),chr(205),chr(205));  
         
-    WHILE list <> NIL DO BEGIN
-      Writeln(list^.name, ': ' , list^.item);
-      list := list^.next;
+    WHILE wishList <> NIL DO BEGIN
+      Writeln(wishList^.name, ': ' , wishList^.item);
+      wishList := wishList^.next;
     END;
-      
-    Writeln('##### End of Wish list: #####');
+
+    WriteLn(chr(205),chr(205),chr(188),' End Wish list: ',chr(200),chr(205),chr(205));  
+    
 END;
 
-(* Function to get a new order node *)
-FUNCTION NewOrderNode(item : STRING; n : INTEGER): OrderNodePtr;
+(*#########*)
+(*  ORDER  *)
+(*#########*)
+
+(* New Order Node*)
+FUNCTION newOrderNode(item : STRING; n : INTEGER): OrderNodePtr;
 VAR node : OrderNodePtr;
 BEGIN
   New(node);
@@ -86,68 +101,78 @@ BEGIN
   NewOrderNode := node;
 END;
 
-(* Proc to append an order node *)
-PROCEDURE AppendOrder(VAR list : OrderNodePtr; element : OrderNodePtr);
-VAR tmp : OrderNodePtr;
+(* Append to an Order List *)
+PROCEDURE appendToOrder(VAR list : OrderNodePtr; element : OrderNodePtr);
+VAR orderList : OrderNodePtr;
 BEGIN
-  IF list = NIL THEN list := element ELSE BEGIN
-    tmp := list;
+  IF list = NIL THEN list := element ELSE 
+  BEGIN
+    orderList := list;
     
-    WHILE (tmp^.next <> NIL) DO
-      tmp := tmp^.next;
+    WHILE (orderList^.next <> NIL) DO
+      orderList := orderList^.next;
       
-    tmp^.next := element; 
+    orderList^.next := element; 
   END;
 END;
 
-(* Proc to increment the number of items per order *)
-PROCEDURE IncrementOrder(VAR list : OrderNodePtr; item : STRING);
-VAR tmp : OrderNodePtr;
+(* Increase the number of items per order *)
+PROCEDURE increaseOrder(VAR list : OrderNodePtr; item : STRING);
+VAR temp_orderlist : OrderNodePtr;
 BEGIN
-  IF list = NIL THEN AppendOrder(list, NewOrderNode(item, 1)) ELSE BEGIN
-  
-    tmp := list;
-    WHILE(tmp <> NIL) DO BEGIN
-      
-      IF(tmp^.item = item) THEN BEGIN
-        tmp^.n := tmp^.n + 1;
+  IF list = NIL THEN appendToOrder(list, newOrderNode(item, 1)) ELSE 
+  BEGIN
+
+    temp_orderlist := list;
+    WHILE(temp_orderlist <> NIL) DO
+    BEGIN
+    
+      IF(temp_orderlist^.item = item) THEN 
+      BEGIN
+        temp_orderlist^.n := temp_orderlist^.n + 1;
         exit;
       END;
       
-      tmp := tmp^.next;
+      temp_orderlist := temp_orderlist^.next;
     END;
     
-    AppendOrder(list, NewOrderNode(item, 1));
+    appendToOrder(list, newOrderNode(item, 1));
   END;
 END;
 
-(* Function to generate an order list from a wish list *)
-FUNCTION OrderListOf(wlist : WishNodePtr): OrderNodePtr;
+
+(* Generate Order List from Wish List*)
+FUNCTION orderListOf(wishlist : WishNodePtr): OrderNodePtr;
 VAR result : OrderNodePtr;
 BEGIN
   result := NIL;
-  WHILE wlist <> NIL DO BEGIN
-      IncrementOrder(result, wlist^.item);
-      wlist := wlist^.next;
+  WHILE wishlist <> NIL DO BEGIN
+      increaseOrder(result, wishlist^.item);
+      wishlist := wishlist^.next;
   END;
   OrderListOf := result;
 END;
 
-(* Proc to print order lists *)
-PROCEDURE PrintOrderList(list : OrderNodePtr);
+(* Write OrderList to Console *)
+PROCEDURE writeOrderList(list : OrderNodePtr);
 BEGIN
-    Writeln('##### Order list: #####');
+    WriteLn(chr(205),chr(205),chr(185),' Order list: ',chr(204),chr(205),chr(205));  
         
     WHILE list <> NIL DO BEGIN
       Writeln(list^.item, ': ' , list^.n);
       list := list^.next;
     END;
       
-    Writeln('##### End of Order list: #####');
+    WriteLn(chr(205),chr(205),chr(188),' End Order list: ',chr(200),chr(205),chr(205));  
 END;
 
-(* Function to get a new item node *)
-FUNCTION NewItemNode(item : STRING): ItemNodePrt;
+
+(*#########*)
+(*  Items  *)
+(*#########*)
+
+(* New Item Node *)
+FUNCTION newItemNode(item : STRING): ItemNodePrt;
 VAR node : ItemNodePrt;
 BEGIN
   New(node);
@@ -156,8 +181,8 @@ BEGIN
   NewItemNode := node;
 END;
 
-(* Proc to append an item node *)
-PROCEDURE AppendItem(VAR list : ItemNodePrt; element : ItemNodePrt);
+(* Append To Item List *)
+PROCEDURE appendItem(VAR list : ItemNodePrt; element : ItemNodePrt);
 VAR tmp : ItemNodePrt;
 BEGIN
   IF list = NIL THEN list := element ELSE BEGIN
@@ -170,8 +195,12 @@ BEGIN
   END;
 END;
 
-(* Function to get a new delivery node *)
-FUNCTION NewDelivNode(name,item : STRING): DelivNodePtr;
+(*############*)
+(*  Delivery  *)
+(*############*)
+
+(* Get New DeliveryList *)
+FUNCTION newDelivNode(name,item : STRING): DelivNodePtr;
 VAR node : DelivNodePtr;
 BEGIN
   New(node);
@@ -181,8 +210,8 @@ BEGIN
   NewDelivNode := node;
 END;
 
-(* Proc to append a delivery node *)
-PROCEDURE AppendDelivery(VAR list : DelivNodePtr; element : DelivNodePtr);
+(* Append to a Deliverylist *)
+PROCEDURE appendToDelivery(VAR list : DelivNodePtr; element : DelivNodePtr);
 VAR tmp : DelivNodePtr;
 BEGIN
   IF list = NIL THEN list := element ELSE BEGIN
@@ -195,8 +224,8 @@ BEGIN
   END;
 END;
 
-(* Proc to append an item to the kids item list *)
-PROCEDURE AppendItemForKid(VAR list : DelivNodePtr; name, item : STRING);
+(* Append Item to Kids Item List *)
+PROCEDURE appendItemForKid(VAR list : DelivNodePtr; name, item : STRING);
 VAR tmp : DelivNodePtr;
 BEGIN
   IF list = NIL THEN BEGIN list := NewDelivNode(name, item);  END ELSE BEGIN
@@ -210,11 +239,11 @@ BEGIN
       tmp := tmp^.next;
     END;
     
-    AppendDelivery(list, NewDelivNode(name, item));
+    appendToDelivery(list, NewDelivNode(name, item));
   END;
 END;
 
-(* Function to generate the delivery list based on the wish list *)
+(* Genereate Delivery based on wish list *)
 FUNCTION DeliveryListOf(wlist : WishNodePtr): DelivNodePtr;
 VAR result : DelivNodePtr;
 BEGIN
@@ -226,11 +255,11 @@ BEGIN
   DeliveryListOf := result;
 END;
 
-(* Proc to print delivery lists *)
-PROCEDURE PrintDelivList(list : DelivListPtr);
+(* Write Delivery List *)
+PROCEDURE writeDelivList(list : DelivListPtr);
 VAR citem: ItemNodePrt;
 BEGIN
-  Writeln('##### Delivery list: #####');
+  WriteLn(chr(205),chr(205),chr(185),' Delv list: ',chr(204),chr(205),chr(205));
         
     WHILE list <> NIL DO BEGIN
       Write(list^.name, ': ');
@@ -244,16 +273,15 @@ BEGIN
       list := list^.next;
     END;
       
-    Writeln('##### End of Delivery list: #####');
-    
+    WriteLn(chr(205),chr(205),chr(188),' End Delv list: ',chr(200),chr(205),chr(205)); 
 END;
 
   VAR
     wishesFile: TEXT;
     s: STRING;
-    wishlist : WishNodePtr;
-    olist : OrderNodePtr;
-    dlist : DelivNodePtr;
+    wish_list : WishNodePtr;
+    order_list : OrderNodePtr;
+    delv_list : DelivNodePtr;
 
 BEGIN (*WLA*)
 
@@ -261,23 +289,21 @@ BEGIN (*WLA*)
   Reset(wishesFile);
   REPEAT
     ReadLn(wishesFile, s);
-    
-   (* Generating WishList *)
-   AppendWish(wishlist,NewWishNode(s));
+    appendToWishList(wish_list,newWishNode(s));
     
   UNTIL Eof(wishesFile);
   Close(wishesFile);
-  
-    (* Printing WishList *)
 
-  PrintWishList(wishlist);
+  writeWishList(wish_list);
+  WriteLn;
 
   (* Generating an printing OrderList *)
-  olist := OrderListOf(wishlist);
-  PrintOrderList(olist);
+  order_list := OrderListOf(wish_list);
+  writeOrderList(order_list);
+  WriteLn;
  
   (* Generating an printing DeliveryList *)
-  dlist := DeliveryListOf(wishlist);
-  PrintDelivList(dlist);
+  delv_list := DeliveryListOf(wish_list);
+  writeDelivList(delv_list);
 
-END.
+END. (*WLA*)

@@ -305,7 +305,7 @@ BEGIN
     ELSE IF anz_b > anz_a THEN ishigher := 2
     ELSE ishigher := HigherBigInt(a,b);   
     
-    IF (sign_a = 1) AND (sign_b = 1) THEN Append(result,1)
+    IF ((sign_a = 1) OR (sign_a = 0)) AND ((sign_b = 1) OR (sign_a = 0)) THEN Append(result,1)
     ELSE IF (sign_a = -1) AND (sign_b = -1) THEN Append(result,-1)
     ELSE IF (sign_a = -1) AND (sign_b = 1) THEN 
       IF ishigher = 1 THEN Append(result,-1) ELSE Append(result,1)
@@ -400,14 +400,8 @@ BEGIN (*BigInts*)
   
   Write('big int > ');
   ReadBigInt(bi2);
-  
-  Write('big int 1 = ');
-  WriteBigInt(bi);
+
   WriteLN;
-  
-  Write('big int 2 = ');
-  WriteBigInt(bi2);
-  WriteLn;
   
   WriteLn('Sum: ');
   sumbi := Sum(bi,bi2);
