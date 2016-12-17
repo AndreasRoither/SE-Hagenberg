@@ -1,14 +1,6 @@
-Daniel: 3TB-Festplatte
-Alina: Grafiktablett
-Alex: NewLife
-Daniel: Grafiktablett
-Alina: Milch
 Christoph: Schlitten
 Barbara: Barbie-Puppe
-Barbara: PuppenkÃ¼che
-Markus: Milch
+Barbara: Puppenküche
 Christoph: Matchboxauto
-Barbara: BlockflÃ¶te
+Barbara: Blockflöte
 Susi: Strolchi-Puppe
-Heinz: Witzebuch
-Daniel: BWL-Nachhilfe

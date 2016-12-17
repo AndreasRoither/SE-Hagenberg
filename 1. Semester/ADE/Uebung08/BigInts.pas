@@ -263,6 +263,7 @@ BEGIN
   ANZ_Nodes := count;
 END;
 
+(* Returns 2,1,0 - 2,1 determines which is bigger 0 means they are equal*)
 FUNCTION HigherBigInt (a, b: BigIntPtr) : INTEGER;
 VAR temp_a, temp_b : BigIntPtr;
 BEGIN
@@ -306,6 +307,7 @@ BEGIN
     ELSE IF anz_b > anz_a THEN ishigher := 2
     ELSE ishigher := HigherBigInt(a,b);   
     
+    (* Set the sign of the result *)
     IF ((sign_a = 1) OR (sign_a = 0)) AND ((sign_b = 1) OR (sign_a = 0)) THEN Append(result,1)
     ELSE IF (sign_a = -1) AND (sign_b = -1) THEN Append(result,-1)
     ELSE IF (sign_a = -1) AND (sign_b = 1) THEN 
@@ -384,8 +386,13 @@ FUNCTION Product(a, b: BigIntPtr): BigIntPtr; (*compute product = a * b*)
      sum_a,sum_b,sum_ab : int64;
      i : INTEGER;
  BEGIN
-
-   IF Sign(a) <> Sign(b) THEN
+  
+  IF (a^.val = 0) OR (b^.val = 0) THEN 
+  BEGIN
+    result := NewNode(1);
+    Append(result, 0);
+  END
+  ELSE IF Sign(a) <> Sign(b) THEN
     result := NewNode(-1)
   ELSE
     result := NewNode(1);

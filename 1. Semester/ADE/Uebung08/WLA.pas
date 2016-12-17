@@ -321,7 +321,7 @@ BEGIN (*WLA*)
   writeOrderList(order_list);
   WriteLn;
  
-  (* Generating & Writing DeliverList to Console *)
+  (* Generating & Writing DeliveryList to Console *)
   delv_list := DeliveryListOf(wish_list);
   writeDelivList(delv_list);
 
