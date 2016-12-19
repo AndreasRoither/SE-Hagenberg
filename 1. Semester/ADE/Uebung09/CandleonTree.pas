@@ -18,14 +18,15 @@ BEGIN
     h := h - 1;
     candles := candles + 3**(h);
   END;
-  
+
   Candles_Iterative := candles + 1;
+
 END;
 
 VAR result, result_it : INTEGER;
 BEGIN
-  WriteLn(chr(205),chr(205),chr(185),' Candles on XMas Tree ',chr(204),chr(205),chr(205)); 
-  
+  WriteLn(chr(205),chr(205),chr(185),' Candles on XMas Tree ',chr(204),chr(205),chr(205));   
+
   result := Candles(1);
   result_it := Candles_Iterative(1);
   WriteLn('Candles with height 1: ',result, ' Iterative: ', result_it);
@@ -45,4 +46,8 @@ BEGIN
   result := Candles(5);
   result_it := Candles_Iterative(5);
   WriteLn('Candles with height 5: ',result, ' Iterative: ', result_it);
+
+  result := Candles(6);
+  result_it := Candles_Iterative(6);
+  WriteLn('Candles with height 6: ',result, ' Iterative: ', result_it);
 END.

@@ -1,0 +1,30 @@
+{
+    "version": "0.1.0",
+    "command": "cmd",
+    "args": ["/C"],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "tasks": [
+        {
+            "taskName": "compile",
+            "args": ["C:\\FPC\\3.0.0\\bin\\i386-win32\\fpc.exe", "${file}"],
+            "isBuildCommand": true
+        },
+        {
+            "taskName": "run",
+            "args": ["${workspaceRoot}\\balkendiagramm.exe"],
+            "isTestCommand": true
+        }
+    ],
+    "problemMatcher": {
+            "owner": "external",
+            "pattern": {
+                "regexp": "^([\\w]+\\.p)\\((\\d+)\\,(\\d+)\\)\\s(Fatal|Error|Warning|Note):(.*)",
+                "file": 1,
+                "line": 2,
+                "column": 3,
+                "message": 5
+            }
+        }
+}
