@@ -7,6 +7,16 @@ TYPE
       val: Integer;
     END;
 
+procedure printList(list : nodePtr);
+BEGIN
+  write('list: ');
+  while(list <> nil) do begin
+    write(list^.val);
+    list := list^.next;
+  end;
+  WriteLn;
+END;
+
 function NewNode(val : Integer): nodePtr;
 var node : nodePtr;
 begin
@@ -119,21 +129,20 @@ end;
 procedure insertAft(var list :nodePtr; val :Integer; node : nodePtr);
 var tmp, tmp2 : nodePtr;
 begin
-  tmp2 := list;
+  tmp := list;
   if list = nil then exit else begin
     if list^.val = val then Prepend(list,node) 
     else begin
-      while(list^.next <> nil) do 
+      while(tmp <> nil) do 
       begin
-        if list^.val = val then 
+        if tmp^.val = val then 
         begin
-          tmp := list^.next;
-          list^.next := node;
-          node^.next := tmp;
-          list := tmp2;
+          tmp2 := tmp^.next;
+          tmp^.next := node;
+          node^.next := tmp2;
           exit;
         end;
-        list := list^.next;
+        tmp := tmp^.next;
       end;   
     end;
   end;
@@ -219,33 +228,98 @@ begin
   end;
 end;
 
-procedure printList(list : nodePtr);
-BEGIN
-  write('list: ');
-  while(list <> nil) do begin
-    write(list^.val);
-    list := list^.next;
+procedure bringToFront(var list : nodePtr; val : Integer);
+var temp : nodePtr;
+var temp2 : nodePtr;
+begin
+  temp := list;
+  
+  if temp^.next <> Nil then
+  begin
+    while (temp <> Nil) do
+    begin
+      temp2 := temp;
+      temp := temp^.next;
+
+      if(temp^.val = val) then
+      begin
+        temp2^.next := temp^.next;
+        temp^.next := list;
+        list := temp;
+        break;
+      end;
+    end;
   end;
-  WriteLn;
-END;
+end;
+
+procedure bringToBack(var list : nodePtr; val : Integer);
+var temp, temp2, temp3 : nodePtr;
+begin
+  temp := list;
+  temp3 := Nil;
+
+  if temp^.val = val then
+  begin
+    list := temp^.next;
+    temp2 := list;
+
+    while temp2^.next <> Nil do
+      temp2 := temp2^.next;
+
+    printList(temp);
+    temp2^.next := temp;
+    temp^.next := Nil;
+  end 
+  else 
+  begin
+    while temp^.next <> Nil do
+    begin
+      temp2 := temp;
+      temp := temp^.next;
+
+      if(temp^.val = val) then
+      begin
+        temp2^.next := temp^.next;
+        temp3 := temp;
+        break;
+      end;
+    end;
+    
+    while temp^.next <> Nil do
+    begin
+        temp := temp^.next;
+    end;
+
+    if (temp3 <> Nil) then
+    begin
+      temp3^.next := Nil;
+      temp^.next := temp3;
+    end;
+  end;
+    
+end;
+
 
 var list : nodePtr;
 begin
 Append(list, NewNode(1));
 Append(list, NewNode(1));
 Append(list, NewNode(2));
-Append(list, NewNode(3));
-Append(list, NewNode(3));
 Append(list, NewNode(4));
 Append(list, NewNode(5));
 Append(list, NewNode(5));
 Append(list, NewNode(6));
+Prepend(list, NewNode(3));
 insertBefore(list, 6, NewNode(8));
-insertAft(list,3,NewNode(7));
+insertAft(list,6,NewNode(7));
 insertAfter(list, 1, NewNode(9));
 
 if hasDoubles(list,1) then WriteLn('List has doubles') else WriteLn('List has no doubles');
 
+printList(list);
+bringToFront(list,4);
+printList(list);
+bringToBack(list, 4);
 printList(list);
 deleteSpecificDouble(list, 1);
 printList(list);
@@ -255,5 +329,4 @@ reverseList(list);
 printList(list);
 
 disposeList(list);
-
 end.
