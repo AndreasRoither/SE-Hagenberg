@@ -299,7 +299,6 @@ begin
     
 end;
 
-
 var list : nodePtr;
 begin
 Append(list, NewNode(1));
