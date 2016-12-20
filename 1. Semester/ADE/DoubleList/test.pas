@@ -119,7 +119,7 @@ begin
   Append(l,3);
   Append(l,4);
   Append(l,5);
-  Prepend(l,6);
+  Prepend(l,1);
   Prepend(l,7);
 
   PrintList(l);

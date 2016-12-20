@@ -139,6 +139,86 @@ begin
   end;
 end;
 
+function hasDoubles(list : nodePtr; val : Integer) : Boolean;
+var temp : nodePtr;
+var temp2 : nodePtr;
+begin
+
+  if (list <> Nil) and (list^.next <> Nil) then 
+  begin
+    temp := list;
+    hasDoubles := False;
+    while (temp <> Nil) and (hasDoubles = False) do begin
+      temp2 := temp^.next;
+      while temp2 <> Nil do begin
+        if temp2^.val = val then
+        begin
+          hasDoubles := True;
+          break;
+        end;
+        temp2 := temp2^.next;
+      end;
+      temp := temp^.next;      
+    end;
+  end;
+end;
+
+procedure deleteDoubles(var list : nodePtr);
+var temp : nodePtr;
+var temp2 : nodePtr;
+var temp3 : nodePtr;
+begin
+
+  if (list <> Nil) and (list^.next <> Nil) then 
+  begin
+    temp := list;
+
+    while (temp <> Nil) do begin
+      temp2 := temp^.next;
+      temp3 := temp;
+      while temp2 <> Nil do begin
+        if temp^.val = temp2^.val then
+        begin
+          temp3^.next := temp2^.next;
+          Dispose(temp2);
+          temp2 := temp3;
+        end;
+        temp3 := temp2; 
+        temp2 := temp2^.next;     
+      end;
+      temp := temp^.next;      
+    end;
+  end;
+end;
+
+procedure deleteSpecificDouble(var list : nodePtr; val : Integer);
+var temp : nodePtr;
+var temp2 : nodePtr;
+var temp3 : nodePtr;
+begin
+
+  if (list <> Nil) and (list^.next <> Nil) then 
+  begin
+    temp := list;
+
+    while (temp <> Nil) do begin
+      temp2 := temp^.next;
+      temp3 := temp;
+      while temp2 <> Nil do begin
+        if temp2^.val = val then
+        begin
+          temp3^.next := temp2^.next;
+          Dispose(temp2);
+          temp2 := temp3;
+        end;
+        temp3 := temp2; 
+        temp2 := temp2^.next;     
+      end;
+      temp := temp^.next;      
+    end;
+  end;
+end;
+
 procedure printList(list : nodePtr);
 BEGIN
   write('list: ');
@@ -152,15 +232,24 @@ END;
 var list : nodePtr;
 begin
 Append(list, NewNode(1));
+Append(list, NewNode(1));
 Append(list, NewNode(2));
 Append(list, NewNode(3));
+Append(list, NewNode(3));
 Append(list, NewNode(4));
+Append(list, NewNode(5));
 Append(list, NewNode(5));
 Append(list, NewNode(6));
 insertBefore(list, 6, NewNode(8));
 insertAft(list,3,NewNode(7));
 insertAfter(list, 1, NewNode(9));
 
+if hasDoubles(list,1) then WriteLn('List has doubles') else WriteLn('List has no doubles');
+
+printList(list);
+deleteSpecificDouble(list, 1);
+printList(list);
+deleteDoubles(list);
 printList(list);
 reverseList(list);
 printList(list);
