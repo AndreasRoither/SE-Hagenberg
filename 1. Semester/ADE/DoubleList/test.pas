@@ -3,9 +3,9 @@ program test;
 type 
  nodePtr = ^listElement;
  listElement = record
- val : Integer;
- Prev : nodePtr;
- Next : nodePtr;
+  val : Integer;
+  Prev : nodePtr;
+  Next : nodePtr;
  end;
 
 List = RECORD
