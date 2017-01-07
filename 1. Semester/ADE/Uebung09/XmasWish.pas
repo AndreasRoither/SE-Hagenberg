@@ -14,7 +14,7 @@ TYPE
   wishersNode = RECORD
     next : wishPtr;
     name : STRING;  
-  END;
+  END; (* END RECORD *)
 
   amazonListPtr = ^listElement;
   listElement = RECORD
@@ -23,12 +23,12 @@ TYPE
     item : STRING;
     n : INTEGER;
     wishers : wishPtr;    
-  END;
+  END; (* END RECORD *)
 
   amazonList = RECORD
     first: amazonListPtr;
     last:  amazonListPtr;
-  END;
+  END; (* END RECORD *)
 
 PROCEDURE InitAmazonList(VAR l : amazonList);
 BEGIN
@@ -74,6 +74,9 @@ BEGIN
   newAmazonListNode := temp;
 END;
 
+(* Append to the amazon list *)
+(* if there is no toy in the list a new element will be made *)
+(* if a toy is already in the list, the name of the wisher will be added to the wisher list *)
 PROCEDURE appendToAmazonList(VAR amazon_List : amazonList; toy, wisher : STRING);
 VAR aListPtr, temp : amazonListPtr;
 BEGIN
@@ -108,6 +111,10 @@ BEGIN
     END;
   END;
 END;
+
+(*#######################*)
+(*  Printing to Console  *)
+(*#######################*)
 
 PROCEDURE printWishers(wishers : wishPtr);
 VAR temp : wishPtr;
@@ -154,7 +161,7 @@ BEGIN (*WLA*)
   WriteLn(chr(205),chr(205),chr(185),' Amazon wish list for XMas ',chr(204),chr(205),chr(205));  
   WriteLn;
   
-  (* Read everyline from txt *)
+  (* Read every line from txt *)
   Assign(wishesFile, 'Wishes.txt');
   Reset(wishesFile);
   
