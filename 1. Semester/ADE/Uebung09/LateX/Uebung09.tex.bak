@@ -22,7 +22,7 @@ Bei dieser Aufgabe wird eine doppelt verkettete Liste, die eine einfach verkette
 \lstinputlisting[language=C] {../Wishes.txt}
 
 \section*{Testfälle}
-Eine Liste wird erstellt und ausgegeben. Die Liste wird mithilfe der Wishes.txt erstellt.
+Eine Liste wird erstellt und ausgegeben. Die Liste wird aufgrund der Wishes.txt erstellt.
 Zu sehen ist ein Element der Liste und die Namen der Kinder die sich dasselbe wünschen.
 \newpage
 \subsection*{Aufgabe 2}
@@ -55,7 +55,7 @@ Bei dieser Aufgabe muss wie bei der vorherigen Aufgabe die mathematische Funktio
 	\label{fig: XmasFire}
 \end{figure}
 
-\section*{Testfälle}
+\section*{Testfall}
 Die Testfälle zeigen Anzahl der möglichen Wege für das jeweilige Wort.
 \newpage
 
