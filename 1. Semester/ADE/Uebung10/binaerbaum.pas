@@ -89,6 +89,19 @@ BEGIN
   END;
 END;
 
+PROCEDURE CleanArray(VAR b_array : ARRAY OF Node);
+VAR count : INTEGER;
+BEGIN
+  FOR count := 0 TO High(b_array) DO
+  BEGIN
+    IF b_array[Count] <> NIL THEN 
+    BEGIN
+      b_array[count]^.left := NIL;
+      b_array[count]^.right := NIL;
+    END;
+  END;
+END;
+
 PROCEDURE CountNodes (t: Tree; VAR count : INTEGER);
 BEGIN
   IF t <> NIL THEN
@@ -115,6 +128,15 @@ BEGIN
   END;
 END;
 
+FUNCTION CalculateHalf(i : LONGINT): INTEGER;
+BEGIN
+  
+  IF i/2 = i DIV 2 THEN
+    CalculateHalf := Round(i / 2 )
+  ELSE
+    CalculateHalf := (i DIV 2) + 1;
+END;
+
 PROCEDURE PrintArray(b_array: ARRAY OF Node);
 VAR count : INTEGER;
 BEGIN
@@ -123,15 +145,17 @@ BEGIN
     IF b_array[Count] = NIL THEN 
       Write('NIL ')
     ELSE
-      Write(b_array[count]^.value, ' ');
+      Write(count+1 ,'> ', b_array[count]^.value, ' ');
   END;
   WriteLn;
 END;
 
 PROCEDURE Balance(VAR t: Tree);
 VAR 
-  c : INTEGER;
+  c, length : INTEGER;
+  pos : LONGINT;
   b_array : ARRAY OF Node;
+  t_temp : Tree;
   
 BEGIN
   IF t <> NIL THEN
@@ -141,10 +165,29 @@ BEGIN
     CountNodes(t,c);
     SetLength(b_array, c);
     InitArray(b_array);
+    InitTree(t_temp);
     SaveTreeInOrder(t, b_array);
+    //CleanArray(b_array);
     PrintArray(b_array);
     
-    WriteLn();
+    length := 19;
+    pos := length;
+
+    WHILE pos > 1 DO 
+    BEGIN
+      pos := pos DIV 2;
+      WriteLn(pos);
+      //InsertNode(t_temp, b_array[pos]);
+    END;
+
+    pos := CalculateHalf(length);
+
+    WHILE pos < length DO 
+    BEGIN 
+      pos := pos + CalculateHalf(length - pos);
+      WriteLn(pos);
+      //InsertNode(t_temp, b_array[pos]);
+    END;
     
   END;
 END;
