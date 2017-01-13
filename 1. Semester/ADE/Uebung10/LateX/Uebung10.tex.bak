@@ -1,0 +1,21 @@
+\section*{Übung 10}
+\subsection*{Aufgabe 1}
+\subsubsection*{Lösungsidee}
+Es wird eine Prozedur erstellt, basierend auf der vorgeschlagenen Lösungsidee. Um die Größe des Arrays festlegen zu können wird die Anzahl der Nodes im Baum mithilfe von CountNodes ermittelt. Nachdem das Array initialisiert wurde und alle Nodes des Baumes in das Array eingefügt sind, werden die Mittelpositionen berechnet. Mit den berechneten Werten wird bestimmt welche Elemente des Arrays eingefügt werden. Elemente die bereits in den Baum gespeichert wurden, werden im Array auf NIL gesetzt. Alle fehlenden Elemente werden danach eingefügt.
+\newline
+
+\lstinputlisting[language=Pascal] {../balancedtree.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.65]{./pictures/balancedtree.png}
+	\caption{Testfälle}
+	\label{fig: BalancedTree}
+\end{figure}
+
+\section*{Testfälle}
+Die Testfälle zeigen drei verschiedene Bäume mit unterschiedlicher Länge und Werten. Anhand des dritten Baumes wird ersichtlich das bei 
+\newpage
+
+
+
+

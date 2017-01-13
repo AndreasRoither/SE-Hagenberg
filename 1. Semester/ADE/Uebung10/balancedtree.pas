@@ -1,4 +1,4 @@
-PROGRAM binaerbaum;
+PROGRAM balancedtree;
 
 TYPE
   Node = ^NodeRec;
@@ -31,31 +31,21 @@ BEGIN
   NewNode := n;
 END;
 
-PROCEDURE InsertNode( VAR t: tree; n: Node);
-VAR
-  subtree, parent: Node;
+(* Insert nodes recursive *)
+PROCEDURE InsertRec (VAR t: Tree; n: Node);
 BEGIN
-  IF t = NIL THEN BEGIN
-    t := n;
-  END
-  ELSE BEGIN
-    parent := NIL;
-    subtree := t;
-    WHILE subtree <> NIL DO BEGIN
-      parent := subtree;
-        IF n^.value < subtree^.value THEN BEGIN
-          subtree := subtree^.left;
-        END
-        ELSE (*n^.value >= subtree^.value*)
-          subtree := subtree^.right;
-      END;
-      IF n^.value < parent^.value THEN
-        parent^.left := n
-      ELSE
-        parent^.right := n;
-  END;
+	IF t= NIL THEN BEGIN
+		t := n;
+	END
+	ELSE BEGIN
+	IF n^.value < t^.value THEN
+		InsertRec(t^.left, n)
+	ELSE
+		InsertRec(t^.right, n)
+	END;	
 END;
 
+(* Adds a node to the Array *)
 PROCEDURE AddToArray(VAR arr : ARRAY OF Node; n : Node);
 VAR count : INTEGER;
 BEGIN
@@ -69,16 +59,7 @@ BEGIN
     WriteLn('Array already full!');
 END;
 
-PROCEDURE WriteTreeInOrder (t: Tree);
-BEGIN
-  IF t <> NIL THEN 
-  BEGIN
-    WriteTreeInOrder(t^.left);
-    WriteLn(t^.value);
-    WriteTreeInOrder(t^.right);
-  END;
-END;
-
+(* Adds Nodes to the Array, sorted *)
 PROCEDURE SaveTreeInOrder (t: Tree; VAR b_array : ARRAY OF Node);
 BEGIN
   IF t <> NIL THEN 
@@ -89,6 +70,7 @@ BEGIN
   END;
 END;
 
+(* Sets the left & right pointer of all Elements in the array to NIL *)
 PROCEDURE CleanArray(VAR b_array : ARRAY OF Node);
 VAR count : INTEGER;
 BEGIN
@@ -102,6 +84,7 @@ BEGIN
   END;
 END;
 
+(* Count the nodes in a tree *)
 PROCEDURE CountNodes (t: Tree; VAR count : INTEGER);
 BEGIN
   IF t <> NIL THEN
@@ -112,6 +95,7 @@ BEGIN
   END;
 END;
 
+(* Returns the height of the tree *)
 FUNCTION Height(t: Tree) : INTEGER;
 VAR
   hl, hr: INTEGER;
@@ -119,12 +103,14 @@ BEGIN
   IF t = NIL THEN
     Height := 0
   ELSE BEGIN
+
   hl := Height (t^.left);
   hr := Height (t^.right);
-    IF hl > hr THEN
-      Height := 1 + hl
-    ELSE
-      Height := 1 + hr;
+
+  IF hl > hr THEN
+    Height := 1 + hl
+  ELSE
+    Height := 1 + hr;
   END;
 END;
 
@@ -137,19 +123,22 @@ BEGIN
     CalculateHalf := (i DIV 2) + 1;
 END;
 
+(* write values of the array to the console *)
 PROCEDURE PrintArray(b_array: ARRAY OF Node);
 VAR count : INTEGER;
 BEGIN
+  WriteLn('Array:');
   FOR count := 0 TO High(b_array) DO
   BEGIN
-    IF b_array[Count] = NIL THEN 
+    IF b_array[count] = NIL THEN 
       Write('NIL ')
     ELSE
-      Write(count+1 ,'> ', b_array[count]^.value, ' ');
+      Write(b_array[count]^.value, ' ');
   END;
   WriteLn;
 END;
 
+(* Balance the tree so the height of the tree will be reduced*)
 PROCEDURE Balance(VAR t: Tree);
 VAR 
   c, length : INTEGER;
@@ -160,35 +149,54 @@ VAR
 BEGIN
   IF t <> NIL THEN
   BEGIN
-    c := 0;
+    WriteLn('Balancing....');
 
+    c := 0;
     CountNodes(t,c);
     SetLength(b_array, c);
     InitArray(b_array);
     InitTree(t_temp);
     SaveTreeInOrder(t, b_array);
-    //CleanArray(b_array);
     PrintArray(b_array);
-    
-    length := 19;
+
+    WriteLn('Old height: ', Height(t));
+
+    (* Has to be done after height function because the pointer left & right are  
+       set to NIL in cleanarray (the height after that will be 1) *)
+    CleanArray(b_array);
+
+    length := High(b_array)+1;
     pos := length;
 
-    WHILE pos > 1 DO 
+    WHILE pos > 2 DO 
     BEGIN
-      pos := pos DIV 2;
-      WriteLn(pos);
-      //InsertNode(t_temp, b_array[pos]);
+      pos := CalculateHalf(pos);
+      InsertRec(t_temp, b_array[pos-1]);
+      b_array[pos-1] := NIL;
     END;
 
     pos := CalculateHalf(length);
 
-    WHILE pos < length DO 
+    WHILE pos < length-1 DO 
     BEGIN 
       pos := pos + CalculateHalf(length - pos);
-      WriteLn(pos);
-      //InsertNode(t_temp, b_array[pos]);
+      InsertRec(t_temp, b_array[pos-1]);
+      b_array[pos-1] := NIL;
     END;
-    
+
+    FOR pos := 0 TO High(b_array) DO
+    BEGIN
+      IF b_array[pos] <> NIL THEN 
+      BEGIN
+        InsertRec(t_temp, b_array[pos]);
+        b_array[pos] := NIL;
+      END;
+    END;
+    t := t_temp;
+    b_array := NIL;
+    t_temp := NIL;
+
+    WriteLn('New height: ', Height(t));
   END;
 END;
 
@@ -204,33 +212,62 @@ END;
 
 VAR
   t : Tree;
-  c : INTEGER;
   
 BEGIN
 
   WriteLn(chr(205),chr(205),chr(185),' Binary Tree ',chr(204),chr(205),chr(205)); 
-  c := 0;
   
   InitTree(t);
-  InsertNode(t,NewNode(14));
-  InsertNode(t,NewNode(5));
-  InsertNode(t,NewNode(20));
-  InsertNode(t, NewNode(12));
-  InsertNode(t, NewNode(11));
-  InsertNode(t, NewNode(3));
-  InsertNode(t, NewNode(25));
-
-  WriteLn('-InOrder-');
-  WriteTreeInOrder(t);
-  WriteLn('Height= ', Height(t));
-  
-  WriteLn('-----------------------');
-  CountNodes(t,c);
-  WriteLn('Nodes: ', c);
-  WriteLn('-----------------------');
-  
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(2));
+  InsertRec(t,NewNode(3));
+  InsertRec(t,NewNode(4));
+  InsertRec(t,NewNode(5));
+  InsertRec(t,NewNode(6));
+  InsertRec(t,NewNode(7));
+  InsertRec(t,NewNode(8));
+  InsertRec(t,NewNode(9));
   Balance(t);
   
   DisposeTree(t);
-  WriteLn('-----------------------');
+
+  WriteLn(#13#10, '---- new tree ----', #13#10);
+
+  InitTree(t);
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(2));
+  InsertRec(t,NewNode(3));
+  InsertRec(t,NewNode(4));
+  InsertRec(t,NewNode(5));
+  InsertRec(t,NewNode(6));
+  InsertRec(t,NewNode(7));
+  InsertRec(t,NewNode(8));
+  InsertRec(t,NewNode(9));
+  InsertRec(t,NewNode(10));
+  InsertRec(t,NewNode(11));
+  InsertRec(t,NewNode(12));
+  InsertRec(t,NewNode(13));
+  InsertRec(t,NewNode(14));
+  InsertRec(t,NewNode(15));
+  InsertRec(t,NewNode(16));
+  InsertRec(t,NewNode(17));
+  InsertRec(t,NewNode(18));
+  InsertRec(t,NewNode(19));
+  Balance(t);
+
+  DisposeTree(t);
+
+  WriteLn(#13#10, '---- new tree ----', #13#10);
+  
+  InitTree(t);
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  InsertRec(t,NewNode(1));
+  Balance(t);
 END.
