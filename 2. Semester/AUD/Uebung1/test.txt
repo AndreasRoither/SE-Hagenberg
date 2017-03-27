@@ -1,0 +1,809 @@
+Fachhochschul-Studiengesetz (FHStG) 2011
+
+Inhaltsverzeichnis
+
+1. Abschnitt
+§ 1. Anwendungsbereich
+§ 2. Erhalter
+§ 3. Ziele und leitenden Grundsätze von Fachhochschul-Studiengängen
+§ 4. Studierende
+§ 5. Studierendenvertretung an den Einrichtungen zur Durchführung von Fachhochschul-
+Studiengängen
+§ 6. Akademische Grade
+§ 7. Lehr- und Forschungspersonal
+2. Abschnitt
+§ 8. Akkreditierungsvoraussetzungen
+§ 9. Lehrgänge zur Weiterbildung
+§ 10. Kollegium, Studiengangsleitung
+3. Abschnitt 
+Studienrechtliche Bestimmungen
+§ 11. Aufnahmeverfahren
+§ 12. Anerkennung nachgewiesener Kenntnisse
+§ 13. Allgemeine Prüfungsmodalitäten
+§ 14. Unterbrechung des Studiums
+§ 15. Mündliche Prüfungen
+§ 16. Abschließende Prüfungen in Fachhochschul-Bachelor-, Fachhochschul-Master- und Fachhoch-
+schul-Diplomstudiengängen
+§ 17. Beurteilung von Leistungen
+§ 18. Wiederholung von Prüfungen
+§ 19. Bachelorarbeiten, Diplom- und Masterarbeiten
+§ 20. Ungültigerklärung von Prüfungen und wissenschaftlichen Arbeiten
+§ 21. Rechtsschutz
+§ 22. Bezeichnung "Fachhochschule"
+4. Abschnitt
+§ 23. Berichtswesen
+§ 24. Strafbestimmungen
+§ 25. Vollziehung
+§ 26. Inkrafttreten
+§ 27. Übergangsbestimmungen
+
+ 
+1. ABSCHNITT
+
+Anwendungsbereich
+
+§ 1. Dieses Bundesgesetz regelt die Durchführung von Fachhochschul-Studiengängen und Lehrgän-
+gen zur Weiterbildung sowie die Verleihung der Bezeichnung "Fachhochschule".
+
+Erhalter
+
+§ 2. (1) Erhalter von Fachhochschul-Studiengängen können der Bund und andere juristische Personen 
+des öffentlichen Rechts sein. Juristische Personen des privaten Rechts können Erhalter von Fach-
+hochschul-Studiengängen sein, soweit deren Unternehmensgegenstand überwiegend die Errichtung, 
+Erhaltung und der Betrieb von Fachhochschul-Studiengängen ist.
+§ 2. (2) Die Erhalter sind berechtigt, von ordentlichen Studierenden einen Studienbeitrag in Höhe von 
+höchstens 363,36 Euro je Semester einzuheben. Von Studierenden aus Drittstaaten, die nicht unter 
+die Personengruppe gemäß § 1 der Verordnung des Bundesministers für Wissenschaft und Verkehr 
+über die Festlegung von Personengruppen bei der Zulassung zu ordentlichen Studien (Personengrup-
+penverordnung), BGBl. II Nr. 211/1997, in der Fassung der Verordnung BGBl. II Nr. 15/1998, fallen 
+und die über eine Aufenthaltsberechtigung für Studierende gemäß § 64 Niederlassungs- und Aufent-
+haltsgesetz (NAG), BGBl. I Nr. 100/2005, verfügen, dürfen höchstens kostendeckende Beiträge einge-
+hoben werden. Die betragliche Einschränkung des ersten Satzes gilt nicht für Bildungsaktivitäten von 
+Erhaltern, die ausschließlich in Drittstaaten angeboten und durchgeführt werden.
+§ 2. (3) Die Erhalter haben zur Leistungs- und Qualitätssicherung ein eigenes Qualitätsmanagement-
+system aufzubauen.
+§ 2. (4) Die Einhebung von pauschalierten Kostenbeiträgen für Materialien, Sachmittel und sonstige 
+Serviceleistungen, die den laufenden, regulären Betrieb eines Studienganges betreffen, ist unzulässig. 
+Darüber hinaus gehende, tatsächlich anfallende Kosten sind individuell zwischen Erhalter und Studie-
+renden zu verrechnen.
+§ 2. (5) Die Erhalter haben die Gleichstellung von Frauen und Männern sowie die Frauenförderung zu 
+beachten. Bei der Zusammensetzung der Gremien ist ein ausgewogenes Verhältnis von Frauen und 
+Männern anzustreben. Erhalter in der Form juristischer Personen des privaten Rechts haben das 
+Bundesgesetz über die Gleichbehandlung (Gleichbehandlungsgesetz - GlBG), BGBl. I Nr. 66/2004, zu 
+beachten.
+
+Ziele und leitende Grundsätze von Fachhochschul-Studiengängen
+
+§ 3. (1) Fachhochschulen und Einrichtungen zur Durchführung von Fachhochschul-Studiengängen 
+haben die Aufgabe, Studiengänge auf Hochschulniveau anzubieten, die einer wissenschaftlich fun-
+dierten Berufsausbildung dienen. Die wesentlichen Ziele sind:
+1. die Gewährleistung einer praxisbezogenen Ausbildung auf Hochschulniveau;
+2. die Vermittlung der Fähigkeit, die Aufgaben des jeweiligen Berufsfeldes dem Stand der Wis-
+senschaft und den aktuellen und zukünftigen Anforderungen der Praxis zu lösen;
+3. die Förderung der Durchlässigkeit des Bildungssystems und der beruflichen Flexibilität der 
+Absolventinnen und Absolventen.
+§ 3. (2) Grundsätze für die Gestaltung von Fachhochschul-Studiengängen sind:
+1. Fachhochschul-Studiengänge haben die Vielfalt wissenschaftlicher Lehrmeinungen und wis-
+senschaftlicher Methoden zu beachten; das Prinzip der Freiheit der Lehre bezieht sich auf die 
+Durchführung von Lehrveranstaltungen im Rahmen der zu erfüllenden Lehraufgaben und de-
+ren inhaltliche und methodische Gestaltung unter Berücksichtigung der Absätze 1 und 2.
+2. Der Arbeitsaufwand für Fachhochschul-Bachelorstudiengänge hat 180 ECTS-
+Anrechnungspunkte und für Fachhochschul-Masterstudiengänge 60, 90 oder 120 ECTS-
+Anrechnungspunkte zu betragen. Für die Berechnung der ECTS-Anrechnungspunkte gilt § 51 
+Abs. 2 Z 26 Universitätsgesetz 2002 (UG), BGBl. I Nr. 120/2002, sinngemäß. Für berufsbeglei-
+tende Fachhochschul-Bachelorstudiengänge kann die Zuteilung der ECTS-Anrechnungspunkte 
+auf das Studienjahr auch unterschritten werden. Wird der Zugang zu einem Fachhochschul-
+Studiengang gemäß § 4 Abs. 4 vierter Satz beschränkt, so kann die Anzahl der Anrechnungs-
+punkte um bis zu 60 ECTS-Anrechnungspunkte reduziert werden.
+1. 2a. Fachhochschul-Bachelorstudiengänge dürfen nur in Verbindung mit Fachhochschul-
+Masterstudiengängen oder Fachhochschul-Diplomstudiengängen desselben Erhalters einge-
+richtet werden.
+2. Im Rahmen von Fachhochschul-Bachelorstudiengängen und Fachhochschul-
+Diplomstudiengängen ist den Studierenden ein Berufspraktikum vorzuschreiben, das einen 
+ausbildungsrelevanten Teil des Studiums darstellt. Die Studienzeit wird um die Dauer des Be-
+rufspraktikums nicht verlängert.
+3. Ein Fachhochschulstudium ist so zu gestalten, dass es in der festgelegten Studienzeit abge-
+schlossen werden kann. Dabei ist zu berücksichtigen, dass die Jahresarbeitsleistung einer o-
+der eines Studierenden 1 500 Stunden nicht überschreiten darf.
+4. Die Art und der Umfang der einzelnen Lehrveranstaltungen und Prüfungen sind im Studien-
+plan und in der Prüfungsordnung festzulegen.
+5. Die einen Fachhochschul-Masterstudiengang oder einen Fachhochschul-Diplomstudiengang 
+abschließende Prüfung ist eine Gesamtprüfung, die sich aus der Abfassung einer Master- o-
+der Diplomarbeit und einer kommissionellen Prüfung zusammensetzt. In Fachhochschul-
+Bachelorstudiengängen besteht die Verpflichtung zur Anfertigung von eigenständigen schrift-
+lichen Arbeiten, die im Rahmen von Lehrveranstaltungen abzufassen sind (Bachelorarbeiten); 
+die abschließende Bachelorprüfung besteht aus einer kommissionellen Prüfung.
+6. Die besuchten Lehrveranstaltungen und abgelegten Prüfungen sind dem Studierenden jähr-
+lich, jedenfalls bei seinem Ausscheiden aus dem Fachhochschul-Studiengang, schriftlich zu 
+bestätigen.
+7. Die Lehrveranstaltungen sind ihrer Aufgabenstellung und dem Ausbildungsstand der Studie-
+renden entsprechend didaktisch zu gestalten.
+8. Die Lehrveranstaltungen sind einer Bewertung durch die Studierenden zu unterziehen; die 
+Bewertungsergebnisse dienen der Qualitätssicherung und sind für die pädagogisch-
+didaktische Weiterbildung der Lehrenden heranzuziehen.
+9. Fachhochschul-Studiengänge können auch als gemeinsame Studienprogramme durchgeführt 
+werden. Dies sind ordentliche Studien, die auf Grund von Vereinbarungen zwischen einer 
+oder mehreren österreichischen Universitäten, Erhaltern von Fachhochschul-Studiengängen, 
+Privatuniversitäten oder Pädagogischen Hochschulen sowie ausländischen anerkannten post-
+sekundären Bildungseinrichtungen in der Form eines joint-, double- oder multiple-degree 
+programs durchgeführt werden, wobei in diesen Vereinbarungen festgelegt sein muss, wel-
+che Leistungen die betreffenden Studierenden an den beteiligten Bildungseinrichtungen zu 
+erbringen haben.
+10. Erhalter von Fachhochschul-Studiengängen sind berechtigt, Lehrgänge zur Weiterbildung 
+einzurichten. Diese dürfen auch von mehreren Erhaltern von Fachhochschul-Studiengängen 
+gemeinsam sowie gemeinsam mit anderen anerkannten postsekundären Bildungseinrichtun-
+gen durchgeführt werden. Die beteiligten Bildungseinrichtungen haben eine Vereinbarung 
+über die Durchführung, insbesondere die Zuständigkeiten (Zulassung, Ausstellung von Zeug-
+nissen, Anerkennung von Prüfungen etc.) zu schließen. In dem von den beteiligten Bildungs-
+einrichtungen gleichlautend zu erlassenden Studienplan ist die Zuordnung der Fächer oder 
+Lehrveranstaltungen zu der jeweiligen Bildungseinrichtung ersichtlich zu machen. Gesetzliche 
+Zuständigkeiten bleiben von dieser Bestimmung unberührt. Die Lehrgänge zur Weiterbildung 
+dürfen zur wirtschaftlichen und organisatorischen Unterstützung in Zusammenarbeit mit au-
+ßerhochschulischen Rechtsträgern durchgeführt werden.
+
+Studierende
+
+§ 4. (1) Fachhochschul-Studiengänge sind bei Erfüllung der fachlichen Voraussetzungen, ohne Unter-
+schied der Geburt, des Geschlechts, der Rasse, des Standes, der Klasse und des Bekenntnisses allge-
+mein zugänglich.
+§ 4. (2) Ordentliche Studierende sind die Studierenden, die zu den ordentlichen Studien zugelassen 
+sind. Außerordentliche Studierende sind die Studierenden, die zu den außerordentlichen Studien 
+zugelassen sind.
+§ 4. (3) Ordentliche Studien sind Fachhochschul-Bachelorstudiengänge, Fachhochschul-
+Masterstudiengänge und Fachhochschul-Diplomstudiengänge. Außerordentliche Studien sind Lehr-
+gänge zur Weiterbildung gemäß § 9 sowie der Besuch einzelner Lehrveranstaltungen.
+§ 4. (4) Fachliche Zugangsvoraussetzung zu einem Fachhochschul-Bachelorstudiengang ist die allge-
+meine Universitätsreife oder eine einschlägige berufliche Qualifikation; fachliche Zugangsvorausset-
+zung zu einem Fachhochschul-Masterstudiengang ist ein abgeschlossener facheinschlägiger Fach-
+hochschul-Bachelorstudiengang oder der Abschluss eines gleichwertigen Studiums an einer aner-
+kannten inländischen oder ausländischen postsekundären Bildungseinrichtung. Dies ist eine Bil-
+dungseinrichtung, die Studien im Ausmaß von mindestens sechs Semestern durchführt, bei denen die 
+Zulassung die allgemeine Universitätsreife im Sinne dieses Bundesgesetzes voraussetzt, und die auf 
+Grund der Rechtsvorschriften des Staates, in dem sie ihren Sitz hat, als postsekundäre Bildungsein-
+richtung anerkannt ist. Wenn die Gleichwertigkeit grundsätzlich gegeben ist und nur einzelne Ergän-
+zungen auf die volle Gleichwertigkeit fehlen, ist die Studiengangsleitung berechtigt, die Feststellung 
+der Gleichwertigkeit mit der Auflage von Prüfungen zu verbinden, die während des jeweiligen Mas-
+terstudiums abzulegen sind. Baut das wissenschaftliche und didaktische Konzept eines Fachhoch-
+schul-Studienganges auf Berufserfahrung auf, darf der Zugang zu diesem Fachhochschul-Studiengang 
+auf eine entsprechende Zielgruppe beschränkt werden. Wird für einen Studiengang die Beherrschung 
+einer bestimmten Sprache gefordert, so haben die Studierenden die Kenntnis dieser Sprache nach-
+zuweisen.
+§ 4. (5) Die allgemeine Universitätsreife ist durch eine der folgenden Urkunden nachzuweisen:
+1. österreichisches Reifezeugnis einschließlich eines Zeugnisses über die Berufsreifeprüfung,
+2. für den jeweiligen Fachhochschul-Studiengang in Frage kommendes Studienberechtigungs-
+zeugnis gemäß § 64a UG,
+3. ausländisches Zeugnis, das einem dieser österreichischen Zeugnisse auf Grund einer völker-
+rechtlichen Vereinbarung oder auf Grund einer Nostrifizierung oder auf Grund der Entschei-
+dung der Studiengangsleitung des inländischen Fachhochschul-Studienganges im Einzelfall 
+gleichwertig ist,
+4. Urkunde über den Abschluß eines mindestens dreijährigen Studiums an einer anerkannten 
+inländischen oder ausländischen postsekundären Bildungseinrichtung.
+§ 4. (6) Ist die Gleichwertigkeit ausländischer Zeugnisse im Hinblick auf die Inhalte und die Anforde-
+rungen einer österreichischen Reifeprüfung nicht gegeben, so hat die Studiengangsleitung die Ergän-
+zungsprüfungen vorzuschreiben, die für die Herstellung der Gleichwertigkeit mit einer inländischen 
+Reifeprüfung erforderlich und vor der Zulassung abzulegen sind.
+§ 4. (7) Wenn es das Ausbildungsziel des betreffenden Studienganges erfordert, haben Studienan-
+fängerinnen und Studienanfänger mit einer einschlägigen beruflichen Qualifikation Zusatzprüfungen 
+nachzuweisen. Die Benennung der einschlägigen beruflichen Qualifikationen und die Zusatzprüfun-
+gen werden im Rahmen der Akkreditierung auf Antrag des Erhalters für den beantragten Studiengang 
+oder im Einzelfall, für nicht im Akkreditierungsbescheid geregelte Qualifikationen, von der Studien-
+gangsleitung festgelegt.
+§ 4. (8) Studienanfängerinnen und Studienanfänger mit einschlägiger beruflicher Qualifikation haben 
+die vorgeschriebenen Zusatzprüfungen entweder vor Aufnahme des Studiums abzulegen oder bis zu 
+einem bestimmten Zeitpunkt des Studiums, jedenfalls vor Eintritt in das zweite Studienjahr, nachzu-
+weisen. Im Falle eines Teilzeitstudiums kann eine angemessene Verlängerung dieser Frist vorgesehen 
+werden. Die Zusatzprüfungen und die dafür erforderlichen Qualifikationen können an Einrichtungen 
+der Erwachsenenbildung, die vom Bund als Förderungsempfänger anerkannt sind, an staatlich orga-
+nisierten Lehrgängen, an privaten Werkmeisterschulen mit Öffentlichkeitsrecht, oder an Einrichtun-
+gen, die Fachhochschul-Studiengänge durchführen, abgelegt bzw. erworben werden.
+§ 4. (9) Zur Unterstützung der internationalen Mobilität der Studierenden sowie der Absolventinnen 
+und Absolventen hat die zuständige Bundesministerin oder der zuständige Bundesminister durch 
+Verordnung festzulegen, in welcher Form der Anhang zum Diplom ("Diploma Supplement") gemäß 
+Art. IX.3 des Übereinkommens über die Anerkennung von Qualifikationen im Hochschulbereich in der 
+europäischen Region, BGBl. III Nr. 71/1999, auszustellen ist.
+§ 4. (9) Studierende an Fachhochschul-Studiengängen und Teilnehmerinnen und Teilnehmer an Lehr-
+gängen zur Weiterbildung gehören der Österreichischen Hochschülerinnen- und Hochschülerschaft 
+gemäß Hochschülerinnen- und Hochschülerschaftsgesetz 1998 - HSG 1998, BGBl. I Nr. 22/1999, zu-
+letzt geändert durch das Bundesgesetz BGBl. I Nr. 12/2007, an.
+§ 4. (10) Ordentliche Studierende an Fachhochschul-Studiengängen und außerordentliche Studieren-
+de an Lehrgängen zur Weiterbildung gehören der Österreichischen Hochschülerinnen- und Hoch-
+schülerschaft gemäß Hochschülerinnen- und Hochschülerschaftsgesetz 1998, BGBl. I Nr. 22/1999, an.
+ 
+Studierendenvertretung 
+an den Einrichtungen zur Durchführung von Fachhochschul-Studiengängen
+
+§ 5. (1) Erhalter von Fachhochschul-Studiengängen sind Bildungseinrichtungen im Sinne des § 1 Abs. 
+1 HSG 1998, die §§ 4, 4a Abs. 1 und 11 Abs. 1 HSG 1998 sind sinngemäß auf diese Erhalter anzuwen-
+den. § 20b Abs. 2 und Abs. 3 HSG 1998 sind sinngemäß anzuwenden. Es ist eine Vorsitzendenkonfe-
+renz der Fachhochschul-Studienvertretungen einzurichten, dabei ist § 7a HSG 1998 sinngemäß anzu-
+wenden.
+§ 5. (2) Bei den Erhaltern sind folgende Vertretungseinrichtungen einzurichten:
+1. die Fachhochschul-Studienvertretung,
+2. die Studiengangsvertretungen und
+3. die Jahrgangsvertretungen.
+§ 5. (3) Die Fachhochschul-Studienvertretung hat eine Satzung zu erlassen. In dieser können weitere 
+Vertretungseinrichtungen (zB Referate, Standortvertretung, Gruppenvertretung) eingerichtet wer-
+den. Mitglieder der Fachhochschul-Studienvertretung sind alle Vorsitzenden der Studiengangsvertre-
+tungen. Bei weniger als fünf Studiengängen sind zusätzlich alle Vorsitzenden der Jahrgangsvertretun-
+gen Mitglieder der Fachhochschul-Studienvertretung. Die §§ 7 Abs. 1 Z 4, 13 Abs. 2 und 3, 14 Z 1, Z 5 
+und Z 8, 26 und 30 Abs. 3 HSG 1998 gelten für die Fachhochschul-Studienvertretung.
+§ 17 Abs. 1 HSG 1998 ist auf Studiengangsvertretungen sinngemäß anzuwenden.
+§§ 21 und 22 HSG 1998 sind sinngemäß anzuwenden. Die lehrveranstaltungsbezogene Anwesen-
+heitsvorgabe gilt für Studierendenvertreterinnen und Studierendenvertreter nicht.
+§ 5. (4) Es gelten die Wahlgrundsätze gemäß § 34 Abs. 1 HSG 1998. Bei Jahrgangs- oder Studiegangs-
+vertretungen sind alle Studierenden des Wirkungsbereichs aktiv und passiv wahlberechtigt. §§ 20a 
+Abs. 4 und 7 und 45a HSG 1998 gelten sinngemäß. Für die Durchführung der Wahlen ist der Erhalter 
+beziehungsweise eine von ihm bestimmte Person zuständig. Die Wahlen der Jahrgangs- und Studien-
+gangsvertretungen finden jährlich in den letzten beiden Monaten des Studienjahres statt. Studieren-
+de des ersten Studienjahres wählen innerhalb des ersten Monats ihre Jahrgangsvertretung. Die An-
+zahl der Jahrgangs- und Studiengangsvertreterinnen und Studiengangsvertreter sind in der Satzung 
+festzulegen. Die Jahrgangs- und Studiengangsvertretung wählt aus ihrer Mitte die Vorsitzende oder 
+den Vorsitzenden. Die Fachhochschul-Studienvertretung wählt innerhalb eines Monats nach der 
+Wahl der Studiengangsvertretungen eine Vorsitzende oder einen Vorsitzenden mit vier Stellvertrete-
+rinnen oder Stellvertretern. Passiv wahlberechtigt sind alle Studierenden des jeweiligen Erhalters.
+§ 5. (5) Die Fachhochschul-Studienvertretungen von Erhaltern mit weniger als 1000 Studierenden 
+gehören der Wahlgemeinschaft gemäß § 35a Abs. 4 HSG 1998 an. Die Fachhochschul-
+Studienvertretungen von Erhaltern mit mindestens 1000 Studierenden haben eine Studierendenver-
+treterin oder einen Studierendenvertreter sowie eine Ersatzperson in die Bundesvertretung der Stu-
+dierenden gemäß § 7 Abs. 1 HSG 1998 zu wählen. § 35a Abs. 3 HSG 1998 gilt sinngemäß.
+
+Akademische Grade
+
+§ 6. (1) Nach Abschluss der für den Fachhochschul-Studiengang vorgeschriebenen Studien und Prü-
+fungen wird durch das Kollegium ein akademischer Grad verliehen.
+§ 6. (2) Die akademischen Grade haben für Fachhochschul-Bachelorstudiengänge "Bachelor ...", für 
+Fachhochschul-Masterstudiengänge "Master ..." oder "Diplom-Ingenieurin/Diplom-Ingenieur ...", 
+jeweils mit einem die Fächergruppen kennzeichnenden Zusatz zu lauten. Für Fachhochschul-
+Diplomstudiengänge haben die akademischen Grade "Magistra/Magister ..." oder "Diplom-
+Ingenieurin/Diplom-Ingenieur ...", jeweils mit einem die Fächergruppen kennzeichnenden Zusatz und 
+der Beisetzung "(FH)" zu lauten. Hat ein akademischer Grad die Beisetzung "(FH)", ist die Führung 
+dieses akademischen Grades ohne den Zusatz "(FH)" unzulässig. Die zulässigen akademischen Grade, 
+die Zusatzbezeichnungen sowie die Abkürzung der akademischen Grade werden von der Agentur für 
+Qualitätssicherung und Akkreditierung Austria festgesetzt; dieser Beschluss bedarf der Genehmigung 
+der zuständigen Bundesministerin oder des zuständigen Bundesministers. Für den einzelnen Fach-
+hochschul-Studiengang ist der jeweilige akademische Grad samt Zusatzbezeichnung von der Agentur 
+für Qualitätssicherung und Akkreditierung Austria im Akkreditierungsbescheid festzusetzen.
+§ 6. (3) Zur Unterstützung der internationalen Mobilität der Studierenden ist der Verleihungsurkunde 
+eine englischsprachige Übersetzung anzuschließen, wobei die Benennung des Erhalters und des aus-
+stellenden Organs sowie der akademische Grad selbst samt Zusatzbezeichnung nicht zu übersetzen 
+sind.
+§ 6. (4) Der erfolgreiche Abschluss eines Fachhochschul-Masterstudienganges oder eines Fachhoch-
+schul-Diplomstudienganges berechtigt zu einem facheinschlägigen Doktoratsstudium an einer Uni-
+versität, das im Falle einer im Vergleich mit den facheinschlägigen Master- oder Diplomstudien an 
+den Universitäten kürzeren Regelstudiendauer des Fachhochschul-Masterstudienganges oder des 
+Fachhochschul-Diplomstudienganges um den Differenzzeitraum verlängert wird.
+§ 6. (5) Für die jeweils in Betracht kommenden Doktoratsstudien hat die zuständige Bundesministe-
+rin oder der zuständige Bundesminister eine entsprechende Verordnung zu erlassen. Der im Falle 
+einer Verlängerung gemäß Abs. 4 festzulegende Gesamtumfang der Grundlagenfächer, der fachspezi-
+fischen Ergänzungsfächer und der Vertiefungsfächer hat sich an den fachspezifischen Anforderungen 
+der Dissertation zu orientieren.
+§ 6. (6) Über einen Antrag auf Nostrifizierung eines an einer ausländischen Fachhochschule erworbe-
+nen Grades entscheidet das Kollegium der Einrichtung, an die der Antrag gestellt wird und die den 
+entsprechenden Studiengang durchführt. Das Kollegium hat zu prüfen, ob das ausländische Studium 
+der Antragstellerin oder des Antragstellers hinsichtlich der Anforderungen, des Gesamtumfanges 
+sowie der Studieninhalte so aufgebaut ist, dass es mit dem im Antrag genannten inländischen Fach-
+hochschul-Studiengang als gleichwertig anzusehen ist. Sofern die Gleichwertigkeit grundsätzlich ge-
+geben ist und nur einzelne Ergänzungen auf die volle Gleichwertigkeit fehlen, haben die antragstel-
+lenden Personen das Recht, diese vom Kollegium bekanntgegebenen Lehrveranstaltungen und Prü-
+fungen als außerordentliche Studierende zu absolvieren.
+§ 6. (7) Die Antragstellung auf Nostrifizierung eines an einer ausländischen Fachhochschule erworbe-
+nen akademischen Grades setzt den Nachweis voraus, dass die Nostrifizierung zwingend für die Be-
+rufsausübung oder für die Fortsetzung der Ausbildung der Antragstellerin oder des Antragstellers in 
+Österreich erforderlich ist. Es ist unzulässig, denselben Nostrifizierungsantrag gleichzeitig oder nach 
+der Zurückziehung bei anderen Kollegien einzubringen.
+
+Lehr- und Forschungspersonal
+
+§ 7. (1) Das Lehr- und Forschungspersonal an Fachhochschulen und an Fachhochschul-Studiengängen 
+besteht aus hauptberuflich und aus nebenberuflich tätigen Personen.
+§ 7. (2) Nebenberuflich tätige Personen sind Personen, die
+1. ausschließlich in der Lehre tätig sind und
+2. nicht mehr als sechs Semesterwochenstunden lehren und
+3. nachweislich einer anderen voll sozialversicherungspflichtigen Erwerbstätigkeit nachgehen.
+§ 7. (3) Nebenberufliches Lehrpersonal gemäß Abs. 2 kann sich von anderen geeigneten Personen 
+vertreten lassen.
+§ 7. (4) § 98 ArbVG (personelles Informationsrecht) gilt auch für die Gruppe der nebenberuflich täti-
+gen Personen, selbst wenn ein freies Dienstverhältnis oder eine selbständige Tätigkeit vorliegt.
+
+2. Abschnitt
+
+Akkreditierungsvoraussetzungen
+
+§ 8. (1) Ein Antrag auf Akkreditierung als Fachhochschuleinrichtung und eines Studienganges als 
+Fachhochschul-Studiengang ist an die Agentur für Qualitätssicherung und Akkreditierung Austria zu 
+richten.
+§ 8. (2) Zur Erlangung der Akkreditierung als Fachhochschuleinrichtung sowie für die Dauer der Ak-
+kreditierung muss der Erhalter folgende Voraussetzungen erfüllen:
+1. Vorlage eines Entwicklungsplans, der jedenfalls das Entwicklungskonzept für den Aufbau der 
+betreffenden Bildungseinrichtung zu einer Fachhochschuleinrichtung unter Berücksichtigung 
+der Zielsetzungen der Einrichtung, der Schwerpunkte und Maßnahmen in Lehre und For-
+schung sowie die strukturelle und inhaltliche Entwicklungsplanung, die Gleichstellung von 
+Frauen und Männern und Frauenförderung und den Aufbau eines Leistungs- und Qualitäts-
+managementsystems umfasst;
+2. Vorlage eines Satzungsentwurfes gemäß § 10 Abs. 3 Z 10;
+3. Erfüllung der Prüfbereiche gemäß § 23 Hochschul-Qualitätssicherungsgesetz (HS-QSG), BGBl. 
+I Nr. 74/2011.
+§ 8. (3) Eine Akkreditierung als Fachhochschul-Studiengang setzt voraus, daß
+1. den Zielen und den leitenden Grundsätzen für die Gestaltung von Fachhochschul-
+Studiengängen (§ 3) entsprochen wird;
+2. der Studienplan und die Prüfungsordnung fachlichen und beruflichen Erfordernissen ent-
+sprechen; im Sinne des Europäischen Systems zur Anrechnung von Studienleistungen (Euro-
+pean Credit Transfer System - ECTS, 253/2000/EG, Amtsblatt Nr. L 28 vom 3. 2. 2000) sind 
+den einzelnen Studienleistungen ECTS-Anrechnungspunkte zuzuteilen. Mit diesen Anrech-
+nungspunkten ist der Anteil des mit den einzelnen Studienleistungen verbundenen Arbeits-
+pensums ("work load") der Studierenden bezogen auf den gesamten Studiengang zu be-
+stimmen, wobei dem Arbeitspensum eines Studienjahres 60 Anrechnungspunkte und dem 
+Arbeitspensum eines Semesters 30 Anrechnungspunkte zugeteilt werden;
+3. der Unterricht durch ein wissenschaftlich, berufspraktisch und pädagogisch-didaktisch quali-
+fiziertes Lehr- und Forschungspersonal abgehalten wird;
+4. die zur Erreichung der Ziele und zur Sicherung der Grundsätze erforderlichen anwendungs-
+bezogenen Forschungs- und Entwicklungsarbeiten durch Mitglieder des Lehr- und For-
+schungspersonals durchgeführt werden;
+5. der mit der Entwicklung des beantragten Studienganges betraute Personenkreis und das den 
+Studiengang durchführende Lehr- und Forschungspersonal eine den Hochschulen entspre-
+chende Autonomie besitzen sowie eine entsprechende Mitbestimmung der Studierenden 
+gewährleistet ist;
+6. eine Anerkennung nachgewiesener Kenntnisse im Sinne der berufsorientierten Ausbildung 
+des jeweiligen Studienganges vorgesehen ist und dadurch eine Verkürzung der Studienzeit 
+erreicht werden kann;
+7. jene in Frage kommenden Studienberechtigungsprüfungen gemäß § 64a UG sowie jene fach-
+einschlägigen beruflichen Qualifikationen samt allfälligen Zusatzprüfungen, die als Zugangs-
+voraussetzung für den beantragten Studiengang geeignet sind, angegeben sind. Dabei ist auf 
+jene Kenntnisse abzustellen, die für die Erreichung des Ausbildungszieles des beantragten 
+Studienganges, auch bei Berücksichtigung der Förderung der Durchlässigkeit des Bildungssys-
+tems, unabdingbar sind;
+8. eine wissenschaftliche Evaluierung des Fachhochschul-Studienganges gewährleistet ist;
+9. eine Bedarf- und Akzeptanzerhebung für den Fachhochschul-Studiengang beigebracht wird;
+10. die erforderliche Personal-, Raum- und Sachausstattung für die Dauer der Genehmigung des 
+Fachhochschul-Studienganges vorhanden ist;
+11. eine Kalkulation mit Ausweis der Kosten pro Studienplatz und ein Finanzierungsplan für die 
+Dauer der Genehmigung des Fachhochschul-Studienganges vorgelegt werden;
+12. die Bedingungen der Prüfbereiche gemäß § 23 HS-QSG erfüllt werden.
+§ 8. (4) Der mit der Entwicklung des beantragten Studienganges vom Erhalter betraute Personenkreis 
+muß mindestens vier Personen umfassen. Von diesen müssen zwei wissenschaftlich durch Habilitati-
+on oder durch eine dieser gleichwertige Qualifikation ausgewiesen sein, und zwei über den Nachweis 
+einer Tätigkeit in einem für den beantragten Fachhochschul-Studiengang relevanten Berufsfeld ver-
+fügen. Die für die Entwicklung des beantragten Fachhochschul-Studienganges verantwortlichen Per-
+sonen sind im Antrag zu nennen; eine Person ist vom Erhalter zu beauftragen, der Agentur für Quali-
+tätssicherung und Akkreditierung Austria für die erforderlichen Auskünfte zur Verfügung zu stehen. 
+Im Falle der Akkreditierung haben mindestens vier Personen des mit der Entwicklung betrauten Per-
+sonenkreises im Studiengang haupt- oder nebenberuflich zu lehren. Von diesen müssen zwei wissen-
+schaftlich durch Habilitation oder durch eine dieser gleichwertige Qualifikation ausgewiesen sein und 
+zwei über den Nachweis einer Tätigkeit in einem für den Studiengang relevanten Berufsfeld verfü-
+gen. Scheidet eine dieser Personen während des Akkreditierungszeitraumes aus dem Lehr- und For-
+schungspersonal aus, ist diese durch eine gleichqualifizierte Person zu ersetzen.
+§ 8. (5) Ein Antrag auf Akkreditierung eines Fachhochschul-Studienganges hat neben dem Nachweis 
+der in Abs. 2 bis 4 genannten Voraussetzungen zu enthalten:
+1. Name des Erhalters; ist der Erhalter eine juristische Person des privaten Rechts, so ist ein 
+Auszug aus dem Firmenbuch bzw. Vereinsregister beizubringen;
+2. Benennung der Studiengangsleitung, der im Einzelfall über Anliegen von Studienwerberinnen 
+und Studienwerbern und Studierenden entscheidet;
+3. Vorlage eines Studienplanes und einer Prüfungsordnung einschließlich eines Vorschlages für 
+die zeitliche Gliederung des Studienganges unter Berücksichtigung des Studienförderungsge-
+setzes 1992, BGBl. Nr. 305;
+4. Vorlage einer Aufnahmeordnung, in der die Zahl der Studienplätze und die Kriterien für die 
+Auswahl von Studienwerberinnen und Studienwerbern für den Fall angegeben ist, daß die 
+Zahl der Bewerbungen die Zahl der Studienplätze übersteigt.
+
+Lehrgänge zur Weiterbildung
+
+§ 9. (1) Die Erhalter sind berechtigt, in den Fachrichtungen der bei ihnen akkreditierten Fachhoch-
+schul-Studiengänge auch Lehrgänge zur Weiterbildung anzubieten. Diese Lehrgänge zur Weiterbil-
+dung sind in einer angemessenen Form in die hochschulinterne Qualitätssicherung und -entwicklung 
+einzubinden.
+§ 9. (2) Im Studienplan eines Lehrganges zur Weiterbildung dürfen im jeweiligen Fach international 
+gebräuchliche Mastergrade festgelegt werden, die den Absolventinnen und Absolventen jener Lehr-
+gänge zur Weiterbildung zu verleihen sind, deren Zugangsbedingungen, Umfang und Anforderungen 
+mit Zugangsbedingungen, Umfang und Anforderungen entsprechender ausländischer Masterstudien 
+vergleichbar sind. Die Qualität der Lehre ist durch ein wissenschaftlich und didaktisch entsprechend 
+qualifiziertes Lehrpersonal sicher zu stellen.
+§ 9. (3) Wenn Abs. 2 nicht zur Anwendung kommt, darf die Bezeichnung "Akademische ..." bzw. 
+"Akademischer ..." mit einem die Inhalte des jeweiligen Lehrganges zur Weiterbildung charakterisie-
+renden Zusatz festgelegt werden, die den Absolventinnen und Absolventen jener Lehrgänge zur Wei-
+terbildung zu verleihen ist, die mindestens 60 ECTS-Anrechnungspunkte umfassen.
+§ 9. (4) Für den Besuch von Lehrgängen zur Weiterbildung haben die außerordentlichen Studieren-
+den einen Lehrgangsbeitrag zu entrichten. Er ist unter der Berücksichtigung der tatsächlichen Kosten 
+des Lehrganges zur Weiterbildung festzusetzen.
+§ 9. (5) Den Urkunden über die Verleihung der Bezeichnung dürfen fremdsprachige Übersetzungen 
+angeschlossen werden, wobei die Benennung des Erhalters und des ausstellenden Organs sowie die 
+Bezeichnung selbst nicht zu übersetzen sind.
+
+Kollegium, Studiengangsleitung
+
+§ 10. (1) Zur Durchführung und Organisation des Lehr- und Prüfungsbetriebes ist bei jedem Erhalter 
+von Fachhochschul-Studiengängen ein Kollegium einzurichten. Dieses hat mindestens zweimal jähr-
+lich zusammenzutreten.
+§ 10. (2) Dem Kollegium gehören neben der Leiterin oder dem Leiter des Kollegiums und ihrer oder 
+seiner Stellvertretung sechs Leiterinnen oder Leiter der jeweils eingerichteten Fachhochschul-
+Studiengänge, sechs Vertreterinnen oder Vertreter des Lehr- und Forschungspersonals sowie vier 
+Vertreterinnen oder Vertreter der Studierenden der Fachhochschul-Studiengänge an. Diese Vertre-
+tungen im Kollegium werden von den jeweiligen Personengruppen gewählt. Sollten weniger als sechs 
+Leiterinnen oder Leiter von Fachhochschul-Studiengängen zur Verfügung stehen, ist deren Anzahl aus 
+dem Kreis der Vertreterinnen oder Vertreter des Lehr- und Forschungspersonals zu ergänzen. Bei der 
+Erstellung der Wahlvorschläge für die zu wählenden Vertreterinnen oder Vertreter sind pro Gruppe 
+nach Möglichkeit mindestens 45 vH Frauen aufzunehmen.
+§ 10. (3) Die Aufgaben des Kollegiums sind:
+1. Wahl der Leitung sowie der Stellvertretung auf Grund eines Dreiervorschlages des Erhalters. 
+Mit Zustimmung des Kollegiums kann dieser Vorschlag auf zwei Personen reduziert werden;
+2. Antrag an den Erhalter auf Abberufung der Leitung oder der Stellvertretung oder Stellung-
+nahme zu einer diesbezüglichen Absicht des Erhalters für den Fall, dass diese Organe ihre 
+Aufgaben gröblich verletzt oder vernachlässigt haben oder nicht mehr in der Lage sind, ihre 
+Aufgaben zu erfüllen;
+3. Änderungen betreffend akkreditierte Studiengänge im Einvernehmen mit dem Erhalter;
+4. Einrichtung und Auflassung von Studiengängen und Lehrgängen zur Weiterbildung im Ein-
+vernehmen mit dem Erhalter;
+5. Antragstellung zum Budget (Investitions-, Sach- und Personalaufwand) an den Erhalter;
+6. Vorschläge für die Einstellung und Abberufung von Lehr- und Forschungspersonal an den Er-
+halter;
+7. Inhaltliche Koordination des gesamten Lehrbetriebes;
+8. Evaluierung des gesamten Lehrbetriebes samt Prüfungsordnung und Studienpläne;
+9. Verleihung akademischer Grade und deren Widerruf, Nostrifizierung ausländischer akademi-
+scher Grade sowie im Einvernehmen mit dem Erhalter Verleihung von im Universitätswesen 
+üblichen akademischen Ehrungen;
+10. Erlassung einer Geschäftsordnung und einer Satzung im Einvernehmen mit dem Erhalter. In 
+der Satzung sind jedenfalls die Studien- und Prüfungsordnungen, die Wahlordnung für das 
+Kollegium, die Einrichtung allfälliger Arbeitsausschüsse und deren Statuten, Maßnahmen zur 
+Gleichstellung von Frauen und Männern, Bestimmungen über Frauenförderung sowie Richt-
+linien für die sinngemäße Verwendung von Bezeichnungen des Universitätswesens und über 
+Verleihung von akademischen Ehrungen aufzunehmen. Die Satzung ist in geeigneter Form zu 
+veröffentlichen;
+11. Entscheidung über Beschwerden gegenüber Entscheidungen der Studiengangsleitung.
+§ 10. (4) Der Leitung des Kollegiums obliegt:
+1. sofern es hauptberuflich tätige Personen sind, die Erteilung von Anweisungen an Mitglieder 
+des Lehr- und Forschungspersonals zu Art und Umfang der Ausübung ihrer Lehrverpflichtung, 
+soweit dies zur ordnungsgemäßen Aufrechterhaltung des Studienbetriebes nach Maßgabe 
+der Studienpläne erforderlich ist;
+2. die Erteilung von Lehraufträgen auf Grund von Vorschlägen oder nach Anhörung des Kollegi-
+ums;
+3. die Vertretung des Kollegiums nach außen sowie die Vollziehung der Beschlüsse des Kollegi-
+ums.
+§ 10. (5) Der Studiengangsleitung obliegt:
+1. die Zulassung zu Prüfungen, Zuteilung von Prüferinnen und Prüfern, Festsetzung von Prü-
+fungsterminen;
+2. die Anerkennung von Studien und Prüfungen im Einzelfall;
+3. die Aberkennung von Prüfungen;
+4. die Entscheidungen in studienrechtlichen Angelegenheiten gemäß §§ 11 bis 21;
+5. die Entscheidungen gemäß § 4 Abs. 4, 5 Z 3, Abs. 6 und 7.
+§ 10. (6) Gegen Entscheidungen des Kollegiums gemäß Abs. 3 Z 9 ist eine Beschwerde an den Verwal-
+tungsgerichtshof zulässig. Gegen Entscheidungen der Studiengangsleitung haben Studierende sowie 
+Aufnahmewerberinnen und Aufnahmewerber die Möglichkeit einer Beschwerde an das Kollegium.
+§ 10. (7) Der Erhalter hat dafür zu sorgen, dass das Lehr- und Forschungspersonal an anwendungsbe-
+zogenen Forschungs- und Entwicklungsarbeiten teilnimmt. Dies kann an der eigenen Einrichtung 
+oder durch Kooperation mit anderen Forschungs- und Entwicklungseinrichtungen geschehen.
+§ 10. (8) Der Erhalter kann gemäß den Richtlinien des Kollegiums den bei ihm tätigen Personen die 
+sinngemäße Verwendung von Bezeichnungen des Universitätswesens gestatten, die im UG festgelegt 
+sind. Die Verwendung dieser Bezeichnungen ist jeweils nur mit dem Zusatz "FH", "(FH)" oder "Fach-
+hochschul-..." zulässig.
+§ 10. (9) Fachhochschul-Studiengänge und Fachhochschulen haben das Recht zur Führung des Bun-
+deswappens.
+§ 10. (10) Die zuständige Bundesministerin oder der zuständige Bundesminister ist berechtigt, sich 
+über alle Angelegenheiten von Fachhochschul-Studiengängen zu informieren. Der Erhalter und das 
+Kollegium sind verpflichtet, der zuständigen Bundesministerin oder dem zuständigen Bundesminister 
+Auskünfte zu erteilen, Unterlagen über bezeichnete Gegenstände vorzulegen, angeordnete Erhebun-
+gen anzustellen sowie Überprüfungen an Ort und Stelle vornehmen zu lassen.
+
+3. Abschnitt: Studienrechtliche Bestimmungen
+
+Aufnahmeverfahren
+
+§ 11. (1) Ein Aufnahmeverfahren ist jedenfalls durchzuführen, wenn die Zahl der Bewerberinnen und 
+Bewerber für einen Studiengang die Zahl der vorhandenen Plätze übersteigt. Für das Aufnahmever-
+fahren sind den Ausbildungserfordernissen des jeweiligen Studienganges entsprechende leistungsbe-
+zogene Kriterien festzulegen. Nach Maßgabe organisatorischer Möglichkeiten sind mit allen Bewer-
+berinnen und Bewerbern Aufnahmegespräche vorzusehen und bei der Reihung zu berücksichtigen. 
+Bei Bachelor- und Diplomstudiengängen hat eine Einteilung der Bewerbungsgruppen mit unter-
+schiedlicher Vorbildung zu erfolgen, wobei zumindest eine Gruppe von Bewerberinnen und Bewer-
+bern mit einschlägiger beruflicher Qualifikation zu bilden ist. Es ist vorzusehen, dass die Bewerbungs-
+gruppen aliquot auf die Zahl der Aufnahmeplätze aufgeteilt werden. Die zur Reihungsliste führenden 
+Bewertungen der Bewerberinnen und Bewerber sind überprüfbar und nachvollziehbar zu dokumen-
+tieren.
+§ 11. (2) Für die Durchführung des Aufnahmeverfahrens sind von den Bewerberinnen und Bewerbern 
+keine Gebühren zu entrichten.
+ 
+Anerkennung nachgewiesener Kenntnisse
+
+§ 12. (1) Bezüglich der Anerkennung nachgewiesener Kenntnisse gilt das Prinzip der lehrveranstal-
+tungsbezogenen Anerkennung. Die Gleichwertigkeit der erworbenen Kenntnisse mit dem Anforde-
+rungsprofil hinsichtlich Inhalt und Umfang der zu erlassenden Lehrveranstaltungen ist auf Antrag der 
+oder des Studierenden festzustellen. Bei Feststellung der Gleichwertigkeit sind positiv absolvierte 
+Prüfungen anzuerkennen. Eine Wissensüberprüfung ist in diesen Fällen nicht vorzusehen.
+§ 12. (2) Besondere Kenntnisse oder Erfahrungen aus der beruflichen Praxis sind in Bezug auf die 
+Anerkennung von Lehrveranstaltungen oder des Berufspraktikums zu berücksichtigen; das gilt insbe-
+sondere für berufsbegleitend organisierte Studiengänge und Studiengangsteile.
+
+Allgemeine Prüfungsmodalitäten
+
+§ 13. (1) Die Prüfungen haben zeitnah zu den Lehrveranstaltungen stattzufinden, in denen die prü-
+fungsrelevanten Inhalte vermittelt werden.
+§ 13. (2) Studierende haben das Recht auf eine abweichende Prüfungsmethode, wenn eine Behinde-
+rung nachgewiesen wird, die die Ablegung der Prüfung in der vorgeschriebenen Methode unmöglich 
+macht und der Inhalt und die Anforderungen der Prüfung durch eine abweichende Methode nicht 
+beeinträchtigt werden.
+§ 13. (3) Es ist eine ausreichende Zahl von Terminen für Prüfungen und Wiederholungen von Prüfun-
+gen je Semester und Studienjahr vorzusehen, so dass die Fortsetzung des Studiums ohne Semester-
+verlust möglich ist. Der konkrete Zeitrahmen für Wiederholungen von Prüfungen hat sich an Umfang 
+und Schwierigkeit der Prüfung zu orientieren. Die Prüfungstermine sind rechtzeitig kundzumachen. 
+Prüfungstermine sind jedenfalls für das Ende und für den Anfang jeden Semesters anzusetzen.
+§ 13. (4) Die konkreten Prüfungsmodalitäten (Inhalte, Methoden, Beurteilungskriterien und Beurtei-
+lungsmaßstäbe) und Wiederholungsmöglichkeiten je Lehrveranstaltung sind den Studierenden in 
+geeigneter Weise zu Beginn jeder Lehrveranstaltung bekannt zu geben. Prüfungen können auch mo-
+dulbezogen stattfinden.
+§ 13. (5) Das nicht ausreichend begründete Nicht-Antreten zu einem Prüfungstermin bei Lehrveran-
+staltungen mit abschließendem Charakter führt zum Verlust einer Prüfungsantrittsmöglichkeit.
+§ 13. (6) Den Studierenden ist Einsicht in die Beurteilungsunterlagen und in die Prüfungsprotokolle zu 
+gewähren, wenn die Studierenden dies binnen sechs Monaten ab Bekanntgabe der Beurteilung ver-
+langen. Die Studierenden sind berechtigt, von diesen Unterlagen Fotokopien anzufertigen.
+§ 13. (7) Wenn die Beurteilungsunterlagen (insbesondere Gutachten, Korrekturen schriftlicher Prü-
+fungen und Prüfungsarbeiten) den Studierenden nicht ausgehändigt werden, ist sicherzustellen, dass 
+diese mindestens sechs Monate ab der Bekanntgabe der Beurteilung aufbewahrt werden.
+ 
+Unterbrechung des Studiums
+
+§ 14. Eine Unterbrechung des Studiums ist bei der Studiengangsleitung zu beantragen. Die Gründe 
+der Unterbrechung und die beabsichtigte Fortsetzung des Studiums sind nachzuweisen oder glaub-
+haft zu machen. In der Entscheidung über den Antrag sind zwingende persönliche, gesundheitliche 
+oder berufliche Gründe zu berücksichtigen. Während der Unterbrechung können keine Prüfungen 
+abgelegt werden.
+
+Mündliche Prüfungen
+
+§ 15. (1) Mündliche Prüfungen sind öffentlich zugänglich, wobei der Zutritt auf eine den räumlichen 
+Verhältnissen entsprechende Anzahl von Personen beschränkt werden kann.
+§ 15. (2) Der Prüfungsvorgang bei mündlichen Prüfungen ist zu protokollieren. In das Protokoll sind 
+der Prüfungsgegenstand, der Ort und die Zeit der Prüfung, die Namen der Prüferin oder des Prüfers 
+oder die Namen der Mitglieder des Prüfungssenates, die Namen der oder des Studierenden, die ge-
+stellten Fragen, die erteilten Beurteilungen, die Gründe für die negative Beurteilung sowie allfällige 
+besondere Vorkommnisse aufzunehmen. Das Ergebnis einer mündlichen Prüfung ist unmittelbar 
+nach der Prüfung der oder dem Studierenden bekannt zu geben. Das Prüfungsprotokoll ist mindes-
+tens ein Jahr ab der Bekanntgabe der Beurteilung aufzubewahren.
+§ 15. (3) Bei mündlichen kommissionellen Prüfungen haben dem Prüfungssenat wenigstens drei Per-
+sonen anzugehören. Bei einer geraden Anzahl der Senatsmitglieder ist der oder dem Vorsitzenden 
+des Prüfungssenates ein Dirimierungsrecht einzuräumen. Jedes Mitglied des Prüfungssenates hat 
+während der gesamten Prüfungszeit anwesend zu sein; dieser Verpflichtung kann allenfalls auch 
+durch den Einsatz von elektronischen Medien nachgekommen werden.
+
+Abschließende Prüfungen 
+in Fachhochschul-Bachelor-, Fachhochschul -Master- und Fachhochschul-Diplomstudiengängen
+
+§ 16. (1) Die einen Fachhochschul-Bachelorstudiengang abschließende kommissionelle Prüfung ge-
+mäß § 3 Abs. 2 Z 6 ist vor einem facheinschlägigen Prüfungssenat abzulegen. Diese kommissionelle 
+Prüfung setzt sich aus den Prüfungsteilen
+1. Prüfungsgespräch über die durchgeführten Bachelorarbeiten sowie
+2. deren Querverbindungen zu relevanten Fächern des Studienplans
+zusammen.
+§ 16. (2) Die einen Fachhochschul-Master- oder einen Fachhochschul-Diplomstudiengang abschlie-
+ßende kommissionelle Prüfung gemäß § 3 Abs. 2 Z 6 ist vor einem facheinschlägigen Prüfungssenat 
+abzulegen. Diese kommissionelle Prüfung setzt sich aus den Prüfungsteilen
+1. Präsentation der Diplom- oder Masterarbeit,
+2. einem Prüfungsgespräch, das auf die Querverbindungen des Themas der Diplom- oder Mas-
+terarbeit zu den relevanten Fächern des Studienplans eingeht, sowie
+3. einem Prüfungsgespräch über sonstige studienplanrelevante Inhalte
+zusammen.
+§ 16. (3) Die Studierenden sind in geeigneter Weise über die Zulassung zu den kommissionellen Prü-
+fungen zu verständigen.
+§ 16. (4) Die Beurteilungskriterien und Ergebnisse der Leistungsbeurteilung der kommissionellen 
+Prüfungen sind den Studierenden mitzuteilen.
+§ 16. (5) Die Prüfungskommission besteht aus dem Kreis aller für die kommissionellen Prüfungen in 
+Frage kommenden Personen. Der Prüfungssenat setzt sich aus den Prüferinnen und Prüfern je Kandi-
+datin oder Kandidat zusammen.
+
+Beurteilung von Leistungen
+
+§ 17. (1) Die Beurteilung der Prüfungen und eigenständigen schriftlichen Arbeiten hat nach dem ös-
+terreichischen Notensystem 1 bis 5 zu erfolgen. Wenn diese Form der Beurteilung unmöglich oder 
+unzweckmäßig ist, hat die positive Beurteilung "mit Erfolg teilgenommen" oder "anerkannt" zu lau-
+ten. Im negativen Fall gelten die Regelungen für die Wiederholung von Leistungsnachweisen für 
+Lehrveranstaltungen mit immanentem Prüfungscharakter.
+§ 17. (2) Die Beurteilung der den Fachhochschul-Bachelorstudiengang abschließenden kommissionel-
+len Prüfung sowie der den Fachhochschul-Diplom- und Fachhochschul-Masterstudiengang abschlie-
+ßenden kommissionellen Gesamtprüfung hat nach der folgenden Leistungsbeurteilung zu erfolgen:
+* Bestanden: für die positiv bestandene Prüfung;
+* Mit gutem Erfolg bestanden: für eine deutlich über dem Durchschnitt liegende Prüfungsleis-
+tung;
+* Mit ausgezeichnetem Erfolg bestanden: für eine herausragende Prüfungsleistung.
+§ 17. (3) Die Beurteilung der Prüfungen und eigenständigen schriftlichen Arbeiten ist jeweils durch 
+ein Zeugnis zu beurkunden. Sammelzeugnisse über abgelegte Prüfungen im Semester sind zulässig.
+§ 17. (4) Die Zeugnisse sind unverzüglich, längstens jedoch innerhalb von vier Wochen nach Erbrin-
+gung der zu beurteilenden Leistung, Sammelzeugnisse sind binnen vier Wochen nach Ablauf des Se-
+mesters auszustellen.
+
+Wiederholung von Prüfungen
+
+§ 18. (1) Eine nicht bestandene abschließende Prüfung einer Lehrveranstaltung kann zweimal wie-
+derholt werden, wobei die zweite Wiederholung als kommissionelle Prüfung durchzuführen ist, die 
+mündlich oder schriftlich durchgeführt werden kann. In der Satzung können zusätzliche Wiederho-
+lungsmöglichkeiten vorgesehen werden.
+§ 18. (2) Ergibt die Summe der Leistungsbeurteilungen im Rahmen von Lehrveranstaltungen mit im-
+manentem Prüfungscharakter eine negative Beurteilung, so ist den Studierenden eine angemessene 
+Nachfrist zur Erbringung der geforderten Leistungsnachweise (1. Wiederholung) einzuräumen. Eine 
+erneute negative Beurteilung dieser Leistungen bewirkt automatisch eine kommissionelle Prüfung (2. 
+Wiederholung).
+§ 18. (3) Nicht bestandene kommissionelle Bachelorprüfungen sowie nicht bestandene kommissio-
+nelle Gesamtprüfungen in Fachhochschul-Master- oder Diplomstudiengängen können zweimal wie-
+derholt werden. In der Satzung können zusätzliche Wiederholungsmöglichkeiten vorgesehen werden.
+§ 18. (4) Die einmalige Wiederholung eines Studienjahres in Folge einer negativ beurteilten kommis-
+sionellen Prüfung ist möglich. Eine Wiederholung ist bei der Studiengangsleitung zu beantragen. 
+Nicht bestandene Prüfungen und die entsprechenden Lehrveranstaltungen sind im Zuge der Wieder-
+holung des Studienjahres jedenfalls, bestandene Prüfungen und die entsprechenden Lehrveranstal-
+tungen nur, sofern es der Zweck des Studiums erforderlich macht, zu wiederholen oder erneut zu 
+besuchen.
+§ 18. (5) Für Studierende, die wegen der negativen Beurteilung bei der letzten zulässigen Wiederho-
+lung einer Prüfung vom Studiengang ausgeschlossen wurden, ist eine neuerliche Aufnahme in den 
+selben Studiengang nicht möglich.
+
+Bachelorarbeiten, Diplom- und Masterarbeiten
+
+§ 19. (1) Die gemeinsame Bearbeitung eines Themas durch mehrere Studierende ist zulässig, wenn 
+die Leistungen der einzelnen Studierenden gesondert beurteilbar bleiben.
+§ 19. (2) Die Approbation der Diplom- oder Masterarbeit ist Voraussetzung für die Zulassung zur 
+kommissionellen Prüfung. Eine nicht approbierte Diplom- oder Masterarbeit ist zur Korrektur und 
+Wiedervorlage innerhalb einer festzusetzenden Frist zurückzuweisen.
+§ 19. (3) Die positiv beurteilte Master- oder Diplomarbeit ist durch Übergabe an die Bibliothek des 
+Erhalters von Fachhochschul-Studiengängen zu veröffentlichen. Anlässlich der Ablieferung der Mas-
+ter- oder Diplomarbeit ist die Verfasserin oder der Verfasser berechtigt, den Ausschluss der Benüt-
+zung der abgelieferten Exemplare für längstens fünf Jahre nach Ablieferung zu beantragen. Dem An-
+trag ist stattzugeben, wenn die oder der Studierende glaubhaft macht, dass wichtige rechtliche oder 
+wirtschaftliche Interessen der oder des Studierenden gefährdet sind.
+
+Ungültigerklärung von Prüfungen und wissenschaftlichen Arbeiten
+
+§ 20. Die Beurteilung einer Prüfung sowie einer wissenschaftlichen Arbeit ist für ungültig zu erklären, 
+wenn diese Beurteilung, insbesondere durch die Verwendung unerlaubter Hilfsmittel, erschlichen 
+wurde. Die Prüfung, deren Beurteilung für ungültig erklärt wurde, ist auf die Gesamtzahl der Wieder-
+holungen anzurechnen.
+
+Rechtsschutz
+
+§ 21. Gegen die Beurteilung einer Prüfung kann nicht berufen werden. Wenn die Durchführung einer 
+negativ beurteilten Prüfung einen Mangel aufweist, kann von der oder dem Studierenden innerhalb 
+von zwei Wochen eine Beschwerde bei der Studiengangsleitung eingebracht werden, welche die 
+Prüfung aufheben kann. Wurde diese Prüfung von der Studiengangsleitung durchgeführt, so ist die 
+Beschwerde beim Kollegium einzubringen. Bis zur Entscheidung über die Beschwerde können von 
+den Studierenden Lehrveranstaltungen weiterhin besucht werden. Der Antritt zu der Prüfung, die 
+aufgehoben wurde, ist auf die zulässige Zahl der Prüfungsantritte nicht anzurechnen.
+
+Bezeichnung "Fachhochschule"
+
+§ 22. (1) Einrichtungen zur Durchführung von Fachhochschul-Studiengängen hat die Agentur für Qua-
+litätssicherung und Akkreditierung Austria auf Antrag des Erhalters bei Erfüllung der Voraussetzun-
+gen des Abs. 2 mit Bescheid die Bezeichnung "Fachhochschule" zu verleihen.
+§ 22. (2) Die Verleihung der Bezeichnung "Fachhochschule" setzt voraus, dass
+1. mindestens zwei Studiengänge der beantragten Einrichtung als Fachhochschul-
+Bachelorstudiengang mit darauf aufbauendem Fachhochschul-Masterstudiengang oder als 
+Fachhochschul-Diplomstudiengang akkreditiert sind;
+2. ein Plan für den Ausbau der betreffenden Einrichtung vorliegt, aus dem die Erreichung einer 
+Mindestzahl von 1.000 Studierenden innerhalb von sechs Jahren glaubhaft gemacht wird.
+§ 22. (3) Aus einer Verleihung gemäß Abs. 1 entstehen keine finanziellen Rechtsansprüche an den 
+Bund.
+§ 22. (4) Eine Verleihung gemäß Abs. 1 ist zu widerrufen, wenn eine der im Abs. 2 genannten Voraus-
+setzungen nicht mehr vorliegt.
+§ 22. (5) An Fachhochschulen eingerichtete Kollegien führen die Bezeichnung "Fachhochschulkollegi-
+um".
+
+4. Abschnitt
+
+Berichtswesen
+
+§ 23. (1) Zur Erfüllung ihrer Aufgaben ist die Agentur für Qualitätssicherung und Akkreditierung Aus-
+tria ermächtigt, den Erhaltern von Fachhochschul-Studiengängen Vorgaben zur Bereitstellung von 
+Informationen über die laufende Entwicklung zu machen.
+§ 23. (2) Die Erhalter haben der Agentur für Qualitätssicherung und Akkreditierung Austria jährlich 
+bis Ende Mai einen Bericht über die Entwicklung im abgelaufenen Berichtsjahr vorzulegen, der jeden-
+falls folgende Inhalte umfasst:
+1. Informationen zu Entwicklungen in den im HS-QSG definierten Prüfbereichen;
+2. Darstellung von Änderungen gegenüber dem letzten Bericht oder dem letzten Akkreditie-
+rungsantrag.
+§ 23. (3) Die Agentur für Qualitätssicherung und Akkreditierung Austria ist ermächtigt, Vorgaben zur 
+Struktur des Berichtes mittels Verordnung festzulegen. Die Berichte sind von den Erhaltern mit Aus-
+nahme der Angabe von Finanzierungsquellen sowie von Betriebs- und Geschäftsgeheimnissen ent-
+sprechend zu veröffentlichen.
+§ 23. (4) Die Erhalter haben an statistischen Erhebungen zur Bereitstellung von Informationen über 
+den Studienbetrieb gemäß den entsprechenden gesetzlichen Bestimmungen mitzuwirken und diese 
+Informationen auch der Agentur für Qualitätssicherung und Akkreditierung Austria zu Verfügung zu 
+stellen. Zur Gewährleistung der Berechnung der Fördersummen hat die Agentur für Qualitätssiche-
+rung und Akkreditierung Austria darüber hinaus mittels Verordnung in folgenden Bereichen Richtli-
+nien für die Datenbereitstellung festzulegen:
+1. Meldeverpflichtungen betreffend Bewerberinnen und Bewerber für Fachhochschul-
+Studienplätze;
+2. Personenkennzeichnungssystem und Meldeverpflichtungen über Studierende;
+3. Meldeverpflichtung betreffend Studien;
+4. Meldeverpflichtungen betreffend Prüfungen;
+5. Meldeverpflichtungen betreffend Lehr- und Forschungspersonal;
+6. Meldeverpflichtungen betreffend Forschungs- und Entwicklungsprojekte;
+7. Meldeverpflichtungen über die finanz- und vermögensrechtliche Gebarung der Erhalter von 
+Fachhochschul-Studiengängen.
+
+Strafbestimmung
+
+§ 24. Wer vorsätzlich
+1. die dem Fachhochschulwesen eigentümlichen Bezeichnungen oder
+2. die Abkürzung "FH" oder
+3. die in § 6 genannten akademischen Grade
+unberechtigt verleiht, vermittelt oder führt, begeht, wenn die Tat nicht den Tatbestand einer in die 
+Zuständigkeit der Gerichte fallenden strafbaren Handlung bildet oder nach anderen Verwaltungs-
+strafbestimmungen mit strengerer Strafe bedroht ist, eine Verwaltungsübertretung, die von der ört-
+lich zuständigen Bezirksverwaltungsbehörde mit einer Geldstrafe von bis zu 15 000 € zu bestrafen ist.
+
+Vollziehung
+
+§ 25. (1) Mit der Vollziehung dieses Bundesgesetzes ist die Bundesministerin oder der Bundesminis-
+ter für Wissenschaft und Forschung betraut.
+§ 25. (2) Die in diesem Bundesgesetz enthaltenen Verweisungen auf andere Bundesgesetze sind 
+Verweisungen auf die jeweils geltende Fassung.
+
+Inkrafttreten
+
+§ 26. (1) Dieses Bundesgesetz tritt, soweit in Abs. 2 nichts anderes bestimmt ist, mit 1. Oktober 1993 
+in Kraft.
+§ 26. (2) Die §§ 6, 7, 8, 9, 10 und 11 treten mit dem der Kundmachung folgenden Tag in Kraft.
+§ 26. (3) § 18 in der Fassung des Bundesgesetzes BGBl. I Nr. 136/2001 tritt mit 1. Jänner 2002 in 
+Kraft.
+§ 26. (4) § 2, § 3 Abs. 2, § 4 Abs. 2, § 5 Abs. 2, 3 und 5, § 6 Abs. 2, 3 und 5, § 7 Abs. 2, 5 und 6, § 8 Abs. 
+1 bis 3, § 9 Abs. 3, § 11 Abs. 1, 2 und 3, § 12 Abs. 2, § 14 Abs. 3, § 15 Abs. 1, 2 und 4, § 17 Abs. 4, § 19, 
+§ 20 Abs. 4 und § 21 samt Überschrift in der Fassung des Bundesgesetzes BGBl. I Nr. 58/2002 treten 
+mit 1. Mai 2002 in Kraft.
+§ 26. (5) § 1, § 2, § 3 Abs. 2 Z 2 und 10, § 4 Abs. 3a, 5, 7 und 8, § 5 Abs. 2 und 3a, § 6 Abs. 1, Abs. 2 Z 
+1, 5 und 6 sowie Abs. 5, § 12 Abs. 1, Abs. 2 erster Satz und Z 3 bis 5, Abs. 3, Abs. 4 erster Satz und Z 2, 
+§ 13 Abs. 2, 2a und 4, § 14 Abs. 1 erster Satz, Z 1 und Z 2 sowie Abs. 2 erster Satz, § 15 Abs. 1 und 
+Abs. 2 Z 1, § 16 Abs. 2, Abs. 3 Z 3, Abs. 4 Z 4 und Abs. 6, § 17 Abs. 1, § 18, § 20 Abs. 5 sowie § 21 Abs. 
+4 und 5 in der Fassung des Bundesgesetzes BGBl. I Nr. 110/2003 treten mit 1. Februar 2004 in Kraft.
+§ 26. (6) § 27 Abs. 9 und 10 in der Fassung des Bundesgesetzes BGBl. I Nr. 74/2011 treten mit Ablauf 
+des Tages der Freigabe zur Abfrage im Rechtsinformationssystem des Bundes in Kraft. Alle anderen 
+Bestimmungen der §§ 1 bis 27 in der Fassung des Bundesgesetzes BGBl. I Nr. 74/2011 treten mit 1. 
+März 2012 in Kraft.
+
+Übergangsbestimmungen
+
+§ 27. (1) Die vor dem 1. Mai 2002 gemäß § 13 anerkannten Fachhochschul-Studiengänge sind Fach-
+hochschul-Diplomstudiengänge gemäß § 3 Abs. 2 Z 2 in der Fassung des Bundesgesetzes BGBl. I Nr. 
+58/2002.
+§ 27. (2) Die vor dem 1. Mai 2002 gemäß § 13 zugestellten Anerkennungsbescheide werden von den 
+Änderungen des Bundesgesetzes BGBl. I Nr. 58/2002 nicht berührt.
+§ 27. (3) Auf die vor dem 1. Mai 2002 eingebrachten und noch nicht entschiedenen Anträge auf An-
+erkennung als Fachhochschul-Studiengang ist dieses Bundesgesetz in der Fassung vor dem Bundes-
+gesetz BGBl. I Nr. 58/2002 anzuwenden.
+§ 27. (4) Das Recht zur Führung bereits verliehener akademischer Grade bleibt unberührt. Wurde der 
+akademische Grad mit der Beisetzung "(FH)" verliehen, ist die Führung dieses akademischen Grades 
+ohne den Zusatz "(FH)" unzulässig. Die Absolventinnen und Absolventen sind jedoch berechtigt, an-
+stelle des verliehenen akademischen Grades den auf Grund des § 6 Abs. 2 festgelegten akademi-
+schen Grad zu führen. Auf Antrag hat der Erhalter darüber eine Bestätigung auszustellen.
+§ 27. (5) Das bereits durch Verordnung der zuständigen Bundesministerin oder des zuständigen Bun-
+desministers oder durch Bescheid des Fachhochschulrates verliehene Recht zur Führung der Be-
+zeichnung "Fachhochschule" bleibt unberührt. Für den Widerruf der Verleihung gemäß § 22 Abs. 4 ist 
+die Agentur für Qualitätssicherung und Akkreditierung Austria zuständig.
+§ 27. (6) Bisherige Fachhochschul-Bakkalaureatsstudiengänge und Fachhochschul-
+Magisterstudiengänge gelten als Fachhochschul-Bachelorstudiengänge und Fachhochschul-
+Masterstudiengänge gemäß § 3 Abs. 2 Z 2, gemäß § 3 Abs. 2 Z 6 gelten bisherige Bakkalaureatsarbei-
+ten als Bachelorarbeiten sowie an Fachhochschul-Masterstudiengängen verfasste Diplomarbeiten als 
+Masterarbeiten.
+§ 27. (7) Kollegien sind bis zum 1. September 2012 einzurichten. Bis zur Einrichtung der Kollegien 
+bleibt der Fachhochschulrat, an Fachhochschulen das Fachhochschulkollegium für die Verleihung der 
+akademischen Grade sowie für Nostrifizierungen zuständig. Den Bestimmungen des § 10 entspre-
+chende Kollegien sind bis 1. September 2012 neu einzurichten.
+§ 27. (8) Die zum 1. März 2012 beim Fachhochschulrat anhängigen Verfahren sind nach den Bestim-
+mungen dieses Bundesgesetzes in der Fassung des Bundesgesetzes BGBl. I Nr. 2/2008, längstens je-
+doch bis zum Ablauf des 31. August 2012, weiterzuführen. Für bis zum 31. August 2012 durch den 
+Fachhochschulrat nicht abgeschlossene Verfahren geht die Kompetenz an die Agentur für Qualitäts-
+sicherung und Akkreditierung Austria über.
+§ 27. (9) Bis zum Ablauf des 29. Februar 2012 sind Studienpläne gemäß § 14a Abs. 2 und 3 vor der 
+Einrichtung von Lehrgängen zur Weiterbildung von den Erhaltern dem Fachhochschulrat zu übermit-
+teln. Der Fachhochschulrat hat die Einrichtung innerhalb von drei Monaten ab Einlangen in der Ge-
+schäftsstelle des Fachhochschulrates bescheidmäßig zu untersagen, wenn die Voraussetzungen ge-
+mäß § 14a Abs. 1 bis 3 dieses Bundesgesetzes, in der Fassung des Bundesgesetzes BGBl. I Nr. 2/2008, 
+nicht vorliegen.
+§ 27. (10) Mitglieder des Fachhochschulrates, die zum Stichtag 30. September 2011 bestellt sind, 
+bleiben bis zum Ablauf des 31. August 2012 bestellt. Die Funktionsperiode der Mitglieder des Fach-
+hochschulrates endet jedenfalls mit Ablauf des 31. August 2012. Die Präsidentin oder der Präsident 
+des Fachhochschulrates und deren Stellvertreterin oder dessen Stellvertreter, die zum Stichtag 30. 
+September 2011 diese Funktion ausüben, sind bis zum Ablauf des 31. August 2012 weiterbestellt.
+§ 27. (11) Für die am 1. März 2012 bestehenden Erhalter mit akkreditierten Fachhochschul-
+Studiengängen, die bereits eine institutionelle Evaluierung positiv durchlaufen haben, ist kein Verfah-
+ren gemäß § 23 HS-QSG erforderlich. Die Agentur für Qualitätssicherung und Akkreditierung Austria 
+hat eine unbefristete Akkreditierung gemäß § 23 HS-QSG mit Bescheid auszusprechen. Diese Erhalter 
+haben binnen sechs Jahren, gerechnet ab dem Datum der letztmaligen institutionellen Evaluierung 
+gemäß FHStG, das erste Audit gemäß § 22 HS-QSG durchzuführen. Für die am 1. März 2012 beste-
+henden Erhalter mit akkreditierten Fachhochschul-Studiengängen, die noch keine institutionelle Eva-
+luierung durchlaufen haben, ist bis 31. Dezember 2014 eine institutionelle Akkreditierung gemäß § 
+23 HS-QSG erforderlich.
+§ 27. (12) § 2 Abs. 2 in der Fassung des Bundesgesetzes BGBl. I Nr. 74/2011 ist auf jene Studierenden 
+anwendbar, die nach dem 1. März 2012 ein Studium beginnen.

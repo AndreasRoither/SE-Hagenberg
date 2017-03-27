@@ -8,7 +8,7 @@
     "tasks": [
         {
             "taskName": "compile",
-            "args": ["C:\\FPC\\3.0.0\\bin\\i386-win32\\fpc.exe", "${file}"],
+            "args": ["C:\\FPC\\3.0.2\\bin\\i386-win32\\fpc.exe", "${file}"],
             "isBuildCommand": true
         },
         {
