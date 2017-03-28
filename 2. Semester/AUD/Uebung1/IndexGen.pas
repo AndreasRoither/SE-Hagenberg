@@ -18,11 +18,24 @@ PROGRAM IndexGen;
 
 	TYPE
 	Word = STRING[maxWordLen];
+	
+	doubleListPtr = ^listElement;
+	listElement = record
+	  val : Integer;
+	  Prev : doubleListPtr;
+	  Next : doubleListPtr;
+	end; (*Record*)
+ 
+	dList = ^List;
+	List = RECORD
+		first: doubleListPtr;
+		last:  doubleListPtr;
+	END; (*Record*)
 
 	NodePtr = ^Node;
-	  Node = RECORD
+		Node = RECORD
 		key: STRING;
-		data : Integer;
+		data : dList;
 		next: NodePtr;
 	  END; (*Record*)
 	ListPtr = NodePtr;
@@ -38,6 +51,7 @@ PROGRAM IndexGen;
 		wordArray : ARRAY of STRING;
 		wordCount : Integer;
 
+	(* New has table node *) 
 	function NewHashNode(key: String; next: NodePtr; data : dList) : NodePtr;
 	var
 		n: NodePtr;
@@ -49,6 +63,7 @@ PROGRAM IndexGen;
 		NewHashNode := n;
 	end; (*NewNode*)
 
+	(* New double linked list node *)
 	function NewDLListNode(val : Integer) : doubleListPtr;
 	var temp : doubleListPtr;
 	begin
@@ -59,12 +74,14 @@ PROGRAM IndexGen;
 		NewDLListNode := temp;
 	end;
 
+	(* init double linked list*)
 	procedure InitDLList(var l : dList);
 	begin
 		l^.first := Nil;
 		l^.last := Nil;
 	end;
 	
+	(* append to double linked list *)
 	procedure AppendDlList(var l : dList; val : Integer);
 	var n : doubleListPtr;
 	begin
@@ -240,6 +257,7 @@ PROGRAM IndexGen;
 		LT := a < b;
 	END;
   
+	(* quicksort rec for string arrays *)
 	PROCEDURE QuickSort(VAR arr : ARRAY OF String; n : INTEGER);
 	PROCEDURE QuickSortRec(VAR arr : ARRAY OF String; l, u : INTEGER);
 	VAR
@@ -272,12 +290,11 @@ PROGRAM IndexGen;
 		QuickSortRec(arr, Low(arr), n);
 	END;
 
-	procedure SortandPrintStringArray();
+	procedure PrintStringArray();
 	var 
 		i : Integer;
 		n : NodePtr;
 	begin
-		QuickSort(wordArray, wordCount);
 		
 		for i := 0 to wordCount do begin
 			WriteLn;
@@ -343,9 +360,10 @@ BEGIN (*IndexGen*)
 		n := n + 1;
 		GetNextWord(w, lnr);
 	END; (*WHILE*)
-	SortandPrintStringArray();
+	QuickSort(wordArray, wordCount);
+	PrintStringArray();
 	StopTimer;	
-	
+
 	WriteLn;
 	WriteLn('number of words: ', n, ' ', wordCount);
 	WriteLn('elapsed time:    ', ElapsedTime);

@@ -7,25 +7,23 @@ PROGRAM WG_Hash;
   {$ELSE}
     WinTypes, WinProcs,
   {$ENDIF}
-    Strings, WinCrt;
+    Strings, WinCrt, WinGraph;
 	
 	CONST
 	EF = CHR(0);         (*end of file character*)
 	maxWordLen = 30;     (*max. number of characters per word*)
-	chars = ['a' .. 'z', 'Ã¤', 'Ã¶', 'Ã¼', 'ÃŸ',
-			 'A' .. 'Z', 'Ã„', 'Ã–', 'Ãœ'];
-	size = 30000;
+	chars = ['a' .. 'z', 'ä', 'ö', 'ü', 'ß',
+			 'A' .. 'Z', 'Ä', 'Ö', 'Ü'];
+	size = 421;
 
 	TYPE
 	Word = STRING[maxWordLen];
 
 	NodePtr = ^Node;
-	  Node = RECORD
+	Node = RECORD
 		key: STRING;
-		data : Integer;
-		collision: Integer;
 		next: NodePtr;
-	  END; (*Record*)
+	END; (*Record*)
 	ListPtr = NodePtr;
 	HashTable = ARRAY[0..size-1] OF ListPtr;
 	
@@ -36,93 +34,85 @@ PROGRAM WG_Hash;
 		curLineNr: INTEGER;  (*current line number*)
 		curColNr: INTEGER;   (*current column number*)
 		ht : HashTable;
+		option : Integer;
 	
-	function NewHashNode(key: String; next: NodePtr; data : Integer) : NodePtr;
+	function NewHashNode(key: String; next: NodePtr) : NodePtr;
 	var
 		n: NodePtr;
 	begin
 		New(n);
 		n^.key := key;
 		n^.next := next;
-		n^.data := data;
-		n^.collision := 0;
 		NewHashNode := n;
 	end; (*NewNode*)
 
 	(* returns the hashcode of a key *)
-	function HashCode(key: String): Integer;
+	function HashCode1(key: String): Integer;
 	begin
-	  HashCode := Ord(key[1]) MOD size;
-	end; (*HashCode*)
+	  HashCode1 := Ord(key[1]) MOD size;
+	end; (*HashCode1*)
 
-	(* returns the hashcode of a key *)
+	(* compiler hashcode.. *)
 	function HashCode2(key: String): Integer;
 	begin
-	  HashCode2 := (Ord(key[1]) + Length(key)) MOD size;
-	end; (*HashCode2*)
-	
+	  if Length(key) = 1 then
+		HashCode2 := (Ord(key[1]) * 7 + 1) * 17 MOD size
+	  else
+		HashCode2 := (Ord(key[1]) * 7 + Ord(key[2]) + Length(key)) * 17 MOD size
+	end; (*HashCode2)
+
 	(* returns the hashcode of a key *)
 	function HashCode3(key: String): Integer;
 	  var
 		hc, i : Integer;
 	begin
-		hc := 0;
+	  hc := 0;
 
-		for i := 1 to Length(key) do begin
-		{Q-}
-		{R-}
+	  for i := 1 to Length(key) do begin
+	  {Q-}
+	  {R-}
 		hc := 31 * hc + Ord(key[i]);
-		{R+}
-		{Q+}
-		end; (* for *)
+	  {R+}
+	  {Q+}
+	  end; (* for *)
 
-		HashCode3 := Abs(hc) MOD size;
+	  HashCode3 := Abs(hc) MOD size;
 	end; (*HashCode3*)
 
 	(* Lookup combines search and prepend *)
-	function Lookup(key: String) : NodePtr;
+	procedure Lookup(key: String);
 	  var
 		i: Integer;
 		n: NodePtr;  
 	begin
-		IF hash = 1 THEN BEGIN
-			i := HashCode1(key);
-		END ELSE IF mode = 2 THEN BEGIN
-			i := HashCode2(key);
-		END ELSE IF mode = 3 THEN BEGIN
-			i := HashCode3(key);
-		END ELSE BEGIN
-			WriteLn('Invalid hash function');
+		IF option = 1 THEN i := HashCode1(key)
+		ELSE IF option = 2 THEN i := HashCode2(key)
+		ELSE IF option = 3 THEN i := HashCode3(key)
+		ELSE BEGIN
+			WriteLn('Invalid option');
 			Halt;
 		END;
 		n := ht[i];
 		
 		while (n <> Nil) do begin
-		if (n^.key = key) THEN BEGIN
-			n^.data = n^.data + 1;
-			exit;
+			if (n^.key = key) THEN BEGIN
+				exit;
+			end;
+			n := n^.next;
 		end;
-		n := n^.next;
-		end;
 
-		if n = nil then begin
-			n := NewHashNode(key, ht[i], 1);
-			ht[i] := n;
-			ht[i]^.collision := ht[i]^.collision + 1;
-		end; (*if*)
-
-		Lookup := n;
-
+		n := NewHashNode(key, ht[i]);
+		ht[i] := n;
 	end; (* Lookup *)
 
 	FUNCTION LowerCase(ch: CHAR): STRING;
 	BEGIN
 		CASE ch OF
 		  'A'..'Z': LowerCase := CHR(ORD(ch) + (ORD('a') - ORD('A')));
-		  'Ã„', 'Ã¤': LowerCase := 'ae';
-		  'Ã–', 'Ã¶': LowerCase := 'oe';
-		  'Ãœ', 'Ã¼': LowerCase := 'ue';
-		  'ÃŸ':      LowerCase := 'ss';
+		  'Ä', 'ä': LowerCase := 'ae';
+		  'Ö', 'ö': LowerCase := 'oe';
+		  'Ü', 'ü': LowerCase := 'ue';
+		  'ß':      LowerCase := 'ss';
 		  ELSE (*all the others*)
 					LowerCase := ch;
 		  END; (*CASE*)
@@ -163,8 +153,22 @@ PROGRAM WG_Hash;
 		ELSE (*curCh = EF*)
 		  w := '';
 	END; (*GetNextWord*)
+	
+	(* Counts nodes *)
+	FUNCTION CountNodes(n : ListPtr) : INTEGER;
+	VAR
+		count : INTEGER;
+	BEGIN
+		count := 0;
+		WHILE n <> NIL DO BEGIN
+			Inc(count);
+			n := n^.next;
+		END;
+		CountNodes := count;
+	END;
 
-	PROCEDURE Draw(ht : HashTable; dc : HDC; r : TRect);
+	(* Draw function with eclipse *)
+	PROCEDURE Draw(table : HashTable; dc : HDC; r : TRect);
     VAR i, j : INTEGER;
       stepX : REAL;
       w, h : INTEGER;
@@ -175,23 +179,26 @@ PROGRAM WG_Hash;
     BEGIN
       w := r.right - r.left;
       h := r.bottom - r.top;
-      count := ht[0]^.collision;
+      count := 1;
       maxVal := count;
 	  
-      FOR i := Low(ht) TO High(ht) DO BEGIN
-      	count := ht[i]^.collision;
+      FOR i := Low(table) TO High(table) DO BEGIN
+      	count := CountNodes(table[i]);
         IF maxVal < count THEN BEGIN
           maxVal := count;
         END;
       END;
+      IF maxVal = 0 THEN BEGIN
+      	maxVal := 1;
+      END;
 	  
-      stepX := w / (High(ht) - Low(ht) + 1);
+      stepX := w / (High(table) - Low(table) + 1);
       hFactor := (h / stepX) / maxVal;
       x := r.left;
       count := 0;
 	  
-      FOR i := Low(ht) TO High(ht) DO BEGIN
-      	count := ht[i]^.collision;
+      FOR i := Low(table) TO High(table) DO BEGIN
+      	count := CountNodes(table[i]);
         y := r.bottom;
         FOR j := 1 TO Round(hFactor * count) DO BEGIN
           Ellipse(dc, Round(x), Round(y + stepX), Round(x + stepX), Round(y));
@@ -201,6 +208,7 @@ PROGRAM WG_Hash;
       END;
     END;
 	
+	(* Function to call the actual drawing function *)
 	PROCEDURE DrawHash(dc: HDC; wnd: HWnd; r: TRect);
     BEGIN
       Draw(ht, dc, r);
@@ -219,11 +227,13 @@ VAR
 	w: Word;        (*current word*)
 	lnr: INTEGER;   (*line number of current word*)
 	n: LONGINT;     (*number of words*)
-	hash : Integer;
 	
 BEGIN 
-
-  IF ParamCount = 0 THEN BEGIN
+	option := 1;
+	n := 0;
+	Init();
+	
+	IF ParamCount = 0 THEN BEGIN
 	  WriteLn;
 	  WriteLn;
 	  Write('name of text file > ');
@@ -233,23 +243,22 @@ BEGIN
 	  WriteLn(txtName);
 	END;
 	WriteLn;
-	
+
 	WriteLn('Choose HashFunction: ');
-	WriteLn('1.');
-	WriteLn('2.');
-	WriteLn('3.');
-	ReadLn(hash);
-	
+	WriteLn('1. func (bad)');
+	WriteLn('2. func (better)');
+	WriteLn('3. func (best)');
+	Write('> ');
+	ReadLn(option);
+
 	Assign(txt, txtName);
 	Reset(txt);
 	curLine := '';
 	curLineNr := 0;
 	curColNr := 1;
 	GetNextChar; 
-	
+
 	GetNextWord(w, lnr);
-	n := 0;
-	Init;
 	WHILE Length(w) > 0 DO BEGIN
 	  LookUp(w);
 	  n := n + 1;
