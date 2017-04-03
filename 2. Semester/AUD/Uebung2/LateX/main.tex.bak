@@ -28,7 +28,7 @@
 %Für Kopfzeile den Style
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{ADE - Übung 10}
+\lhead{AUD 2\textbackslash PRO 2 - Übung 2}
 \rhead{Andreas Roither, \today{}}
 \newcommand{\Cross}{\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}%
 
@@ -37,58 +37,52 @@
 %ANGABE     
 \thispagestyle{plain}
 \includepdf[pages={1},pagecommand={     
-\begin{tikzpicture}[remember picture, overlay]\node at (15.8, -1.35) {6 h};\end{tikzpicture}
-\begin{tikzpicture}[remember picture, overlay]\node at (7.6, -1.35) {Andreas Roither};\end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]\node at (15.8, -0.85) {6 h};\end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]\node at (7.6, -0.85) {Andreas Roither};\end{tikzpicture}
 \begin{Huge}
 \begin{tikzpicture}[remember picture, overlay]\node at (-1.3, -1.9) {X};\end{tikzpicture}
 \end{Huge}
-}]{Angabe/UE1.pdf}
+}]{Angabe/UE2.pdf}
 \thispagestyle{plain}
-\includepdf[pages=2-,pagecommand={}]{Angabe/UE1.pdf}
+\includepdf[pages=2-,pagecommand={}]{Angabe/UE2.pdf}
 
-\section*{Übung 1}
+\section*{Übung 2}
 \subsection*{Aufgabe 1}
 \subsubsection*{Lösungsidee}
-Die erstellte Hash Tabelle enthält eine Doppelt verkette Liste, in dieser werden die Zeilennummern der Wörter gespeichert. Da die Hash Tabelle selbst nicht durch eine Quicksort Funktion sortiert werden darf, wird nebenbei beim einfügen eines Wortes in die Hash Tabelle, dasselbe Wort in ein String Array eingefügt. Dieses Array wird dann sortiert und der Reihe nach durch gegangen. Dabei wird der Hashcode des Wortes ausgerechnet und an der entsprechenden Stelle im Array wird nach dem Wort gesucht. Zusätzlich werden dann auch die Zeilennummern ausgegeben.
+Bei MinM wird in eine Liste eingefügt falls ein Zeichen darin noch nicht enthalten ist. Am Schluss wird gezählt wie viele Zeichen in der Liste enthalten sind. Diese Anzahl gibt MinM zurück. Bei MaxMStringLen wird solange in eine Liste eingefügt bis m erreicht wird. Falls die Anzahl unterschiedlicher Zeichen in der Liste überschritten wurde, löscht RemoveFirst das erste Zeichen in der Liste. Falls die aktuelle Länge größer ist als die vorher gespeicherte Länge wird die aktuelle Länge gespeichert.
 \newline
 
-\lstinputlisting[language=Pascal] {../IndexGen.pas}
+\lstinputlisting[language=Pascal] {../Kette.pas}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.65]{./pictures/ausgabe.jpg}
-	\caption{Ausgabe}
-	\label{fig: IndexGen}
+	\includegraphics[scale=0.75]{./pictures/1a.png}
+	\caption{Ausgabe 1a}
+	\label{fig: Kette1a}
 \end{figure}
+Ausgegeben wird die Anzahl der unterschiedlichen Zeichen der oben angegebenen Zeichenketten.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.75]{./pictures/1b.png}
+	\caption{Ausgabe 1b}
+	\label{fig: Kette1b}
+\end{figure}
+Hier wird der längste Substring mit maximalen m eines Strings ausgegeben.
+
+\newpage
 \subsection*{Aufgabe 2}
 \subsubsection*{Lösungsidee}
-Ähnlich wie bei Aufgabe 1 wird eine Hash Tabelle erstellt. Anschließend wird beim zeichnen für jede Position in der Tabelle die Knoten gezählt und gezeichnet. Es werden drei verschiedene Hash Funktionen getestet. Die ungewöhnliche Größe des String Arrays ergibt sich aus dem Testen. Ist die Größe des Arrays durch 3 teilbar, ist die Verteilung in der Tabelle lückenhaft und ähnlich schlecht wie bei der ersten oder zweiten Hash Funktion.
+Das Matching funktioniert ähnlich wie die BruteForce Methode. Es wird von links nach rechts durch den string gegangen. Dabei wird bei jedem Aufruf ein Teil des string nicht mehr mit übergeben, für die Zeichen \grqq{}*\grqq{} und \grqq{}?\grqq{} werden dabei spezielle Aktionen durchgeführt. Falls die Zeichenfolge nicht mehr übereinstimmt wird False zurückgegeben, andernfalls wird True zurückgegeben.
 \newline
 
-\lstinputlisting[language=Pascal] {../WG_Hash.pas}
+\lstinputlisting[language=Pascal] {../wildcard.pas}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.65]{./pictures/bad.jpg}
-	\caption{Ausgabe}
-	\label{fig: BadHash}
+	\includegraphics[scale=0.75]{./pictures/2arecursive.png}
+	\caption{Ausgabe Matching}
+	\label{fig: Matching}
 \end{figure}
-Hier sieht man deutlich das die Verteilung der Elemente in der Tabelle sehr schlecht ist.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.65]{./pictures/better.jpg}
-	\caption{Ausgabe}
-	\label{fig: BetterHash}
-\end{figure}
-Im Gegensatz zur vorherigen Hash Funktion sieht hier die Verteilung etwas besser aus.
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.65]{./pictures/best.jpg}
-	\caption{Ausgabe}
-	\label{fig: BestHash}
-\end{figure}
-Hie 
+Ausgabe für die jeweiligen Zeichenketten.
 
 \end{document}
 

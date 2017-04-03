@@ -1,4 +1,5 @@
 PROGRAM kette;
+ (* Implementation with lists *)
 
   TYPE
     nodePtr = ^listElement;
@@ -164,8 +165,6 @@ PROGRAM kette;
 		
 		Append(list, NewNode(s[i]));
 		tempCount := CountDistinct(list);
-		//Write(tempCount, ' ', count, ' ');
-		//PrintList(list);
 		
 		IF tempCount > m THEN 
 		BEGIN
@@ -181,27 +180,7 @@ PROGRAM kette;
 		END;
 	END;
 	MaxMStringLen := maxLength;
-  END;
-  
-   PROCEDURE HighlightPart(s: STRING; fromPos, toPos: Integer);
-   VAR
-	i : Integer;
-   BEGIN
-	FOR i := 1 TO Length(s) DO BEGIN
-		IF (i >= fromPos) AND (i <= toPos) THEN BEGIN
-			TextColor(Green);
-			Write(s[i]);
-		END
-		else BEGIN
-			TextColor(LightGray);
-			Write(s[i]);
-		END;
-		
-	END;
-	TextBackground(Black);
-	TextColor(LightGray);
-	WriteLn;
-   END;
+  END; 
   
   VAR 
 	s1, s2, s3, longest : String;
@@ -215,6 +194,7 @@ BEGIN
   WriteLn('String 1: ', s1, #13#10#9, 'Min m: ', MinM(s1));
   WriteLn('String 2: ', s2, #13#10#9, 'Min m: ', MinM(s2));
   WriteLn('String 3: ', s3, #13#10#9, 'Min m: ', MinM(s3));
+  
   WriteLn('---------------------------------------------');
   WriteLn('String 1 mit m 2: ', s1, #13#10#9,'MaxM: ', MaxMStringLen(longest,s1,2), 
 	#13#10#9, 'Longest substring: ', longest, #13#10);
