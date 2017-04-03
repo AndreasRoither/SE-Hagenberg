@@ -183,6 +183,26 @@ PROGRAM kette;
 	MaxMStringLen := maxLength;
   END;
   
+   PROCEDURE HighlightPart(s: STRING; fromPos, toPos: Integer);
+   VAR
+	i : Integer;
+   BEGIN
+	FOR i := 1 TO Length(s) DO BEGIN
+		IF (i >= fromPos) AND (i <= toPos) THEN BEGIN
+			TextColor(Green);
+			Write(s[i]);
+		END
+		else BEGIN
+			TextColor(LightGray);
+			Write(s[i]);
+		END;
+		
+	END;
+	TextBackground(Black);
+	TextColor(LightGray);
+	WriteLn;
+   END;
+  
   VAR 
 	s1, s2, s3, longest : String;
 BEGIN
