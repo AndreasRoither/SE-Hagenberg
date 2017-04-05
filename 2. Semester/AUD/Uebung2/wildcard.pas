@@ -1,37 +1,37 @@
 PROGRAM wildcard;
 
-(* Matching Going from the left to right 
-   recursive *)
+  (* Matching Going from the left to right 
+     recursive *)
   FUNCTION Matching(p, s : STRING):Boolean;
 	VAR 
-		i,j:Integer;
+    i,j:Integer;
   BEGIN
 	i := 1;
 	j := 1;
   
-  (* *)
     WHILE (p[j] <> '*') AND (j <= length(p)) AND ((s[i] = p[j]) OR 
-			(p[j] = '?')) DO BEGIN
-		i := i + 1;
-		j := j + 1;
+          (p[j] = '?')) DO BEGIN
+      i := i + 1;
+      j := j + 1;
     END;
 
     IF (p[j] <> '*') AND (i <= length(s)) THEN BEGIN
-		Matching := Matching(p,Copy(s,2,length(s)))
+      Matching := Matching(p,Copy(s,2,length(s)))
     END
     ELSE IF (j <= length(p)) AND (i <= length(s)) THEN BEGIN
-		Matching := Matching(Copy(p, j + 1, Length(p)),Copy(s, 2, length(s)));
+      Matching := Matching(Copy(p, j + 1, Length(p)),Copy(s, 2, length(s)));
     END 
     ELSE IF ((j >= length(p)) AND (i >= length(s))) OR 
-			((j = length(p)) AND (p[j] = '*')) THEN BEGIN
-		Matching := True;
+            ((j = length(p)) AND (p[j] = '*')) THEN BEGIN
+      Matching := True;
     END
     ELSE Begin
-		Matching := False;
+      Matching := False;
     END;
   END;
+  
   VAR
-	s,p : STRING;
+    s,p : STRING;
 BEGIN
 	s := '?c?$';
 	p := 'aca$';
