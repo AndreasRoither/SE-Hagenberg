@@ -2,31 +2,6 @@ PROGRAM RLE;
   USES
     (* sysutils for StrToInt, IntToStr and FileExists *)
     Crt, sysutils;
-
-  (* Check if char is Alphabet Char 
-     Returns true if char *)
-  FUNCTION IsChar(c: CHAR): BOOLEAN;
-  BEGIN
-    IF ((Ord(c) >= 65) AND (Ord(c) <= 90)) OR
-       ((Ord(c) >= 97) AND (Ord(c) <= 122)) THEN
-       IsChar := TRUE
-    ELSE
-      IsChar := FALSE;
-  END;
-  
-  (* Check if char is Alphabet Char 
-     Returns true if char *)
-  FUNCTION IsCharWithSpecial(c: CHAR): BOOLEAN;
-  BEGIN
-    IF ((Ord(c) >= 65) AND (Ord(c) <= 90)) OR
-       ((Ord(c) >= 97) AND (Ord(c) <= 122)) OR
-       ((Ord(c) >= 33) AND (Ord(c) <= 47)) OR
-       ((Ord(c) >= 58) AND (Ord(c) <= 64)) OR
-       ((ord(c) >= 123) AND (Ord(c) <= 254)) THEN
-       IsCharWithSpecial := TRUE
-    ELSE
-      IsCharWithSpecial := FALSE;
-  END;
   
   (* check if char is a number 
      returns true if number *)
@@ -95,7 +70,7 @@ PROGRAM RLE;
     
     WHILE i <= Length(curLine) DO BEGIN
 
-      IF IsCharWithSpecial(curLine[i]) THEN BEGIN
+      IF NOT IsNumber(curLine[i]) THEN BEGIN
         s := s + curLine[i];
         curChar := curLine[i];
       END
@@ -113,7 +88,6 @@ PROGRAM RLE;
         FOR i2 := 1 TO count - 1 DO s := s + curChar;  
       END;
       i := i + 1;
-      WriteLn(s);
     END;
     
     IF Length(curLine) > 1 THEN curLine := s;

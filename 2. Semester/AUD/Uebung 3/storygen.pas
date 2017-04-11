@@ -1,6 +1,6 @@
-PROGRAM sTOrygen;
+PROGRAM storygen;
   USES
-    Crt, sysutils;
+    Crt, sysutils; (* sysutils for filesexits *)
 
   CONST
     EF = CHR(0);         (*END of file character*)
@@ -8,8 +8,6 @@ PROGRAM sTOrygen;
     chars = ['a' .. 'z', 'ä', 'ö', 'ü', 'ß',
          'A' .. 'Z', 'Ä', 'Ö', 'Ü'];
     size = 100;
-    sLineBreak = {$IFDEF LINUX} AnsiChar(#10) {$ENDIF} 
-               {$IFDEF MSWINDOWS} AnsiString(#13#10) {$ENDIF};
     
   TYPE
     Word = STRING[maxWordLen];
@@ -20,14 +18,15 @@ PROGRAM sTOrygen;
         replacement : STRING;
         next: NodePtr;
       END; (*Record*)
+      
     ListPtr = NodePtr;
     HashTable = ARRAY[0..size-1] OF ListPtr;
     
 	VAR
 		curLine : STRING;     (*current line from file txt*)
-		curCh: CHAR;         (*current character*)
-		curLineNr: INTEGER;  (*current line number*)
-		curColNr: INTEGER;   (*current column number*)
+		curCh: CHAR;          (*current character*)
+		curLineNr: INTEGER;   (*current line number*)
+		curColNr: INTEGER;    (*current column number*)
     mode : (fillHashTableMode, replaceMode);
     replTXTFile, inTXTFile, outTXTFile : TEXT;   (* text files *)
     newLine : BOOLEAN;
@@ -37,7 +36,7 @@ PROGRAM sTOrygen;
   VAR
     h: Integer;
   BEGIN
-    FOR h := 0 TO size-1 DO BEGIN
+    FOR h := 0 TO size - 1 DO BEGIN
       ht[h] := NIL;
     END;
   END;
@@ -82,7 +81,6 @@ PROGRAM sTOrygen;
       n := NewNode(w, wr, ht[i]);
       ht[i] := n;
     END;
-    
     Lookup := n;
   END;
   
@@ -99,24 +97,8 @@ PROGRAM sTOrygen;
     WHILE (n <> NIL) AND (n^.key <> key) DO BEGIN
       n := n^.next;
     END;
- 
     Search := n;
   END;
-  
-  (* char to lowercase 
-     returns lowercase char *)
-	FUNCTION LowerCase(ch: CHAR): STRING;
-	BEGIN
-		CASE ch OF
-		  'A'..'Z': LowerCase := CHR(ORD(ch) + (ORD('a') - ORD('A')));
-		  'Ä', 'ä': LowerCase := 'ae';
-		  'Ö', 'ö': LowerCase := 'oe';
-		  'Ü', 'ü': LowerCase := 'ue';
-		  'ß':      LowerCase := 'ss';
-		  ELSE (*all the others*)
-					LowerCase := ch;
-		  END; (*CASE*)
-	END; (*LowerCase*)
 
   (* updates curChar *)
 	PROCEDURE GetNextChar(VAR txt: TEXT);
@@ -124,24 +106,36 @@ PROGRAM sTOrygen;
 		IF curColNr < Length(curLine) THEN BEGIN
 			curColNr := curColNr + 1;
 			curCh := curLine[curColNr];
-      newLine := FALSE;
-		END (* THEN *)
+		END
+    ELSE IF (curColNr = 0) AND (curColNr >= Length(curLine)) THEN BEGIN
+    
+      CASE mode OF
+          replaceMode: BEGIN
+            WriteLn(outTXTFile);
+            ReadLn(txt, curLine);
+            curLineNr:= curLineNr + 1;
+            curColNr := 0;
+            curCh := ' '; (* separate lines by ' ' *)  
+          END;
+        END;     
+    END
 		ELSE BEGIN (* curColNr >= Length(curLine) *)
 		  IF NOT Eof(txt) THEN BEGIN
+        
+        CASE mode OF
+          replaceMode: BEGIN
+            newLine := TRUE;
+          END;
+        END; 
+        
 			  ReadLn(txt, curLine);
 			  curLineNr:= curLineNr + 1;
 			  curColNr := 0;
-			  curCh := ' '; (* separate lines by ' ' *)
-        
-        CASE mode OF
-        replaceMode: BEGIN
-            WriteLn(outTXTFile);
-          END;
-        END;     
-			END (* THEN *)
-		  ELSE (* Eof(txt) *)
+			  curCh := ' '; (* separate lines by ' ' *)       
+			END
+		  ELSE 
 			curCh := EF;
-		END; (* ELSE *)
+		END;
 	END; (* GetNextChar *)
 
   (* Creates word from char
@@ -154,10 +148,9 @@ PROGRAM sTOrygen;
         replaceMode: BEGIN
           IF NOT (curCh IN chars) THEN Write(outTXTFile, curCh); 
         END;
-      END;
-      
+      END;   
       GetNextChar(txt);
-    END; (* WHILE *)
+    END;
     
     lnr := curLineNr;
     IF curCh <> EF THEN BEGIN
@@ -167,23 +160,23 @@ PROGRAM sTOrygen;
       WHILE (curCh <> EF) AND (curCh IN chars) DO BEGIN
         w := Concat(w, curCh);
         GetNextChar(txt);
-      END; (* WHILE *)
-    END (* THEN *)
-    ELSE (* curCh = EF *)
+      END; 
+    END 
+    ELSE 
       w := '';   
 	END; (* GetNextWord *)
 
   (* Fills the HashTable with the replacements *)
   PROCEDURE FillHashTable(VAR ht: HashTable; VAR txt: TEXT);
   VAR
-		w, wr: Word;        (*current word*)
+		w, wr: Word;    (*current word*)
 		lnr: INTEGER;   (*line number of current word*)
 		n: LONGINT;     (*number of words*)
     
   BEGIN
     curLine := '';
     curLineNr := 0;
-    curColNr := 1; (*curColNr > Length(curLine) FORces reading of first line*)
+    curColNr := 1;      (*curColNr > Length(curLine) FORces reading of first line*)
     GetNextChar(txt);   (*curCh now holds first character*)
     n := 0;
     mode := fillHashTableMode;
@@ -197,13 +190,13 @@ PROGRAM sTOrygen;
       GetNextWord(w, lnr, txt);
       GetNextWord(wr, lnr, txt);
     END;
-    
+    WriteLn('Found ',n ,' replacements');
   END;
   
   (* Replaces a word if there is a replacement *)
   PROCEDURE Replace(ht: HashTable);
   VAR
-		w : Word;        (*current word*)
+		w : Word;       (*current word*)
 		lnr: INTEGER;   (*line number of current word*)
 		n: LONGINT;     (*number of words*)
     temp : NodePtr;
@@ -211,34 +204,40 @@ PROGRAM sTOrygen;
   BEGIN
     curLine := '';
     curLineNr := 0;
-    curColNr := 1; (*curColNr > Length(curLine) FORces reading of first line*)
+    curColNr := 1;            (*curColNr > Length(curLine) forces reading of first line*)
     GetNextChar(inTXTFile);   (*curCh now holds first character*)
     n := 0;
     mode := replaceMode;
     w := ' ';
-    newLine := FALSE;
 
+    WriteLn('Replacing... ');
+    
     GetNextWord(w, lnr, inTXTFile);
     WHILE Length(w) > 0 DO BEGIN
       (* Check if word is the word from the ht, and not just a word 
          with the same hashcode *)
       temp := Search(w, ht);
+      
+      IF newLine THEN BEGIN
+        WriteLn(outTXTFile);
+        newLine := FALSE;
+      END;
+      
       IF temp <> NIL THEN BEGIN
-        //WriteLn(w, ' ', temp^.key, ' ', temp^.replacement);
+        //WriteLn('w: ', w, ' temp: ', temp^.key, ' temp repl.: ', temp^.replacement, ' ');
         IF (temp^.key = w) THEN Write(outTXTFile, temp^.replacement)
         ELSE Write(outTXTFile, w);
       END
       ELSE
         Write(outTXTFile, w);
-        
-      IF lnr <> curLineNr THEN Write(outTXTFile, '');
-        
+      
       n := n + 1;
       GetNextWord(w, lnr, inTXTFile);
     END;
+    WriteLn('Finished!');
   END;
 
-  (* check FOR command line args 
+  (* check for command line args 
      calls Decompress or Compress *)
   PROCEDURE ParamCheck();
   VAR
@@ -272,50 +271,29 @@ PROGRAM sTOrygen;
     Assign(replTXTFile, replaceFileName);
     Reset(replTXTFile);    (* read file *) 
     Assign(inTXTFile, inFileName);
-    Reset(inTXTFile);    (* read file *)
+    Reset(inTXTFile);      (* read file *)
     Assign(outTXTFile, outFileName);
-    Rewrite(outTXTFile);  (* Rewrite new file or write*)
+    Rewrite(outTXTFile);   (* Rewrite new file or write*)
     
+    (* Check IOResult for opening errors *)
     IF IOResult <> 0 THEN
     BEGIN
       WriteLn('Error opening file!');
       Exit;
     END;
     
+    (* closing repl. cause we dont need it anymore *)
     FillHashTable(ht, replTXTFile);
     Close(replTXTFile);
     
     Replace(ht);
     
-    (* Close Files *)
+    (* close files *)
     Close(inTXTFile);
     Close(outTXTFile);
 
   END;
   
-  PROCEDURE WriteHashTable(ht: HashTable);
-    var 
-    h : Integer;
-    n : NodePtr;
-
-    BEGIN
-      FOR h:= 0 to size-1 DO BEGIN
-      if ht[h] <> NIL THEN BEGIN 
-        Write(h, ': ');
-        n := ht[h];
-
-        WHILE n <> NIL DO BEGIN
-          Write(n^.key, ' ', n^.replacement);
-          n := n^.next;
-        END;
-        WriteLn;
-      END;
-      END;
-    END;
-
-  VAR
-    ht : HashTable;
-    txt : TEXT;
 BEGIN
 
   ParamCheck();
