@@ -67,7 +67,7 @@ Auf Basis eines binären Suchbaums wird eine Pascal-Unit erstellt. Diese Unit en
 	\label{fig: WC_ADS Unit}
 \end{figure}
 \raggedright
-Die Testfälle zeigen die Verwendung der Funktionen. Bereits vorhandene Wörter werden nicht nochmal eingefügt, deshalb ist trotz neu einfügen des Wortes \grqq{}Hallo\grqq{} und anschließendem löschen und abfragen ob es existiert, \grqq{}Hallo\grqq{} nicht mehr vorhanden. Anders als bei Aufgabe 2 gibt es hier keinen Datentyp auf den zugegriffen werden kann. 
+Die Testfälle zeigen die Verwendung der Funktionen. Bereits vorhandene Wörter werden nicht nochmal eingefügt, deshalb ist trotz neu einfügen des Wortes \grqq{}Hallo\grqq{} und anschließendem löschen und abfragen ob es existiert, \grqq{}Hallo\grqq{} nicht mehr vorhanden. Anders als bei Aufgabe 2 gibt es hier keinen Datentyp auf den zugegriffen werden kann. Anmerkung: Außerhalb der Unit wird es über den Typ Pointer initialisiert aber in der Unit werden TypeCasts zu WordSet ausgeführt.
 
 \newpage
 \subsection*{Aufgabe 2}
@@ -109,7 +109,7 @@ Zu sehen sind genau die selben Tests wie bei Aufgabe 1. Da sich nur der Zugriff 
 \end{figure}
 \raggedright
 
-Bei diesen Testfällen enthält das WordSet von SPÖ und den GRÜNEN die meisten gemeinsamen Wörter, 1631. SPÖ und ÖVP haben \grqq{}nur\grqq{} 1330 gemeinsame Wörter. Hier wird auch ersichtlich das die SPÖ und die GRÜNEN am zweiten Platz stehen bei den unterschiedlichen Wörtern, obwohl sie so viele gemeinsame Wörter haben.
+Bei diesen Testfällen enthält das WordSet von SPÖ und den GRÜNEN die meisten gemeinsamen Wörter, 1631. SPÖ und ÖVP haben \grqq{}nur\grqq{} 1330 gemeinsame Wörter. Hier wird auch ersichtlich das die SPÖ und die GRÜNEN am zweiten Platz stehen bei den unterschiedlichen Wörtern, obwohl sie so viele gemeinsame Wörter haben. Difference gibt das erste übergebene WordSet zurück aus dem alle Wörter entfernt wurden die im ersten und im zweiten übergebenen WordSet entfernt wurden. Anmerkung: Außerhalb der Unit wird es über den Typ Pointer initialisiert aber in der Unit werden TypeCasts zu WordSet ausgeführt.
 
 \end{document}
 

@@ -188,8 +188,6 @@ IMPLEMENTATION
      TypeCast to WordSet for rec. function *)
   FUNCTION Union (s1,s2 : TreePtr) : TreePtr;
   BEGIN
-    WordSet(s1) := CopyWSet(WordSet(s1));
-    WordSet(s2) := CopyWSet(WordSet(s2));
     Union := WordSet(UnionRec(WordSet(s1),WordSet(s2)));
   END;
   
@@ -215,8 +213,6 @@ IMPLEMENTATION
      TypeCast to WordSet for rec. function *)
   FUNCTION Intersection (s1,s2 : TreePtr) : TreePtr;
   BEGIN
-    WordSet(s1) := CopyWSet(WordSet(s1));
-    WordSet(s2) := CopyWSet(WordSet(s2));
     Intersection := WordSet(IntersectionRec(WordSet(s1),WordSet(s2)));
   END;
   
@@ -241,14 +237,9 @@ IMPLEMENTATION
      TypeCast to WordSet for rec. function *)
   FUNCTION Difference (s1,s2 : TreePtr) : TreePtr;
   BEGIN
-    WordSet(s1) := CopyWSet(WordSet(s1));
-    WordSet(s2) := CopyWSet(WordSet(s2));
-    IF Cardinality(WordSet(s1)) < Cardinality(WordSet(s2)) THEN
-      Difference := DifferenceRec(WordSet(s2),WordSet(s1))
-    ELSE
-      WordSet(Difference) := DifferenceRec(WordSet(s1),WordSet(s2));
+    WordSet(Difference) := DifferenceRec(WordSet(s1),WordSet(s2));
   END;
-  
+ 
   (* number of words in a WordSet 
      returns 0 if none are found  *)
   FUNCTION Cardinality (s1: TreePtr) : INTEGER;
