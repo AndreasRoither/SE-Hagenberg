@@ -1,0 +1,21 @@
+  S <out String result> =
+    Expr <out e>              sem reslut := e; endsem
+    eos.
+
+  Expr <out String e> =
+  Term <out t1>               sem e := t1; endsem
+  { '+' Term <out t2>         sem e := ' + ' + t1 + ' ' + t2; t1 := e; endsem
+  | '-' Term <out t2>         sem e := ' - ' + t1 + ' ' + t2; t1 := e; endsem
+  }.
+
+  Term <out String t> =
+  Fact <out f1>               sem t := f1; endsem
+  { '*' Fact <out f2>         sem t := ' * ' + f1 + ' ' + f2; f1 := t; endsem
+  | '/' Fact <out f2>         sem t := ' / ' + f1 + ' ' + f2; f1 := t; endsem
+  }.
+
+  Fact <out String f> =
+  number <out stringVal>      sem f := numberVal endsem
+  | variable <out id>         sem f := variableStr; endsem
+  | '('Expr <out e>           sem f := e; endsem
+  ')'.

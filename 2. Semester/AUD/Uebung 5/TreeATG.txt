@@ -1,0 +1,23 @@
+  S <out Node result> =
+    Expr <out e>                sem reslut := e; endsem
+    eos.
+
+  Expr <out Node e> =
+  Term <out t1>                 sem e := t1; endsem
+  { '+' Term <out t2>           sem e := NewNode(t1,t2,'+'); t1 := e; endsem
+  | '-' Term <out t2>           sem e := NewNode(t1,t2,'-'); t1 := e; endsem
+  }.
+
+  Term <out Node t> =
+  Fact <out f1>                 sem t := f1; endsem
+  { '*' Fact <out f2>           sem t := NewNode(f1,f2,'*'); f1 := t; endsem
+  | '/' Fact <out f2>           sem t := NewNode(f1,f2,'/'); f1 := t; endsem
+  }.
+
+  Fact <out Node f> =
+  number <out stringVal>        sem f := NewNode(numberVal); endsem
+  | variable <out id>           
+
+  sem f := NewNode(variableStr); endsem
+  | '('Expr <out e>             sem f := e; endsem
+  ')'.

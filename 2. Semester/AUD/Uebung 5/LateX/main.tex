@@ -1,0 +1,98 @@
+%für Sprache, A4 Blatt, float, Grafiken, UTF Codierung, PDF, Color, Seitenabstand, Listings
+\documentclass[a4papr,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{grffile}
+\usepackage{caption}
+
+%Mathematics
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+%include this before fancy or page style gets messed up bc of geometry
+\include{settings}
+
+%Für Kopfzeile den Style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{AUD 2\textbackslash PRO 2 - Übung 5}
+\rhead{Andreas Roither, \today{}}
+\newcommand{\Cross}{\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}%
+
+\begin{document}
+
+%ANGABE     
+\thispagestyle{plain}
+\includepdf[pages={1},pagecommand={     
+\begin{tikzpicture}[remember picture, overlay]\node at (15.8, -0.85) {6 h};\end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]\node at (7.6, -0.85) {Andreas Roither};\end{tikzpicture}
+\begin{Huge}
+\begin{tikzpicture}[remember picture, overlay]\node at (-1.3, -1.9) {X};\end{tikzpicture}
+\end{Huge}
+}]{Angabe/UE5.pdf}
+%\thispagestyle{plain}
+%\includepdf[pages=2-,pagecommand={}]{Angabe/UE4.pdf}
+
+\section*{Übung 5}
+\subsection*{Aufgabe 1}
+\subsubsection*{Lösungsidee}
+Es wird eine ATG für Infix zu Prefix erstellt. Mithilfe dieser ATG wird ein entsprechende Implementation vorgenommen.  Um eine Prefix-Notation zu erreichen wird Auf oberster Ebene ( Expr ) alles aus den unteren Ebene ( bzw. aus den Aufrufen von Term und Fact ) aneinander gehängt. Somit wird eine Prefix-Notation erreicht.  
+\newline
+\lstinputlisting[language=] {../InfixToPrefixATG.txt}
+Die ATG für Infix zu Prefix.
+\newpage
+\lstinputlisting[language=Pascal] {../InfixToPrefix.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{./pictures/1.png}
+	\caption{Infix to Prefix Test }
+	\label{fig: InfixToPrefix}
+\end{figure}
+\raggedright
+Die Testfälle zeigen sowohl funktionierende Testfälle als auch Testfälle mit eingebauten Fehlern. Falls zu viele Klammern oder Rechenoperationszeichen übergeben werden, wird eine Fehler Meldung ausgegeben. Die Spalten Nummer bei der Fehler Meldung funktioniert dabei leider nicht immer. Result zeigt die Prefix-Notation.
+
+\newpage
+\subsection*{Aufgabe 2}
+\subsubsection*{Lösungsidee}
+Die ATG funktioniert ähnlich wie bei Aufgabe 1. Der Unterschied besteht darin das der Baum ohne eine Insert Funktion aufgebaut wird. Die Nodes werden aneinander gehängt und somit wird der Baum aufgebaut. Auf oberster Ebene ( oberster Funktionsaufruf, oder erste Funktion die aufgerufen wird von Expr, Term, Fact ) wird eine Node mit den anderen Nodes aus den Funktionsaufruf Term aneinander gehängt. Bei \grqq{}1 + 2\grqq{} wäre f1 eine Node mit \grqq{}1\grqq{} in txt und f2 eine Node mit \grqq{}2\grqq{} in txt gespeichert. Mit diesen Nodes wird eine neue Node erstellt, mit \grqq{}+\grqq{} als Wurzelknoten und f1, f2 als die beiden sub trees. Die anderen Funktionen geben immer eine Node zurück, entweder mit einem \grqq{}+\grqq{}, \grqq{}-\grqq{} oder einer Zahl als Wurzelknoten. Die rekursive Funktion wird mithilfe eines case statements implementiert. Je nachdem welches Zeichen in der aktuellen Node enthalten ist wird eine der vier Rechenoperationen ausgeführt. Bei den verschiedene Ausgaben InOrder, PreOrder, PostOrder fällt auf das InOrder den Baum ähnlich ausgibt wie den ursprünglichen Input nur ohne Klammern, PreOrder gibt den Baum aus wie Prefix-Notation und PostOrder wie Postfix-Notation.
+\newline
+
+\lstinputlisting[language=] {../TreeATG.txt}
+\newpage
+\lstinputlisting[language=Pascal] {../TreeEval.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{./pictures/2_1.png}
+	\caption{TreeEval Test 1}
+	\label{fig: Matching}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.8]{./pictures/2_2.png}
+	\caption{TreeEval Test 2}
+	\label{fig: Matching}
+\end{figure}
+\raggedright
+Die verschiedene Testfälle zeigen die Syntax Analysis, InOrder, PreOrder, PostOrder Ausgabe des Baumes und das verwenden der ValueOf Funktion. Die ValueOf Funktion führt alle Rechenoperationen im Baum aus und liefert das ausgerechnete Ergebnis zurück.
+\newpage
+
+
+\end{document}
+
+
+
+
+
