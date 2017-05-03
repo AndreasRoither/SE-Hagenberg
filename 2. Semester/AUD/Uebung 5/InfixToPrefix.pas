@@ -85,8 +85,8 @@ PROGRAM InfixToPrefix;
         sy := variable;
         variableStr := '';
 
-        WHILE ((ch >= 'A') AND (ch < 'Z')) OR ((ch >= 'a') AND (ch < 'z')) DO
-        BEGIN
+        WHILE ((ch >= 'A') AND (ch < 'Z')) OR ((ch >= 'a') AND (ch < 'z'))
+        DO BEGIN
           variableStr := variableStr + ch;
           NewCh;
         END;
@@ -100,7 +100,7 @@ PROGRAM InfixToPrefix;
   PROCEDURE S; FORWARD;
   PROCEDURE Expr(VAR e: STRING); FORWARD;
   PROCEDURE Term(VAR t: STRING); FORWARD;
-  PROCEDURE Fact(VAR f: STRING); FORWARD;  
+  PROCEDURE Fact(VAR f: STRING); FORWARD;
 
   PROCEDURE S;
   VAR
@@ -208,7 +208,8 @@ PROGRAM InfixToPrefix;
     success := TRUE;
 
     S;
-    IF success THEN WriteLn('successful syntax analysis',#13#10) ELSE WriteLn('Error in column: ', cnr,#13#10);
+    IF success THEN WriteLn('successful syntax analysis',#13#10) 
+    ELSE WriteLn('Error in column: ', cnr,#13#10);
   END;
 
 BEGIN
