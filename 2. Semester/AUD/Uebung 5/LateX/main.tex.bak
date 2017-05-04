@@ -62,7 +62,7 @@ Die ATG für Infix zu Prefix.
 	\label{fig: InfixToPrefix}
 \end{figure}
 \raggedright
-Die Testfälle zeigen sowohl funktionierende Testfälle als auch Testfälle mit eingebauten Fehlern. Falls zu viele Klammern oder Rechenoperationszeichen übergeben werden wird eine Fehler Meldung ausgegeben. 
+Die Testfälle zeigen sowohl funktionierende Testfälle als auch Testfälle mit eingebauten Fehlern. Falls zu viele Klammern oder Rechenoperationszeichen übergeben werden, wird eine Fehler Meldung ausgegeben. Die Spalten Nummer bei der Fehler Meldung funktioniert dabei leider nicht immer. Result zeigt die Prefix-Notation.
 
 \newpage
 \subsection*{Aufgabe 2}

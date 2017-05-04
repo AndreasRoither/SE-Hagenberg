@@ -92,8 +92,8 @@ PROGRAM TreeEval;
         sy := variable;
         variableStr := '';
 
-        WHILE ((ch >= 'A') AND (ch < 'Z')) OR ((ch >= 'a') AND (ch < 'z')) DO
-        BEGIN
+        WHILE ((ch >= 'A') AND (ch < 'Z')) OR ((ch >= 'a') AND (ch < 'z'))
+        DO BEGIN
           variableStr := variableStr + ch;
           NewCh;
         END;
@@ -109,7 +109,8 @@ PROGRAM TreeEval;
   PROCEDURE Term(VAR t: NodePtr); FORWARD;
   PROCEDURE Fact(VAR f: NodePtr); FORWARD;
   FUNCTION NewNode (value: STRING): NodePtr; FORWARD;
-  FUNCTION NewNode2 (leftSubTree, rightSubTree: NodePtr; value: STRING): NodePtr; FORWARD;
+  FUNCTION NewNode2 (leftSubTree, rightSubTree: NodePtr; value: STRING)
+    : NodePtr; FORWARD;
 
   PROCEDURE S;
   VAR
@@ -224,8 +225,10 @@ PROGRAM TreeEval;
     NewNode := n;
   END;
 
-  (* NewNode2 with value as root and the two other Nodes as left and right subtree *)
-  FUNCTION NewNode2 (leftSubTree, rightSubTree: NodePtr; value: STRING): NodePtr;
+  (* NewNode2 with value as root and the two other
+     Nodes as left and right subtree *)
+  FUNCTION NewNode2 (leftSubTree, rightSubTree: NodePtr; value: STRING)
+    : NodePtr;
     VAR
       n: NodePtr;
   BEGIN
@@ -309,7 +312,8 @@ PROGRAM TreeEval;
     success := TRUE;
 
     S;
-    IF success THEN WriteLn('successful syntax analysis',#13#10) ELSE WriteLn('Error in column: ', cnr,#13#10);
+    IF success THEN WriteLn('successful syntax analysis',#13#10)
+    ELSE WriteLn('Error in column: ', cnr,#13#10);
 
     WriteLn('-InOrder-');
     WriteTreeInOrder(tr);
