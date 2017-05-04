@@ -1,0 +1,17 @@
+Grammar = Rule { Rule } .
+
+Rule    = ident equal Expr .
+
+Expr    = < Term |
+            lt Term { bar Term } gt 
+          > .
+            
+
+Term    = Fact { Fact } .
+
+Fact    = < ident |
+            leftPar  Expr rightPar |
+            leftOpt  Expr rightOpt |
+            leftIter Expr rightIter
+          > .
+

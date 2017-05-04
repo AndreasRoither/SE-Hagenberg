@@ -1,0 +1,6 @@
+Expr = Term { plus Term } .
+           
+Term = Fact { times Fact } .
+
+Fact = < number | leftPar Expr rightPar > .
+
