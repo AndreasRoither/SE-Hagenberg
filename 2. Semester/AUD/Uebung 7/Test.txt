@@ -1,0 +1,16 @@
+PROGRAM SVP;
+  VAR
+    a, b, asdf, cs: INTEGER;
+BEGIN
+  READ(a);
+  READ(b);
+  cs := (a * a) + (b * b);
+  WHILE asdf DO
+  BEGIN
+  END;
+  IF asdf THEN
+  BEGIN
+  END;
+  WRITE(cs);
+END. 
+

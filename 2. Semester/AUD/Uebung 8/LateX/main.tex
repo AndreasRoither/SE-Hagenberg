@@ -1,0 +1,91 @@
+%für Sprache, A4 Blatt, float, Grafiken, UTF Codierung, PDF, Color, Seitenabstand, Listings
+\documentclass[a4papr,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{grffile}
+\usepackage{caption}
+
+%Mathematics
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+%include this before fancy or page style gets messed up bc of geometry
+\include{settings}
+
+%Für Kopfzeile den Style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{AUD 2\textbackslash PRO 2 - Übung 8}
+\rhead{Andreas Roither, \today{}}
+\newcommand{\Cross}{\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}%
+
+\begin{document}
+
+%ANGABE     
+\thispagestyle{plain}
+\includepdf[pages={1},pagecommand={     
+\begin{tikzpicture}[remember picture, overlay]\node at (15.8, -0.85) {6 h};\end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]\node at (7.6, -0.85) {Andreas Roither};\end{tikzpicture}
+\begin{Huge}
+\begin{tikzpicture}[remember picture, overlay]\node at (-1.3, -1.9) {X};\end{tikzpicture}
+\end{Huge}
+}]{Angabe/UE8.pdf}
+%\thispagestyle{plain}
+%\includepdf[pages=2-,pagecommand={}]{Angabe/UE6.pdf}
+
+\section*{Übung 8}
+Aufgabe 1 und Aufgabe 2 befinden in einem .pas file: \grqq{}SOSU.pas\grqq{}. Die Testfälle werden in eigenen .pas files behandelt. Lösungsidee und Testfälle sind auf den nachfolgenden Seiten. Die Implementationen der Klassen sind durch Kommentare gekennzeichnet.
+
+\subsection*{SOSU Unit}
+\lstinputlisting[language=Pascal] {../SOSU.pas}
+\newpage
+\subsection*{Aufgabe 1}
+\subsubsection*{Lösungsidee}
+Es werden öffentliche Methoden und Funktionen erstellt mit deren Hilfe Mengenoperationen durchgeführt werden können. Die Mengenoperationen werden als Funktionen implementiert, da die Ursprungsmengen nicht verändert werden sollen damit weitere Operationen auf dieselben durchgeführt werden können. Zurückgegeben wird ein Pointer auf ein SOS Objekt. In den Testfällen wird dieser verwendet um die Ergebnisse der Mengenoperationen auszugeben. Es wurden zusätzlich zu den vorgegebenen Operationen neue wie \grqq{}LookupPos\grqq{} hinzugefügt um das einfügen und verwalten in das Array zu vereinfachen.
+\subsubsection*{Testfälle}
+\raggedright
+Zum Testen werden alle Operationen ausgeführt. Bei Union wird eine Fehlermeldung ausgegeben falls das resultierende Objekt der Union zu groß wäre. Auch Operationen wie \grqq{}Add\grqq{} haben eine Fehlerüberprüfung.
+\newline
+\lstinputlisting[language=Pascal] {../SOSTest.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{./pictures/1.png}
+	\caption{Console Output SOSTest}
+	\label{fig: ParserTest}
+\end{figure}
+\newpage
+\subsection*{Aufgabe 2}
+\subsubsection*{Lösungsidee}
+Die vererbten Methoden bzw. Funktionen werden teilweise überschrieben je nachdem ob neue Datentypen verwendet werden oder nicht. Die Mengenoperationen funktionieren fast gleich mit der Ausnahme dass das Feld \grqq{}counters\grqq{} berücksichtigt wird. Die Operationen bei Sack werden nicht mehr als \grqq{}Virtual\grqq{} bezeichnet da vom Objekt \grqq{}Sack\grqq{} nicht mehr abgeleitet wird.
+\subsubsection*{Testfälle}
+\raggedright
+Das ausführen der Operationen soll genau gleich funktionieren und dieselben Fehlermeldungen anzeigen wie beim SOS Test. Durchgeführt werden dieselben Operationen.
+\newline
+\lstinputlisting[language=Pascal] {../SackTest.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{./pictures/2.png}
+	\caption{Console Output SackTest}
+	\label{fig: ParserTest}
+\end{figure}
+\raggedright
+
+\end{document}
+
+
+
+
+

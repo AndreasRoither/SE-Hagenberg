@@ -1,0 +1,21 @@
+S = MP eof.
+
+MP = "PROGRAM" ident ";"
+      [ VarDecl ]
+      "BEGIN"
+        StatSeq
+      "END" "." .
+
+VarDecl = "VAR" ident { "," ident }
+          ":" "INTEGER" ";".
+
+StatSeq = Stat { ";" Stat } .
+
+Stat = [ ident ":=" Expr
+        | "READ" "(" ident ")"
+        | "WRITE" "(" Expr ")"
+        ] .
+
+Expr = Term { ( "+" | "-" ) Term } .
+Term = Fact { ( "*" | "/" ) Fact } .
+Fact = ident | number | "(" Expr ")" .

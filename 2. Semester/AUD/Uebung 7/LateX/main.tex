@@ -1,0 +1,93 @@
+%für Sprache, A4 Blatt, float, Grafiken, UTF Codierung, PDF, Color, Seitenabstand, Listings
+\documentclass[a4papr,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{grffile}
+\usepackage{caption}
+
+%Mathematics
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+
+%include this before fancy or page style gets messed up bc of geometry
+\include{settings}
+
+%Für Kopfzeile den Style
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{AUD 2\textbackslash PRO 2 - Übung 7}
+\rhead{Andreas Roither, \today{}}
+\newcommand{\Cross}{\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}}%
+
+\begin{document}
+
+%ANGABE     
+\thispagestyle{plain}
+\includepdf[pages={1},pagecommand={     
+\begin{tikzpicture}[remember picture, overlay]\node at (15.8, -0.85) {6 h};\end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]\node at (7.6, -0.85) {Andreas Roither};\end{tikzpicture}
+\begin{Huge}
+\begin{tikzpicture}[remember picture, overlay]\node at (-1.3, -1.9) {X};\end{tikzpicture}
+\end{Huge}
+}]{Angabe/UE7.pdf}
+\thispagestyle{plain}
+\includepdf[pages=2-,pagecommand={}]{Angabe/UE7.pdf}
+
+\section*{Übung 7}
+\subsection*{Aufgabe 1}
+\subsubsection*{Lösungsidee}
+Zuerst wird ein lexikalischer Analysator erstellt, mit dessen Hilfe wird das überprüfende File analysiert. Dabei wird bei besonderen Zeichen ( Abfrage in Case Statement ) das aktuelle Symbol auf einen Enum Typ gesetzt. Das aktuelle Symbol wird dann beim Parser verwendet um eine Syntaxanalyse zu ermöglichen. Der Parser wird durch Rekursiven Abstieg realisiert. Durch Aufrufen der WritePas Funktion wird der Pascal Syntax des generierten Parsers (bzw. den Parser Prozeduren) die Ausgabedatei schrittweise aufbaut und raus geschrieben. 
+\newline
+\lstinputlisting[language=Pascal] {../Lex.pas}
+\newpage
+\lstinputlisting[language=Pascal] {../Parser.pas}
+Der Parser analysiert das Input File solange bis entweder ein Fehler gefunden wurde oder erfolgreich ohne Fehler sy auf eofSy ( End of file symbol ) gesetzt wurde. Damit die Ausgabe Datei nicht komplett ohne Formatierung ist, wird ein tab String verwendet der für den notwendigen Abstand sorgt.
+\newpage
+\lstinputlisting[language=Pascal] {../Test.pas}
+In Test.pas wird der Lexikalische Analysator und der Parser initialisiert nachdem die Kommandozeilenargumente überprüft wurden. Danach wird die Prozedur S aufgerufen um die Syntaxanalyse und das generieren des Pascal Codes zu initiieren.
+\newpage
+\raggedright
+Zum Testen wird eine .syn Datei ohne Fehler verwendet und eine .syn Datei die einen Fehler enthält.
+Hier das erfolgreiche Parsen von Expr.syn.
+\newline
+\lstinputlisting[language=Pascal] {../Expr.syn}
+\lstinputlisting[language=Pascal] {../output.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{./pictures/1.png}
+	\caption{Console Output}
+	\label{fig: ParserTest}
+\end{figure}
+\newpage
+\raggedright
+Das Parsen der Error.syn Datei mit dem eingebauten Fehler war nicht erfolgreich. Das Ausgabe File ist durch den Fehler beim Parsen unvollständig.
+\newline
+\lstinputlisting[language=Pascal] {../Error.syn}
+\lstinputlisting[language=Pascal] {../Error.pas}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{./pictures/2.png}
+	\caption{Console Output}
+	\label{fig: ParserTest}
+\end{figure}
+\raggedright
+
+\end{document}
+
+
+
+
+

@@ -1,5 +1,5 @@
-PROGRAM stringmatching;
-uses Crt;
+PROGRAM wildcard;
+uses Crt, Timer;
 
   VAR
     comps : LONGINT;
@@ -256,6 +256,7 @@ BEGIN
   writeln('BruteForceLR1L:', #13#10, '  pos: from ', pos1, ' - ', pos2, #13#10, '  comps: ', comps);
   WriteLn('  ', p);
   HighlightPart(s,pos1,pos2);
+  WriteLn('elapsed time:    ', ElapsedTime, #13#10);
   
   p := '?*?a';
   
@@ -264,5 +265,7 @@ BEGIN
   writeln('BruteForceLR1L:', #13#10, '  pos: from ', pos1, ' - ', pos2, #13#10, '  comps: ', comps);
   WriteLn('  ', p);
   HighlightPart(s,pos1,pos2);
+  WriteLn('elapsed time:    ', ElapsedTime, #13#10);
+  
   
 END.
